@@ -5,10 +5,15 @@
  */
 package OregonTrail.model;
 
+//import Serializable
+import java.io.Serializable;
 /**
  *
  * @author Marci
  */
-public class Condition {
+public class Condition implements Serializable {
+    
+    //Class Instance Variables
+    private String excute;
     
 }

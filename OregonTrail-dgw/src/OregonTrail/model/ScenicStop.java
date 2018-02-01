@@ -5,10 +5,16 @@
  */
 package OregonTrail.model;
 
+//import Serializable
+import java.io.Serializable;
+
 /**
  *
  * @author Marci
  */
-public class ScenicStop {
+public class ScenicStop implements Serializable {
+    
+     //Class Instance Variables
+    private String aboutStop;
     
 }

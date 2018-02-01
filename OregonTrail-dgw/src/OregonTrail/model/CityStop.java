@@ -5,10 +5,19 @@
  */
 package OregonTrail.model;
 
+//import Serializable
+import java.io.Serializable;
+
 /**
  *
  * @author Marci
  */
-public class CityStop {
+//Implement Serializable in order for import to work
+public class CityStop implements Serializable {
+    
+    //Class Instance Variables
+    private String excute;
+    private int trade;
+    private int amountAvailable;
     
 }

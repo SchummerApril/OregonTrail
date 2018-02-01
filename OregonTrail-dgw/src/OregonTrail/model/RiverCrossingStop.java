@@ -5,10 +5,17 @@
  */
 package OregonTrail.model;
 
+//import Serializable
+import java.io.Serializable;
 /**
  *
  * @author Marci
  */
-public class RiverCrossingStop {
+public class RiverCrossingStop implements Serializable {
+    
+    //Class Instance Variables
+    private int depth;
+    private int ferryCost;
+    private String amountAvailable;
     
 }
