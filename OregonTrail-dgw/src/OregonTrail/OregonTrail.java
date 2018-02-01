@@ -17,6 +17,7 @@ public class OregonTrail {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("This is the first line of the Oregon Trail program!");
+        System.out.println("One more change and commit to test.");
     }
     
 }
