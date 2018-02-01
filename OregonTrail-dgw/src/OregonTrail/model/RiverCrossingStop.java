@@ -18,4 +18,4 @@ public class RiverCrossingStop implements Serializable {
     private int ferryCost;
     private String amountAvailable;
     
-}
+}//closing tag

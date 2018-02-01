@@ -16,4 +16,4 @@ public class Condition implements Serializable {
     //Class Instance Variables
     private String excute;
     
-}
+}//closing tag
