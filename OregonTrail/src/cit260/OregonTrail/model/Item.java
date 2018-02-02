@@ -1,4 +1,3 @@
-
 package cit260.OregonTrail.model;
 import java.io.Serializable;
 import java.util.Objects;

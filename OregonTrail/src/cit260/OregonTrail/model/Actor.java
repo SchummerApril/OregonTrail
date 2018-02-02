@@ -11,7 +11,7 @@ import java.util.Objects;
         
         Wesley(new Inventory(), "Wesley", "He is the first person you meet"),
         Spencer(new Inventory(), "Spencer", "He is the second person you meet"),
-        Karl(new Inventory(), "Karl", "He is the thirst person you meet");
+        Karl(new Inventory(), "Karl", "He is the third person you meet");
         
         private Inventory shopInventory;
         private String name;
