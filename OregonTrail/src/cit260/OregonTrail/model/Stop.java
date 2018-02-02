@@ -1,32 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cit260.OregonTrail.model;
-
 import java.io.Serializable;
+import java.util.Objects;
 /**
- *
+ * 
  * @author Nastia
  */
 public class Stop implements Serializable{
-    private int condition;
+    private final Condition condition;
     private boolean canRest;
-
-    public Stop() {
-    }
-    
-    
-
-    public int getCondition() {
-        return condition;
-    }
-
-    public void setCondition(int condition) {
-        this.condition = condition;
-    }
 
     public boolean isCanRest() {
         return canRest;
@@ -35,12 +16,20 @@ public class Stop implements Serializable{
     public void setCanRest(boolean canRest) {
         this.canRest = canRest;
     }
+    
+    Stop(Condition condition) {
+        this.condition = condition;
+    }
+    
+    public void visit() {
+        this.condition.execute();
+    }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 19 * hash + this.condition;
-        hash = 19 * hash + (this.canRest ? 1 : 0);
+        int hash = 5;
+        hash = 11 * hash + Objects.hashCode(this.condition);
+        hash = 11 * hash + (this.canRest ? 1 : 0);
         return hash;
     }
 
@@ -56,10 +45,10 @@ public class Stop implements Serializable{
             return false;
         }
         final Stop other = (Stop) obj;
-        if (this.condition != other.condition) {
+        if (this.canRest != other.canRest) {
             return false;
         }
-        if (this.canRest != other.canRest) {
+        if (!Objects.equals(this.condition, other.condition)) {
             return false;
         }
         return true;
@@ -69,6 +58,6 @@ public class Stop implements Serializable{
     public String toString() {
         return "Stop{" + "condition=" + condition + ", canRest=" + canRest + '}';
     }
-     
+    
     
 }
