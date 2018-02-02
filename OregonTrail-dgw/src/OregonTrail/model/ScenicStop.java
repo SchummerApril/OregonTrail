@@ -17,11 +17,12 @@ public class ScenicStop implements Serializable {
     
      //Class Instance Variables
     private String aboutStop;
-    
+    private String nameOfStop;
     
     //Constructor
+
     public ScenicStop() {
-    }
+    }   
     
     
     //Getter & Setter
@@ -32,12 +33,22 @@ public class ScenicStop implements Serializable {
     public void setAboutStop(String aboutStop) {
         this.aboutStop = aboutStop;
     }
+
+    public String getNameOfStop() {
+        return nameOfStop;
+    }
+
+    public void setNameOfStop(String nameOfStop) {
+        this.nameOfStop = nameOfStop;
+    }
+    
     
     //equals & Hascode
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.aboutStop);
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.aboutStop);
+        hash = 67 * hash + Objects.hashCode(this.nameOfStop);
         return hash;
     }
 
@@ -56,16 +67,18 @@ public class ScenicStop implements Serializable {
         if (!Objects.equals(this.aboutStop, other.aboutStop)) {
             return false;
         }
+        if (!Objects.equals(this.nameOfStop, other.nameOfStop)) {
+            return false;
+        }
         return true;
     }
     
-       
+         
     //toString
     @Override
     public String toString() {
-        return "ScenicStop{" + "aboutStop=" + aboutStop + '}';
+        return "ScenicStop{" + "aboutStop=" + aboutStop + ", nameOfStop=" + nameOfStop + '}';
     }
-    
     
     
 }//closing tag
