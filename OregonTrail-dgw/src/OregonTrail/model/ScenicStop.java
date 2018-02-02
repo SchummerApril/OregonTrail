@@ -26,8 +26,8 @@ public enum ScenicStop {
     private String nameOfStop;
         //might have to add location with Point
     
-    ScenicStop(Sring nameofStop, String aboutStop) {
-    this.nameofStop = nameOfStop;
+    ScenicStop(String nameOfStop, String aboutStop) {
+    this.nameOfStop = nameOfStop;
     this.aboutStop = aboutStop;
     
 }
