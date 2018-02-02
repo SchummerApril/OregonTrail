@@ -6,74 +6,40 @@
 package OregonTrail.model;
 
 //import Serializable
-import java.io.Serializable;
-import java.util.Objects;
+
 
 /**
  *
  * @author Marci
  */
-public class ScenicStop implements Serializable {
+public enum ScenicStop {
+    
+    location1("Name 1","Here are some interesting facts!"),
+    location2("Name 2","Here are some interesting facts!"),
+    location3("Name 3","Here are some interesting facts!"),
+    location4("Name 4","Here are some interesting facts!"),
+    location5("Name 5","Here are some interesting facts!"),
+    location6("Name 6","Here are some interesting facts!");
     
      //Class Instance Variables
     private String aboutStop;
     private String nameOfStop;
+        //might have to add location with Point
     
-    //Constructor
-
-    public ScenicStop() {
-    }   
+    ScenicStop(Sring nameofStop, String aboutStop) {
+    this.nameofStop = nameOfStop;
+    this.aboutStop = aboutStop;
     
-    
-    //Getter & Setter
+}
+    //Getters
     public String getAboutStop() {
         return aboutStop;
-    }
-
-    public void setAboutStop(String aboutStop) {
-        this.aboutStop = aboutStop;
     }
 
     public String getNameOfStop() {
         return nameOfStop;
     }
 
-    public void setNameOfStop(String nameOfStop) {
-        this.nameOfStop = nameOfStop;
-    }
-    
-    
-    //equals & Hascode
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.aboutStop);
-        hash = 67 * hash + Objects.hashCode(this.nameOfStop);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final ScenicStop other = (ScenicStop) obj;
-        if (!Objects.equals(this.aboutStop, other.aboutStop)) {
-            return false;
-        }
-        if (!Objects.equals(this.nameOfStop, other.nameOfStop)) {
-            return false;
-        }
-        return true;
-    }
-    
-         
     //toString
     @Override
     public String toString() {
@@ -81,4 +47,6 @@ public class ScenicStop implements Serializable {
     }
     
     
+    
+
 }//closing tag
