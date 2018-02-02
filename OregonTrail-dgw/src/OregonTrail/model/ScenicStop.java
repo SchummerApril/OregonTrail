@@ -22,8 +22,9 @@ public enum ScenicStop {
     location6("Name 6","Here are some interesting facts!");
     
      //Class Instance Variables
-    private String aboutStop;
     private String nameOfStop;
+    private String aboutStop;
+    
         //might have to add location with Point
     
     ScenicStop(String nameOfStop, String aboutStop) {
