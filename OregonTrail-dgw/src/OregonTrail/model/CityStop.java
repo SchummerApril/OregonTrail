@@ -21,9 +21,21 @@ public class CityStop implements Serializable {
     private int trade;
     private int amountAvailable;
     
+    //class attribute variable
+    private Stop stop;
+    
     //Constructor
-
     public CityStop() {
+    }
+    
+    
+    //Getters and Setters for class attribute
+    public Stop getStop() {
+        return stop;
+    }
+
+    public void setStop(Stop stop) {
+        this.stop = stop;
     }
     
     

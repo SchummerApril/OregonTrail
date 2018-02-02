@@ -22,6 +22,12 @@ public class Stop implements Serializable {
     private String canRest;
     private int travelTime;
 
+    //class attribute variable
+        private ScenicStop scenicStop;
+        private RiverCrossingStop rvierCrossingStop;
+        private Condition conditions;
+    
+    
     public Stop() {
     }
     
@@ -30,6 +36,33 @@ public class Stop implements Serializable {
     public String getCondition() {
         return condition;
     }
+    
+    //Getters and Setters for Class Attributes
+
+    public ScenicStop getScenicStop() {
+        return scenicStop;
+    }
+
+    public void setScenicStop(ScenicStop scenicStop) {
+        this.scenicStop = scenicStop;
+    }
+
+    public RiverCrossingStop getRvierCrossingStop() {
+        return rvierCrossingStop;
+    }
+
+    public void setRvierCrossingStop(RiverCrossingStop rvierCrossingStop) {
+        this.rvierCrossingStop = rvierCrossingStop;
+    }
+
+    public Condition getConditions() {
+        return conditions;
+    }
+
+    public void setConditions(Condition conditions) {
+        this.conditions = conditions;
+    }
+    
     
     //Getters and Setters
     public void setCondition(String condition) {

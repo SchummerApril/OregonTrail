@@ -18,6 +18,7 @@ public class ScenicStop implements Serializable {
      //Class Instance Variables
     private String aboutStop;
     
+    
     //Constructor
     public ScenicStop() {
     }
