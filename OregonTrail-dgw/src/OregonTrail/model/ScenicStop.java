@@ -5,8 +5,7 @@
  */
 package OregonTrail.model;
 
-//import Serializable
-
+import java.io.Serializable;
 
 /**
  *
@@ -46,7 +45,6 @@ public enum ScenicStop {
     public String toString() {
         return "ScenicStop{" + "aboutStop=" + aboutStop + ", nameOfStop=" + nameOfStop + '}';
     }
-    
     
     
 
