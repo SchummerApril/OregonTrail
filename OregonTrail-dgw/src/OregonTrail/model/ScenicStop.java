@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package OregonTrail.model;
-
 import java.io.Serializable;
-
+import java.util.Objects;
 /**
  *
  * @author Marci
