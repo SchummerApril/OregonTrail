@@ -10,8 +10,7 @@ import OregonTrail.model.Inventory;
  *
  * @author aschummer
  */
-public enum Actor {
-    relationship("FATHER", "MOTHER", "BOY CHILD", "GIRL CHILD");
+/*public enum Actor {
     
     private Inventory inventory;
     private String name;
