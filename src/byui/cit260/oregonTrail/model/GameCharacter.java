@@ -3,7 +3,7 @@ package byui.cit260.oregonTrail.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
+ *redone with Connors help... woot hoo
  * @author aschummer
  */
 public class GameCharacter implements Serializable{
