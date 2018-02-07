@@ -13,6 +13,15 @@ public class Location implements Serializable{
     private int row;
     private int column;
     private int milesRemaining;
+    private Point point;
+
+    public Point getPoint() {
+        return point;
+    }
+
+    public void setPoint(Point point) {
+        this.point = point;
+    }
 
     public String getName() {
         return name;
@@ -66,14 +75,20 @@ public class Location implements Serializable{
     }
 
     @Override
+    public String toString() {
+        return "Location{" + "name=" + name + ", description=" + description + ", stop=" + stop + ", row=" + row + ", column=" + column + ", milesRemaining=" + milesRemaining + ", point=" + point + '}';
+    }
+
+    @Override
     public int hashCode() {
         int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.name);
-        hash = 41 * hash + Objects.hashCode(this.description);
-        hash = 41 * hash + (this.stop ? 1 : 0);
-        hash = 41 * hash + this.row;
-        hash = 41 * hash + this.column;
-        hash = 41 * hash + this.milesRemaining;
+        hash = 97 * hash + Objects.hashCode(this.name);
+        hash = 97 * hash + Objects.hashCode(this.description);
+        hash = 97 * hash + (this.stop ? 1 : 0);
+        hash = 97 * hash + this.row;
+        hash = 97 * hash + this.column;
+        hash = 97 * hash + this.milesRemaining;
+        hash = 97 * hash + Objects.hashCode(this.point);
         return hash;
     }
 
@@ -107,15 +122,9 @@ public class Location implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.point, other.point)) {
+            return false;
+        }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "Location{" + "name=" + name + ", description=" + description + ", stop=" + stop + ", row=" + row + ", column=" + column + ", milesRemaining=" + milesRemaining + '}';
-    }
-    
-    
-    
-    
 }
