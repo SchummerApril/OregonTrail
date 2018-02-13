@@ -7,16 +7,16 @@ import java.util.Objects;
  * @author aschummer
  */
 public class Wagon implements Serializable{
-    private String contianers;
+    private String containers;
     private int maxNumberContainers;
     private int sizeOfWagon;
 
     public String getContianers() {
-        return contianers;
+        return containers;
     }
 
-    public void setContianers(String contianers) {
-        this.contianers = contianers;
+    public void setContainers(String containers) {
+        this.containers = containers;
     }
 
     public int getMaxNumberContainers() {
@@ -35,8 +35,8 @@ public class Wagon implements Serializable{
         this.sizeOfWagon = sizeOfWagon;
     }
 
-    public Wagon(String contianers, int maxNumberContainers, int sizeOfWagon) {
-        this.contianers = contianers;
+    public Wagon(String containers, int maxNumberContainers, int sizeOfWagon) {
+        this.containers = containers;
         this.maxNumberContainers = maxNumberContainers;
         this.sizeOfWagon = sizeOfWagon;
     }
@@ -44,7 +44,7 @@ public class Wagon implements Serializable{
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.contianers);
+        hash = 97 * hash + Objects.hashCode(this.containers);
         hash = 97 * hash + this.maxNumberContainers;
         hash = 97 * hash + this.sizeOfWagon;
         return hash;
@@ -68,7 +68,7 @@ public class Wagon implements Serializable{
         if (this.sizeOfWagon != other.sizeOfWagon) {
             return false;
         }
-        if (!Objects.equals(this.contianers, other.contianers)) {
+        if (!Objects.equals(this.containers, other.containers)) {
             return false;
         }
         return true;
