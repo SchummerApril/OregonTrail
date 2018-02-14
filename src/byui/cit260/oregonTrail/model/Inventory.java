@@ -7,10 +7,11 @@ import java.util.Objects;
  *
  * @author Nastia
  */
+
 public class Inventory implements Serializable{
-    private ArrayList<Item> contents; 
-    private int quantityInStock; 
-    private int requiredAmount;
+    private ArrayList<Item> contents; //maybe change this to array not ArrayList
+    private int quantityInStock; //TODO move to Item class
+    private int requiredAmount; //TODO move to Item class
 
     public Inventory() {
     }
@@ -40,8 +41,10 @@ public class Inventory implements Serializable{
     }
     
     public void addItem(Item itemToAdd){
-        this.contents.add(itemToAdd);
+        this.contents.add(itemToAdd); // this stays here :)
     }
+    
+    
 
     @Override
     public int hashCode() {
