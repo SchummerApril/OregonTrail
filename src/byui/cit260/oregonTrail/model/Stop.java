@@ -10,19 +10,21 @@ import java.util.Objects;
  */
 
 //Implement Serializable in order for import to work
-public class Stop implements Serializable {
+public abstract class Stop implements Serializable {
     
     //Class Instance Variables
-    private String condition;
-    private String canRest;
+    private Condition condition;
+    private boolean canRest;
     private int travelTime;
 
+    public abstract void visit();
+    
     //class attribute variable
         private ScenicStop scenicStop;
         private RiverCrossingStop rvierCrossingStop;
         private Condition conditions;
-    
-    
+     
+        
     public Stop() {
     }
     
@@ -100,7 +102,7 @@ public class Stop implements Serializable {
         }
         if (getClass() != obj.getClass()) {
             return false;
-        }
+         }
         final Stop other = (Stop) obj;
         if (this.travelTime != other.travelTime) {
             return false;

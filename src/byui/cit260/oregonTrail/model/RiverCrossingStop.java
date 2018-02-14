@@ -7,7 +7,7 @@ import java.util.Objects;
  *
  * @author Marci
  */
-public class RiverCrossingStop implements Serializable {
+public class RiverCrossingStop  extends Stop implements Serializablep {
     
     //Class Instance Variables
     private int depth;
@@ -17,6 +17,9 @@ public class RiverCrossingStop implements Serializable {
     
     //Constructor
     public RiverCrossingStop() {
+        this.depth = 10;
+        this.ferryCost = 100;
+        
     }
     
     
