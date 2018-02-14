@@ -9,7 +9,10 @@ import java.util.Objects;
 public class Wagon implements Serializable{
     private String containers;
     private int maxNumberContainers;
-    private int sizeOfWagon;
+   private int height;
+   private int length;
+   private int width;
+   
 
     public String getContianers() {
         return containers;
@@ -27,26 +30,27 @@ public class Wagon implements Serializable{
         this.maxNumberContainers = maxNumberContainers;
     }
 
-    public int getSizeOfWagon() {
-        return sizeOfWagon;
-    }
+    
 
-    public void setSizeOfWagon(int sizeOfWagon) {
-        this.sizeOfWagon = sizeOfWagon;
-    }
-
-    public Wagon(String containers, int maxNumberContainers, int sizeOfWagon) {
+    public Wagon(String containers, int maxNumberContainers) {
         this.containers = containers;
         this.maxNumberContainers = maxNumberContainers;
-        this.sizeOfWagon = sizeOfWagon;
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Wagon{" + "containers=" + containers + ", maxNumberContainers=" + maxNumberContainers + ", height=" + height + ", length=" + length + ", width=" + width + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.containers);
-        hash = 97 * hash + this.maxNumberContainers;
-        hash = 97 * hash + this.sizeOfWagon;
+        hash = 79 * hash + Objects.hashCode(this.containers);
+        hash = 79 * hash + this.maxNumberContainers;
+        hash = 79 * hash + this.height;
+        hash = 79 * hash + this.length;
+        hash = 79 * hash + this.width;
         return hash;
     }
 
@@ -65,7 +69,13 @@ public class Wagon implements Serializable{
         if (this.maxNumberContainers != other.maxNumberContainers) {
             return false;
         }
-        if (this.sizeOfWagon != other.sizeOfWagon) {
+        if (this.height != other.height) {
+            return false;
+        }
+        if (this.length != other.length) {
+            return false;
+        }
+        if (this.width != other.width) {
             return false;
         }
         if (!Objects.equals(this.containers, other.containers)) {
@@ -73,6 +83,28 @@ public class Wagon implements Serializable{
         }
         return true;
     }
-    
-    
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
 }
