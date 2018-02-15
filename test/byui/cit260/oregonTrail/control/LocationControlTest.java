@@ -37,10 +37,10 @@ public class LocationControlTest {
         fail("The test case is a prototype.");
             
         System.out.println("invalid1 TotalMilesTraveled");
-        int startingPosition = 30;
-        int currentPosition = 50;
-        double expResult = 80.00;
-        double result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
+        startingPosition = 30;
+        currentPosition = 50;
+        expResult = 80.00;
+        result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1.0);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
