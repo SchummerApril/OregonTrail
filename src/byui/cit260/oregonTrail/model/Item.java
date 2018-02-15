@@ -2,26 +2,27 @@ package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Nastia
+ * 
  */
 public class Item implements Serializable{
-    private String name; 
+    private InventoryItemType type; 
     private int weight;
     private int value; 
 
     public Item() {
     }
-    
-    
+   
 
-    public String getName() {
-        return name;
+    public InventoryItemType getType() {
+        return type;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setType(InventoryItemType type) {
+        this.type = type;
     }
 
     public int getWeight() {
@@ -43,7 +44,7 @@ public class Item implements Serializable{
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 59 * hash + Objects.hashCode(this.name);
+        hash = 59 * hash + Objects.hashCode(this.type);
         hash = 59 * hash + this.weight;
         hash = 59 * hash + this.value;
         return hash;
@@ -67,7 +68,7 @@ public class Item implements Serializable{
         if (this.value != other.value) {
             return false;
         }
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.type, other.type)) {
             return false;
         }
         return true;
@@ -75,7 +76,7 @@ public class Item implements Serializable{
 
     @Override
     public String toString() {
-        return "Item{" + "name=" + name + ", weight=" + weight + ", value=" + value + '}';
+        return "Item{" + "type=" + type + ", weight=" + weight + ", value=" + value + '}';
     }
     
     
