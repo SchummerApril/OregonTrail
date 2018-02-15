@@ -6,9 +6,10 @@ package byui.cit260.oregonTrail.model;
  */
 public enum LocationList {
      
-     Fort Nox, San Antonio; // <-- names of all the locations (25)
+     Fort Nox(ScenicStop), San Antonio(CityStop), Fort Nile(RiverCrossingStop); // <-- names of all the locations (25)
      
-     private double locationName; 
+     private string locationName; 
+     private abstract locationType; //check this for validity
 
     private InventoryItemType(point locationName) {
         this.locationName = locationName;
@@ -17,3 +18,8 @@ public enum LocationList {
     public double getLocationName() {
         return locationName;
     }
+    
+    private void locationType() {
+        this.locationType = locationType;
+    }
+}
