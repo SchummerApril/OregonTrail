@@ -6,7 +6,7 @@ package byui.cit260.oregonTrail.control;
  */
 public class MapControl {
     
-    //
+    //How to move the player Part 1
     public static boolean isValidPoint(MapControl map, Point p) {
             for (Point existing : map.getContents().keySet()) {
                 if (existing.getY() == p.getY() && existing.getX() == p.getX()) {
@@ -18,7 +18,7 @@ public class MapControl {
         }
 
 
-        //How to move the player
+        //How to move the player Part 2
         public static boolean movePlayer(MapControl map, Point destination) {
             if (GameMapControl.isValidPoint(map, destination)) {
                 map.setPlayerLocation(destination);
@@ -38,10 +38,9 @@ public class MapControl {
             Point p1 = map.getPlayerLocation();
 
             // calculate distance using distance formula
-            double distance = Math.hypot(x1-x2, y1-y2);
+            double distance = Math.sqrt(Math.pow((x1-x2), 2) + Math.pow((y1-y2), 2));
 
             // return result
-
             return distance;
         }
 

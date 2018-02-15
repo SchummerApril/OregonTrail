@@ -19,7 +19,6 @@ public class RiverCrossingStop  extends Stop implements Serializable {
     public RiverCrossingStop() {
         this.depth = 10;
         this.ferryCost = 100;
-        
     }
     
     
