@@ -6,7 +6,7 @@ package byui.cit260.oregonTrail.control;
  */
 public class MapControl {
     
-    //How to move the player
+    //
     public static boolean isValidPoint(MapControl map, Point p) {
             for (Point existing : map.getContents().keySet()) {
                 if (existing.getY() == p.getY() && existing.getX() == p.getX()) {
@@ -18,7 +18,7 @@ public class MapControl {
         }
 
 
-
+        //How to move the player
         public static boolean movePlayer(MapControl map, Point destination) {
             if (GameMapControl.isValidPoint(map, destination)) {
                 map.setPlayerLocation(destination);
@@ -29,8 +29,8 @@ public class MapControl {
         }
 
 
-        // how you get the distance between the Player and Stop
-        public static double distanceToPoint(MapControl map, Point p2) {
+        // How you get the distance between the Player and Stop
+        public static double distancePlayerToPoint(MapControl map, Point p2) {
             if (!MapControl.isValidPoint(map, p2)) {
                 return -1.0;
             }
@@ -42,18 +42,18 @@ public class MapControl {
 
             // return result
 
-            return 0.0;
+            return distance;
         }
 
 
-
+        //Location of Stop
         public static void visitCurrentLocation(MapControl map) {
             Point currentPoint = map.getPlayerLocation();
             Location currentLocation = map.getContents().get(currentPoint);
             currentLocation.visit();
         }
 
-
+        //The Current Location of Player
         // Superfluous: just use map.getPlayerLocation() outside the control layer!
         public static Point getPlayerLocation(MapControl map) {
             return map.getPlayerLocation();
