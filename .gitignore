@@ -38,5 +38,9 @@ source
 .Trashes
 ehthumbs.db
 Thumbs.db
+<<<<<<< HEAD
 /nbproject/private/
 /build/
+=======
+/nbproject/private/
+>>>>>>> origin/master
