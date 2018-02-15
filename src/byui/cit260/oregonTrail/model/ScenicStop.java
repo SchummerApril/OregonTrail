@@ -23,7 +23,7 @@ public ScenicStop extends Stop {
    
     @override
     public void visit() {
-        //ignor condition
+        //ignore condition
         System.out.pringln()this.aboutStop);
     }
     

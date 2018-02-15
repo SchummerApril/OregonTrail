@@ -39,8 +39,12 @@ source
 ehthumbs.db
 Thumbs.db
 <<<<<<< HEAD
+<<<<<<< HEAD
 /nbproject/private/
 /build/
+=======
+/nbproject/private/
+>>>>>>> origin/master
 =======
 /nbproject/private/
 >>>>>>> origin/master
