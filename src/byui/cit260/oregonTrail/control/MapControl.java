@@ -1,5 +1,4 @@
 package byui.cit260.oregonTrail.control;
-
 /**
  *
  * @author Marci
