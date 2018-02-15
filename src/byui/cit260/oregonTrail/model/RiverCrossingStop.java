@@ -7,16 +7,9 @@ import java.util.Objects;
  *
  * @author Marci
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 public class RiverCrossingStop  extends Stop implements Serializable {
-=======
-public abstract class RiverCrossingStop  extends Stop implements Serializable {
->>>>>>> origin/master
-=======
-public abstract class RiverCrossingStop  extends Stop implements Serializable {
->>>>>>> origin/master
-    
+
     //Class Instance Variables
     private int depth;
     private int ferryCost;
@@ -91,6 +84,11 @@ public abstract class RiverCrossingStop  extends Stop implements Serializable {
     @Override
     public String toString() {
         return "RiverCrossingStop{" + "depth=" + depth + ", ferryCost=" + ferryCost + ", amountAvailable=" + amountAvailable + '}';
+    }
+
+    @Override
+    public void visit() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
