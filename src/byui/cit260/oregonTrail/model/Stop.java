@@ -45,11 +45,11 @@ public abstract class Stop implements Serializable {
     }
 
     public RiverCrossingStop getRiverCrossingStop() {
-        return rvierCrossingStop;
+        return riverCrossingStop;
     }
 
-    public void setRiverCrossingStop(RiverCrossingStop rvierCrossingStop) {
-        this.rvierCrossingStop = rvierCrossingStop;
+    public void setRiverCrossingStop(RiverCrossingStop riverCrossingStop) {
+        this.riverCrossingStop = riverCrossingStop;
     }
 
     public Condition getConditions() {
@@ -66,7 +66,7 @@ public abstract class Stop implements Serializable {
         this.condition = condition;
     }
 
-    public String getCanRest() {
+    public boolean getCanRest() {
         return canRest;
     }
 

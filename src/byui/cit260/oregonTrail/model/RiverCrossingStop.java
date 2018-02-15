@@ -7,7 +7,7 @@ import java.util.Objects;
  *
  * @author Marci
  */
-public class RiverCrossingStop  extends Stop implements Serializable {
+public abstract class RiverCrossingStop  extends Stop implements Serializable {
     
     //Class Instance Variables
     private int depth;
@@ -75,10 +75,7 @@ public class RiverCrossingStop  extends Stop implements Serializable {
         if (this.ferryCost != other.ferryCost) {
             return false;
         }
-        if (!Objects.equals(this.amountAvailable, other.amountAvailable)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.amountAvailable, other.amountAvailable);
     }
     
     //toString
