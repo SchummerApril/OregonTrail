@@ -7,7 +7,7 @@ import java.util.Objects;
  *
  * @author Marci
  */
-public class RiverCrossingStop  extends Stop implements Serializablep {
+public class RiverCrossingStop  extends Stop implements Serializable {
     
     //Class Instance Variables
     private int depth;

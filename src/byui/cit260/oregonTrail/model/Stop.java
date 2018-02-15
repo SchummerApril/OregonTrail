@@ -21,7 +21,7 @@ public abstract class Stop implements Serializable {
     
     //class attribute variable
         private ScenicStop scenicStop;
-        private RiverCrossingStop rvierCrossingStop;
+        private RiverCrossingStop riverCrossingStop;
         private Condition conditions;
      
         
@@ -30,7 +30,7 @@ public abstract class Stop implements Serializable {
     
     
     //Constructor
-    public String getCondition() {
+    public Condition getCondition() {
         return condition;
     }
     
@@ -44,11 +44,11 @@ public abstract class Stop implements Serializable {
         this.scenicStop = scenicStop;
     }
 
-    public RiverCrossingStop getRvierCrossingStop() {
+    public RiverCrossingStop getRiverCrossingStop() {
         return rvierCrossingStop;
     }
 
-    public void setRvierCrossingStop(RiverCrossingStop rvierCrossingStop) {
+    public void setRiverCrossingStop(RiverCrossingStop rvierCrossingStop) {
         this.rvierCrossingStop = rvierCrossingStop;
     }
 
@@ -110,10 +110,7 @@ public abstract class Stop implements Serializable {
         if (!Objects.equals(this.condition, other.condition)) {
             return false;
         }
-        if (!Objects.equals(this.canRest, other.canRest)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.canRest, other.canRest);
        
     }
     //toString
