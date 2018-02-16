@@ -3,8 +3,8 @@ package byui.cit260.oregonTrail.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
- * @author aschummer
+ *          Main Author, Classmate, Classmate
+ * @author aschummer, Nastia, Marci
  */
 public class Wagon implements Serializable{
     private String containers;

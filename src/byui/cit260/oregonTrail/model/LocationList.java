@@ -1,8 +1,8 @@
 package byui.cit260.oregonTrail.model;
 
 /**
- *
- * @author Nastia
+ *          Main Author, Classmate, Classmate
+ * @author Nastia, Marci, aschummer
  */
 public enum LocationList {
      

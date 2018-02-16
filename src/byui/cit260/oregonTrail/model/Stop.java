@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
- * @author Marci
+ *          Main Author, Classmate, Classmate
+ * @author Marci, Nastia, aschummer
  */
 
 //Implement Serializable in order for import to work

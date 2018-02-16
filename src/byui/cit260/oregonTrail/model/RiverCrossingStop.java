@@ -4,8 +4,8 @@ package byui.cit260.oregonTrail.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
- * @author Marci
+ *          Main Author, Classmate, Classmate
+ * @author Marci, Nastia, aschummer
  */
 
 public class RiverCrossingStop  extends Stop implements Serializable {

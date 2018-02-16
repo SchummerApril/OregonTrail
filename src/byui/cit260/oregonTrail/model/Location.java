@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 /**
- *
- * @author aschummer
+ *      Main Author, Classmate, Classmate
+ * @author aschummer, Marci, Nastia
  */
 public class Location implements Serializable{
         private ArrayList<Item> contents;

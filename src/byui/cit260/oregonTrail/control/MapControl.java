@@ -1,11 +1,8 @@
 package byui.cit260.oregonTrail.control;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 /**
- *
- * @author Marci
+ *          Main Author, Classmate, Classmate
+ * @author Marci, Nastia, aschummer
  */
 public class MapControl {
     

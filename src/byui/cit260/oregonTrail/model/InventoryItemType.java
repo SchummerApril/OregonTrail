@@ -3,8 +3,8 @@ package byui.cit260.oregonTrail.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
- * @author Nastia
+ *          Main Author, Classmate, Classmate
+ * @author Nastia, Marci, aschummer
  */
 
     public enum InventoryItemType {

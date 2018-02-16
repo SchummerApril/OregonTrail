@@ -3,7 +3,8 @@ package byui.cit260.oregonTrail.control;
 /**
  *
 <<<<<<< HEAD
- * @author Nastia
+ * @author Nastia, Marci, aschummer
+ *          Main Author, Classmate, Classmate
  */
 public class LocationControl {
 

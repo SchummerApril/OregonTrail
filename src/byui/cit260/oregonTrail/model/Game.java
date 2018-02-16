@@ -3,8 +3,8 @@ package byui.cit260.oregonTrail.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
- * @author davidgw
+ *      Main Author, Classmate, Classmate
+ * @author davidgw, Marci, aschummer, Nastia
  */
 public class Game implements Serializable{
     

@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 /**
- *
- * @author Nastia
+ *      Main Author, Classmate, Classmate
+ * @author Nastia, Marci, aschummer
  */
 
 public class Inventory implements Serializable{
