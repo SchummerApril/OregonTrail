@@ -1,5 +1,5 @@
 package byui.cit260.oregonTrail.control;
-
+import byui.cit260.oregonTrail.model.Inventory;
 /**
  *      Main Author, Classmate, Classmate
  * @author Nastia, Marci, aschummer
