@@ -6,9 +6,8 @@ package byui.cit260.oregonTrail.control;
  */
 public class InventoryControl {
     
-    int accountInfo; 
-    
-    public float addToInventory(contents, int num, int itemCost){
+    //Player currentPlayer - represents an instance of the Player class
+    public float addToInventory(Item[] contents, int num, int itemCost, Player currentPlayer){
         if (itemCost < 0) {
             return -1;
         }
@@ -19,11 +18,11 @@ public class InventoryControl {
         int totalCost = num * itemCost;
         return totalCost;
         
-        if (totalCost < accountInfo){
-            playerInventory.addToInventory();
-            accountInfo - totalCost;
+        if (totalCost < currentPlayer.getAmountofMoney()){
+            currentPlayer.getInventory().addItem(Item, index); //!!! add whatever the player bought to their inventory
+            currentPlayer.setAmountofMoney(currentPlayer.getAmountofMoney() - totalCost); //modifies the amount of money the player has
         }
-        if (totalCost > accountInfo) {
+        if (totalCost > currentPlayer.getAmountofMoney()) {
             System.out.println("Insufficient funds. Please try again.")
             return -1;
         }

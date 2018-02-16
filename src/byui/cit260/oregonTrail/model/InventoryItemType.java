@@ -1,7 +1,4 @@
 package byui.cit260.oregonTrail.model;
-
-import java.io.Serializable;
-import java.util.Objects;
 /**
  * @author Nastia
  * contains the list of all items we have in the game

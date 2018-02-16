@@ -1,7 +1,6 @@
 package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 /**
  * //main class for inventory in the game
@@ -9,18 +8,18 @@ import java.util.Objects;
  */
 
 public class Inventory implements Serializable{
-    private ArrayList<Item> contents; //maybe change this to array not ArrayList
+    private Item[] contents = new Item[10]; //change number of items if needed
     private int quantityInStock; //TODO move to Item class
     private int requiredAmount; //TODO move to Item class
 
     public Inventory() {
     }
 
-    public ArrayList<Item> getContents() {
+    public Item[] getContents() {
         return contents;
     }
 
-    public void setContents(ArrayList<Item> contents) {
+    public void setContents(Item[] contents) {
         this.contents = contents;
     }
 
@@ -40,8 +39,8 @@ public class Inventory implements Serializable{
         this.requiredAmount = requiredAmount;
     }
     
-    public void addItem(Item itemToAdd){
-        this.contents.add(itemToAdd); // this stays here :)
+    public void addItem(Item item, int index){
+        this.contents[index] = item; // this stays here :)
     }
     
     
@@ -81,8 +80,10 @@ public class Inventory implements Serializable{
 
     @Override
     public String toString() {
-        return "Inventory{" + "items=" + contents + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
+        return "Inventory{" + "contents=" + contents + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
     }
+
+    
       
     
 }

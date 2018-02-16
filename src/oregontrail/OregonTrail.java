@@ -17,7 +17,7 @@ public class OregonTrail {
         Shop myShop = new Shop();
         System.out.println(myShop);
         
-        //print something for each class you created in this document
+        //!!!print something for each class you created in this document
     }
   
 }

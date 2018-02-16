@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * @author aschummer
+ * @author aschummer, marci, nastia
  */
 public class LocationControlTest {
     

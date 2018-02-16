@@ -10,10 +10,11 @@ import java.util.ArrayList;
  * @author aschummer
  */
 public class Player implements Serializable{
-    private String inventory;
-    private String playerCharacter;
+    private Inventory inventory;
+    private String playerCharacter; //profession
     private String familyMembers;
     private int bestTime;
+    private int amountofMoney;
     private ArrayList<Game> games = new ArrayList<Game>();
 
     public ArrayList<Game> getGames() {
@@ -23,15 +24,24 @@ public class Player implements Serializable{
     public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
-    
-    
-    public String getInventory() {
+
+    public int getAmountofMoney() {
+        return amountofMoney;
+    }
+
+    public void setAmountofMoney(int amountofMoney) {
+        this.amountofMoney = amountofMoney;
+    }
+
+    public Inventory getInventory() {
         return inventory;
     }
 
-    public void setInventory(String inventory) {
+    public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
+    
+   
 
     public String getPlayerCharacter() {
         return playerCharacter;
