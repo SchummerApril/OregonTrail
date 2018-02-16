@@ -23,7 +23,7 @@ public class InventoryControl {
             currentPlayer.setAmountofMoney(currentPlayer.getAmountofMoney() - totalCost); //modifies the amount of money the player has
         }
         if (totalCost > currentPlayer.getAmountofMoney()) {
-            System.out.println("Insufficient funds. Please try again.")
+            System.out.println("Insufficient funds. Please try again.");
             return -1;
         }
 

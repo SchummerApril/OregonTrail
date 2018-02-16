@@ -14,7 +14,7 @@ public class MapControl {
                 if (existing.getY() == p.getY() && existing.getX() == p.getX()) {
                     return true;
                 }
-            }
+             }
 
             return false;
         }

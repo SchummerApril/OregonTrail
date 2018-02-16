@@ -8,14 +8,18 @@ import java.util.Objects;
  * @author aschummer, Marci, Nastia
  */
 public class Location implements Serializable{
-        private ArrayList<Item> contents;
-        
-        public ArrayList<Item> getContents() {
-        return contents;
+     private String visitText;
+
+    public String getVisitText() {
+        return visitText;
     }
 
-    public void setContents(ArrayList<Item> contents) {
-        this.contents = contents;
+    public void setVisitText(String visitText) {
+        this.visitText = visitText;
+    }
+    
+    public void visit() {
+        System.out.println(visitText);
     }
     
 }

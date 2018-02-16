@@ -24,5 +24,3 @@ public class LocationControl {
         
         return totalMilesTraveled;
 }
-
-

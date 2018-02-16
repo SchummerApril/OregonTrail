@@ -8,53 +8,42 @@ import java.util.Objects;
  * @author aschummer, Marci, Nastia
  */
 public class Map implements Serializable{
-    private HashMap<Point, Location> contents = new HashMap<Point,Location>(); //List that maps(connects) points to location
+    private HashMap<Point, Location> map = new HashMap<Point,Location>(); //List that maps(connects) points to location
+    private Point playerLocation;
     
-    private String location;
-    private int rowCount; //Check for another way of doing this....LATER
-    private int columnCount;
+    private String location; //change this LATER...we may not need it.
     
-    Point playerLocation;
-
-    public HashMap<Point, Location> getContents() {
-        return contents;
+    //tells us which point the player is
+   public void setPlayerLocation(Point p) {
+        this.playerLocation = new Point(p.getX(), p.getY());
     }
 
-    public void setContents(HashMap<Point, Location> contents) {
-        this.contents = contents;
-    }
-
-    
-    public Point getPlayerLocation() {
+   //finds the player for the player
+   public Point getPlayerLocation() {
         return playerLocation;
     }
+   
+   //adds the locations and point together to be placed on the map, instead of column and row
+   public void addLocation(Location l, Point p) {
+        this.map.put(p, l);
+    }
+   //
+    public HashMap<Point, Location> getContents() {
+        return this.map;
+    }
 
-    public void setPlayerLocation(Point playerLocation) {
-        this.playerLocation = playerLocation;
+    //
+    public void setMap(HashMap<Point, Location> map) {
+        this.map = map;
     }
     
+    //see row 14 - may not need it
     public String getLocation() {
         return location;
     }
-
+    //see row 14 - may not need it
     public void setLocation(String location) {
         this.location = location;
-    }
-
-    public int getRowCount() {
-        return rowCount;
-    }
-
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
-    }
-
-    public int getColumnCount() {
-        return columnCount;
-    }
-
-    public void setColumnCount(int columnCount) {
-        this.columnCount = columnCount;
     }
 
     public Map() {
@@ -62,10 +51,10 @@ public class Map implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.location);
-        hash = 71 * hash + this.rowCount;
-        hash = 71 * hash + this.columnCount;
+        int hash = 5;
+        hash = 79 * hash + Objects.hashCode(this.map);
+        hash = 79 * hash + Objects.hashCode(this.playerLocation);
+        hash = 79 * hash + Objects.hashCode(this.location);
         return hash;
     }
 
@@ -81,23 +70,24 @@ public class Map implements Serializable{
             return false;
         }
         final Map other = (Map) obj;
-        if (this.rowCount != other.rowCount) {
-            return false;
-        }
-        if (this.columnCount != other.columnCount) {
-            return false;
-        }
         if (!Objects.equals(this.location, other.location)) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
+        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
             return false;
         }
         return true;
     }
 
+   
+
     @Override
     public String toString() {
-        return "Map{" + "location=" + location + ", rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "map=" + map + ", playerLocation=" + playerLocation + ", location=" + location + '}';
     }
- 
     
     
-}
+}//closing
