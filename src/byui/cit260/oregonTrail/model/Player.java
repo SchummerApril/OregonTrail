@@ -7,7 +7,8 @@ import java.util.ArrayList;
 
 /**
  *I am testing 
- * @author aschummer
+ *          //Main Author, Classmate, Classmate
+ * @author aschummer, Marci, Nastia
  */
 public class Player implements Serializable{
     private Inventory inventory;

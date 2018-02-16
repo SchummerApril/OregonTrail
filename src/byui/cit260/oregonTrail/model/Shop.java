@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
- * @author Nastia
+ *      Main Author, Classmate, Classmate
+ * @author Nastia, Marci, aschummer
  */
 public class Shop implements Serializable{
      private Inventory shopInventory;

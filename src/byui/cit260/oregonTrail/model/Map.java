@@ -1,17 +1,38 @@
 package byui.cit260.oregonTrail.model;
 
+import java.util.HashMap;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
- * @author aschummer
+ *          Main Author, Classmate, Classmate
+ * @author aschummer, Marci, Nastia
  */
 public class Map implements Serializable{
+    private HashMap<Point, Location> contents = new HashMap<Point,Location>(); //List that maps(connects) points to location
     
     private String location;
-    private int rowCount;
+    private int rowCount; //Check for another way of doing this....LATER
     private int columnCount;
+    
+    Point playerLocation;
 
+    public HashMap<Point, Location> getContents() {
+        return contents;
+    }
+
+    public void setContents(HashMap<Point, Location> contents) {
+        this.contents = contents;
+    }
+
+    
+    public Point getPlayerLocation() {
+        return playerLocation;
+    }
+
+    public void setPlayerLocation(Point playerLocation) {
+        this.playerLocation = playerLocation;
+    }
+    
     public String getLocation() {
         return location;
     }

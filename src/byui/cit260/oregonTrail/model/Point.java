@@ -2,8 +2,8 @@ package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
 /**
- *
- * @author aschummer
+ *          Main Author, Classmate, Classmate
+ * @author aschummer, Nastia, Marci
  */
 public class Point implements Serializable{
     private int x;

@@ -1,8 +1,8 @@
 package byui.cit260.oregonTrail.control;
 
 /**
- *
- * @author aschummer
+ *      Main Author, Classmate, Classmate
+ * @author aschummer, Marci, Nastia
  */
 public class ContainerControl {
    public static double calcVolumeOfContainer(double height, double diameter){
