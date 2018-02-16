@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 /**
- *
+ * //main class for inventory in the game
  * @author Nastia
  */
 

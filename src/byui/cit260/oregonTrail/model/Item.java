@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ * //? make a note of what this class does
  * @author Nastia
  * 
  */
