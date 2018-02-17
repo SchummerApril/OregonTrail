@@ -70,7 +70,7 @@ public abstract class Stop implements Serializable {
         return canRest;
     }
 
-    public void setCanRest(String canRest) {
+    public void setCanRest(boolean canRest) {
         this.canRest = canRest;
     }
 
