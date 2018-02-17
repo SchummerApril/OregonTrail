@@ -76,10 +76,7 @@ public class Map implements Serializable{
         if (!Objects.equals(this.map, other.map)) {
             return false;
         }
-        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.playerLocation, other.playerLocation);
     }
 
    

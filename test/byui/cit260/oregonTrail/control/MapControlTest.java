@@ -29,7 +29,7 @@ public class MapControlTest {
         fail("The test case is a prototype.");
         
     //Test 2, Invalid 1
-        System.out.println("isValidPoint");
+        System.out.println("is not ValidPoint");
         map = null;
         p = null;
         expResult = false;
@@ -39,7 +39,7 @@ public class MapControlTest {
         fail("The test case is a prototype.");
         
     //Test 3, Invalid 2
-        System.out.println("isValidPoint");
+        System.out.println("is not ValidPoint");
         map = null;
         p = null;
         expResult = false;
@@ -49,7 +49,7 @@ public class MapControlTest {
         fail("The test case is a prototype.");   
         
     //Test 4, Invalid 3
-        System.out.println("isValidPoint");
+        System.out.println("is not ValidPoint");
         map = null;
         p = null;
         expResult = false;
@@ -59,7 +59,7 @@ public class MapControlTest {
         fail("The test case is a prototype.");    
         
     //Test 5, Boundary 1
-        System.out.println("isValidPoint");
+        System.out.println("is Boundary 1 ValidPoint");
         map = null;
         p = null;
         expResult = false;
@@ -69,7 +69,7 @@ public class MapControlTest {
         fail("The test case is a prototype.");        
         
     //Test 6, Boundary 2
-        System.out.println("isValidPoint");
+        System.out.println("is boundary 2ValidPoint");
         map = null;
         p = null;
         expResult = false;
@@ -79,7 +79,7 @@ public class MapControlTest {
         fail("The test case is a prototype."); 
         
     //Test 7, Boundary 3
-        System.out.println("isValidPoint");
+        System.out.println("is boundary 3ValidPoint");
         map = null;
         p = null;
         expResult = false;

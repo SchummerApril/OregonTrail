@@ -1,5 +1,7 @@
 package byui.cit260.oregonTrail.control;
 
+import byui.cit260.oregonTrail.model.InventoryItemType;
+import byui.cit260.oregonTrail.model.Item;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +29,7 @@ public class InventoryControlTest {
         
         //test 1, valid test
         System.out.println("Here is what you added to your inventory");
-        string contents = InventoryItemType.contents;
+        Item[] contents = InventoryItemType.contents;
         int num = 1;
         int itemCost = 10;
         int totalCost = 10;
