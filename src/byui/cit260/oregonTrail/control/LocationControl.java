@@ -21,6 +21,5 @@ public class LocationControl {
         }
         
         int totalMilesTraveled = startingPosition + currentPosition;
-        
         return totalMilesTraveled;
-}
+
