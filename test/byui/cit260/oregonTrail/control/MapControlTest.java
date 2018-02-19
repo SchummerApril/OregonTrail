@@ -23,17 +23,17 @@ public class MapControlTest {
         
         //List of Locations
         Point startingPoint = new Point(0, 0);
-        ScenicStop startingStop = new ScenicStop();
-        Location startingLocation = new Location();
+        ScenicStop startingStop = new ScenicStop("");
+        Location startingLocation = new Location(startingStop);
         startingLocation.setVisitText("starting Location");
         
         Point endPoint = new Point(1, 25);
-        ScenicStop endStop = new ScenicStop();
+        ScenicStop endStop = new ScenicStop("");
         Location endLocation = new Location(endStop);
         endLocation.setVisitText("End Location");
         
         Point fortNoxPoint = new Point(1, 20);
-        ScenicStop fortNoxStop = new ScenicStop();
+        ScenicStop fortNoxStop = new ScenicStop("");
         Location fortNoxLocation = new Location(fortNoxStop);
         fortNoxLocation.setVisitText("Fort Nox Location");
         
@@ -105,12 +105,12 @@ public class MapControlTest {
         //List of Locations
         
         Point endPoint = new Point(1, 25);
-        ScenicStop endStop = new ScenicStop();
+        ScenicStop endStop = new ScenicStop("");
         Location endLocation = new Location(endStop);
         endLocation.setVisitText("End Location");
         
         Point fortNoxPoint = new Point(1, 20);
-        ScenicStop fortNoxStop = new ScenicStop();
+        ScenicStop fortNoxStop = new ScenicStop("");
         Location fortNoxLocation = new Location(fortNoxStop);
         fortNoxLocation.setVisitText("Fort Nox Location");
         
