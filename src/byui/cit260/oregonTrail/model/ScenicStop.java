@@ -6,26 +6,10 @@ import java.util.Objects;
  *          Main Author, Classmate, Classmate
  * @author Marci, aschummer, Nastia
  */
-public ScenicStop extends Stop {
-    private String aboutStop;
-    
-    public ScenicStop(String about){
-        this.aboutStop = about;
-    }
+import java.io.Serializable;
 
-    public String getAboutStop() {
-        return aboutStop;
-    }
-  
-    public void setAboutStop(Sting aboutStop) {
-        this.aboutStop = aboutStop;
-    }
-   
-    @override
-    public void visit() {
-        //ignore condition
-        System.out.pringln()this.aboutStop);
-    }
-    
- 
-}//closing tag
+public class ScenicStop extends Stop implements Serializable {
+    @Override public void visit() {
+        System.out.println("ScenicStop");
+    }    
+}

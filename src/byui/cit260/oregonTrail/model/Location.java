@@ -1,14 +1,19 @@
 package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Objects;
 /**
  *      Main Author, Classmate, Classmate
  * @author aschummer, Marci, Nastia
  */
-public class Location implements Serializable{
-     private String visitText;
+import java.io.Serializable;
+
+public class Location implements Serializable {
+    private String visitText;
+    private Stop stop;
+    
+    public Location(Stop stop) {
+        this.stop = stop;
+    }
 
     public String getVisitText() {
         return visitText;
@@ -18,8 +23,17 @@ public class Location implements Serializable{
         this.visitText = visitText;
     }
     
-    public void visit() {
-        System.out.println(visitText);
+    public Stop getStop() {
+        return stop;
+    }
+
+    public void setStop(Stop stop) {
+        this.stop = stop;
     }
     
+    public void visit() {
+        System.out.println("Visiting Location");
+        System.out.println(visitText);
+        this.stop.visit();
+    }
 }
