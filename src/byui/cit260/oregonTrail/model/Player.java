@@ -11,6 +11,15 @@ import java.util.ArrayList;
  * @author aschummer, Marci, Nastia
  */
 public class Player implements Serializable{
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     private Inventory inventory;
     private String playerCharacter; //profession
     private String familyMembers;
@@ -70,14 +79,21 @@ public class Player implements Serializable{
 
     public Player() {
     }
+    
+    public Player(String name) {
+        this.name = name;
+}
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.inventory);
-        hash = 67 * hash + Objects.hashCode(this.playerCharacter);
-        hash = 67 * hash + Objects.hashCode(this.familyMembers);
-        hash = 67 * hash + this.bestTime;
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.name);
+        hash = 29 * hash + Objects.hashCode(this.inventory);
+        hash = 29 * hash + Objects.hashCode(this.playerCharacter);
+        hash = 29 * hash + Objects.hashCode(this.familyMembers);
+        hash = 29 * hash + this.bestTime;
+        hash = 29 * hash + this.amountofMoney;
+        hash = 29 * hash + Objects.hashCode(this.games);
         return hash;
     }
 
@@ -96,7 +112,10 @@ public class Player implements Serializable{
         if (this.bestTime != other.bestTime) {
             return false;
         }
-        if (!Objects.equals(this.inventory, other.inventory)) {
+        if (this.amountofMoney != other.amountofMoney) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         if (!Objects.equals(this.playerCharacter, other.playerCharacter)) {
@@ -105,12 +124,19 @@ public class Player implements Serializable{
         if (!Objects.equals(this.familyMembers, other.familyMembers)) {
             return false;
         }
+        if (!Objects.equals(this.inventory, other.inventory)) {
+            return false;
+        }
+        if (!Objects.equals(this.games, other.games)) {
+            return false;
+        }
         return true;
+        
     }
 
     @Override
     public String toString() {
-        return "Player{" + "inventory=" + inventory + ", playerCharacter=" + playerCharacter + ", familyMembers=" + familyMembers + ", bestTime=" + bestTime + '}';
+        return "Player{" + "name=" + name + ", inventory=" + inventory + ", playerCharacter=" + playerCharacter + ", familyMembers=" + familyMembers + ", bestTime=" + bestTime + ", amountofMoney=" + amountofMoney + ", games=" + games + '}';
     }
     
     
