@@ -3,6 +3,7 @@ package byui.cit260.oregonTrail.model;
 import java.util.HashMap;
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *          Main Author, Classmate, Classmate
  * @author aschummer, Marci, Nastia

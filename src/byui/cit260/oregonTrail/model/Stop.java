@@ -63,6 +63,7 @@ public abstract class Stop implements Serializable {
     
     //Getters and Setters
     public void setCondition(Condition condition) {
+
         this.condition = condition;
     }
 
