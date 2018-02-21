@@ -33,7 +33,7 @@ public class LocationControlTest {
         int result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, 0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     
     //test 2, invalid number one       
         System.out.println("invalid1 TotalMilesTraveled");
@@ -43,7 +43,7 @@ public class LocationControlTest {
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     
     //test 3, invalid number two
         System.out.println("invalid2 TotalMilesTraveled");
@@ -53,7 +53,7 @@ public class LocationControlTest {
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     
     
      //test 4, invalid number three 
@@ -64,7 +64,7 @@ public class LocationControlTest {
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     
     
      //test 5, boundary number one      
@@ -75,7 +75,7 @@ public class LocationControlTest {
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     
      //test 6, boundary number two     
         System.out.println("boundary2 TotalMilesTraveled");
@@ -85,7 +85,7 @@ public class LocationControlTest {
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     
      //test 7, boundary number three      
         System.out.println("boundary3 TotalMilesTraveled");
@@ -95,7 +95,7 @@ public class LocationControlTest {
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
 
     }
 
