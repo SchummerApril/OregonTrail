@@ -3,9 +3,7 @@ package byui.cit260.oregonTrail.view;
 import byui.cit260.oregonTrail.control.PlayerControl;
 import byui.cit260.oregonTrail.model.Player;
 import java.io.IOException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -19,7 +17,8 @@ public class StartProgramView {
     //the function/method below is displaying what the end user sees.
     public static void displayStartProgramView(){ 
         Output.println("Welcome to the CIT260 Oregon Trail");
-        Output.println("Please enter your name before continuing.");
+        Output.println("Please enter your name before continuing.");     
+       //controls the loop for this menu
         boolean endOfView = false;
         do { 
         String[] inputs = getInputs();
