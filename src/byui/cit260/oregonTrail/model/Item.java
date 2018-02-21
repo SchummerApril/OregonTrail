@@ -10,10 +10,19 @@ import java.util.Objects;
  */
 public class Item implements Serializable{
     private InventoryItemType type; 
+    private int quantity; 
     private int weight;
     private int value; 
 
     public Item() {
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
    
 

@@ -8,17 +8,33 @@ import java.util.Objects;
  */
 
 public class Inventory implements Serializable{
-    private Item[] contents = new Item[10]; //change number of items if needed
+    private int inventorySize = 9; 
+    private Item[] contents; //
     private int quantityInStock; //TODO move to Item class
     private int requiredAmount; //TODO move to Item class
 
     public Inventory() {
+        this.contents = new Item[this.inventorySize]; 
+        // this needs to move to Control layer
+        for (InventoryItemType type : InventoryItemType.values()){
+            Item each = new Item(); 
+            this.contents[type.ordinal()] = each;
+        }
     }
 
     public Item[] getContents() {
         return contents;
     }
 
+    public int getInventorySize() {
+        return inventorySize;
+    }
+
+    public void setInventorySize(int inventorySize) {
+        this.inventorySize = inventorySize;
+    }
+
+    
     public void setContents(Item[] contents) {
         this.contents = contents;
     }

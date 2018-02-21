@@ -49,7 +49,8 @@ public class StartProgramView {
         Scanner scanner = new Scanner(System.in);
         String[] inputs = new String[1];
         Output.println("hello world output to user");
-        boolean
+     /*   boolean */
+     return inputs;
     }
 
     private static boolean doAction(String[] inputs) {
