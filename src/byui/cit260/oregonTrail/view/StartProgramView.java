@@ -22,8 +22,6 @@ public class StartProgramView {
         }
        while (endOfView != true);
     }
-       
-        
          /*endOfView = false
         DO
             inputs = getInputs()
@@ -32,7 +30,6 @@ public class StartProgramView {
             ENDIF
             endOfView = doAction(inputs)
         WHILE endOfView != true */
-        
         //use this all the time write it down.
         //promt them to enter their name display the banner page. Put what I want to happen first in the game. Welcome, enter name,
 //        System.out.println("Welcome to the Oregon Trail game");
@@ -41,17 +38,25 @@ public class StartProgramView {
   //      System.out.println("Please enter your name");
    //     Scanner inputs = new Scanner(System.in);
     //    System.out.println("How many people are in your party");
-            //get the input
-           
+            //get the inpu
             // if no inputs were entered or the input is a number 
 
-    private static String[] getInputs() {
+    private static boolean getInputs() {
         Scanner scanner = new Scanner(System.in);
         String[] inputs = new String[1];
-        Output.println("hello world output to user");
-        boolean
+        Output.println("Welcome to the CIT260 Oregon Trail");
+        boolean endOfView = false;
+        return false;
     }
-
+    private static boolean doAction() {
+        String[] inputs = new String[2];
+        Output.println("Please enter your name before continuing.");
+        boolean endOfView = false;
+        return false;
+    }
+    
+    
+    
     private static boolean doAction(String[] inputs) {
         System.out.println("doAction() getting action");
         System.out.println("\tinputs = " + inputs[0]);
