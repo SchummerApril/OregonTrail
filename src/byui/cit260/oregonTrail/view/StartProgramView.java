@@ -24,14 +24,22 @@ public class StartProgramView {
     }
  
 
-    private static String[] getInputs() {
+    private static boolean getInputs() {
         Scanner scanner = new Scanner(System.in);
         String[] inputs = new String[1];
-        Output.println("hello world output to user");
-     /*   boolean */
-     return inputs;
+        Output.println("Welcome to the CIT260 Oregon Trail");
+        boolean endOfView = false;
+        return false;
     }
-
+    private static boolean doAction() {
+        String[] inputs = new String[2];
+        Output.println("Please enter your name before continuing.");
+        boolean endOfView = false;
+        return false;
+    }
+    
+    
+    
     private static boolean doAction(String[] inputs) {
         System.out.println("doAction() getting action");
         System.out.println("\tinputs = " + inputs[0]);
