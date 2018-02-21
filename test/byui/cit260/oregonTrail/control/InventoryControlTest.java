@@ -1,15 +1,17 @@
-/*package byui.cit260.oregonTrail.control;
+package byui.cit260.oregonTrail.control;
 
 import byui.cit260.oregonTrail.model.InventoryItemType;
 import byui.cit260.oregonTrail.model.Item;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.;
 
 /**
  *
  * @author Nastia
+ * 
+ */
  
 public class InventoryControlTest {
     
@@ -69,7 +71,7 @@ public class InventoryControlTest {
         accountInfo = 0;
         result = InventoryControl.testaddToInventory(contents, num, itemCost);
         assertEquals(totalCost, result, -1);
-        /*fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
         
         //test 5, boundary number one
         System.out.println("Here is what you added to your inventory");
@@ -80,7 +82,7 @@ public class InventoryControlTest {
         accountInfo = 0;
         result = InventoryControl.testaddToInventory(contents, num, itemCost);
         assertEquals(totalCost, result, 0);
-        /*fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
         
         //test 6, boundary number two
         System.out.println("Here is what you added to your inventory");
@@ -91,7 +93,7 @@ public class InventoryControlTest {
         accountInfo = 0;
         result = InventoryControl.testaddToInventory(contents, num, itemCost);
         assertEquals(totalCost, result, 0);
-        /*fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
         
         //test 7, boundary number three
         System.out.println("Here is what you added to your inventory");
@@ -102,8 +104,7 @@ public class InventoryControlTest {
         accountInfo = 0;
         result = InventoryControl.testaddToInventory(contents, num, itemCost);
         assertEquals(totalCost, result, 0);
-        /*fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
     
 }
-*/

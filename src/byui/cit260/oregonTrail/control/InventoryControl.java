@@ -26,14 +26,14 @@ public class InventoryControl {
         int totalCost = num * itemCost;
         return totalCost;
         
-      /*  if (totalCost < currentPlayer.getAmountofMoney()){
+        if (totalCost < currentPlayer.getAmountofMoney()){
             currentPlayer.getInventory().addItem(Item, index); //!!! add whatever the player bought to their inventory
             currentPlayer.setAmountofMoney(currentPlayer.getAmountofMoney() - totalCost); //modifies the amount of money the player has
         }
         if (totalCost > currentPlayer.getAmountofMoney()) {
             System.out.println("Insufficient funds. Please try again.");
             return -1;
-        }*/
+        }
     }
 }
 
