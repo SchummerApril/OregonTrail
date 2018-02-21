@@ -1,6 +1,7 @@
 package oregontrail;
 
 import byui.cit260.oregonTrail.model.Shop;
+import byui.cit260.oregonTrail.view.StartProgramView;
 
 /**
  *
@@ -13,6 +14,7 @@ public class OregonTrail {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        StartProgramView.displayStartProgramView();
         
         Shop myShop = new Shop();
         System.out.println(myShop);
