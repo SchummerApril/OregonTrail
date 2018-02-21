@@ -62,7 +62,8 @@ public abstract class Stop implements Serializable {
     
     
     //Getters and Setters
-    public void setCondition(String condition) {
+    public void setCondition(Condition condition) {
+
         this.condition = condition;
     }
 
@@ -70,7 +71,7 @@ public abstract class Stop implements Serializable {
         return canRest;
     }
 
-    public void setCanRest(String canRest) {
+    public void setCanRest(boolean canRest) {
         this.canRest = canRest;
     }
 

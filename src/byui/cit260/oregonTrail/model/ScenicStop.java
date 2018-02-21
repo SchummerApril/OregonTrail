@@ -6,7 +6,7 @@ import java.util.Objects;
  *          Main Author, Classmate, Classmate
  * @author Marci, aschummer, Nastia
  */
-public ScenicStop extends Stop {
+public class ScenicStop extends Stop implements Serializable{
     private String aboutStop;
     
     public ScenicStop(String about){
@@ -17,14 +17,14 @@ public ScenicStop extends Stop {
         return aboutStop;
     }
   
-    public void setAboutStop(Sting aboutStop) {
+    public void setAboutStop(String aboutStop) {
         this.aboutStop = aboutStop;
     }
    
-    @override
+    @Override
     public void visit() {
         //ignore condition
-        System.out.pringln()this.aboutStop);
+        System.out.println(this.aboutStop);
     }
     
  

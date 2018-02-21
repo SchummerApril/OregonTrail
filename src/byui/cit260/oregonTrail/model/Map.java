@@ -3,6 +3,7 @@ package byui.cit260.oregonTrail.model;
 import java.util.HashMap;
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *          Main Author, Classmate, Classmate
  * @author aschummer, Marci, Nastia
@@ -76,10 +77,7 @@ public class Map implements Serializable{
         if (!Objects.equals(this.map, other.map)) {
             return false;
         }
-        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.playerLocation, other.playerLocation);
     }
 
    

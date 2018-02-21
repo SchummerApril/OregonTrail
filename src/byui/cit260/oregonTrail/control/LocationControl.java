@@ -8,7 +8,7 @@ package byui.cit260.oregonTrail.control;
 public class LocationControl {
 
     static int calcMilesTraveled(int startingPosition, int currentPosition) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     
 
   
@@ -23,3 +23,5 @@ public class LocationControl {
         int totalMilesTraveled = startingPosition + currentPosition;
         return totalMilesTraveled;
 
+    }
+}
