@@ -6,10 +6,9 @@ package byui.cit260.oregonTrail.model;
 
     public enum InventoryItemType {
      
-     bullets(2), clothing(5), ox (40), firewood(1), berries(5); // <-- all the items our inventory has
+     bullets(2), clothing(5), ox (40), firewood(1), berries(5), food(1), wagonWheel(10), wagonAxel(8), wagonTongue(7); // <-- all the items our inventory has
      
-     private int itemCost; 
-     private Item[] contents;
+     private final int itemCost; 
 
     private InventoryItemType(int itemCost) {
         this.itemCost = itemCost;

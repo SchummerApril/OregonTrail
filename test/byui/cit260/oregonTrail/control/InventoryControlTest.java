@@ -1,15 +1,18 @@
-/*package byui.cit260.oregonTrail.control;
+package byui.cit260.oregonTrail.control;
 
 import byui.cit260.oregonTrail.model.InventoryItemType;
 import byui.cit260.oregonTrail.model.Item;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import byui.cit260.oregonTrail.model.Inventory;
 import static org.junit.Assert.*;
 
 /**
  *
  * @author Nastia
+ * 
+ */
  
 public class InventoryControlTest {
     
@@ -26,84 +29,58 @@ public class InventoryControlTest {
 
     @Test
     public void testaddToInventory() {
-        
+        Inventory testInventory = new Inventory();
         //test 1, valid test
         System.out.println("Here is what you added to your inventory");
-        Item[] contents = InventoryItemType.contents;
+        Item[] contents = testInventory.getContents();
         int num = 1;
-        int itemCost = 10;
-        int totalCost = 10;
-        int accountInfo = 0;
-        int result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, 0);
-        fail("The test case is a prototype.");
+        InventoryItemType type = InventoryItemType.berries; 
+        InventoryControl.addToInventory(contents, type, num);
+        int actualResult = contents[type.ordinal()].getQuantity(); 
+        assertEquals(num, actualResult, 0);
         
         //test 2, invalid number one
         System.out.println("Here is what you added to your inventory");
-        contents = InventoryItemType.contents;
+        contents = testInventory.getContents();
         num = -1;
-        itemCost = 10;
-        totalCost = -1;
-        accountInfo = 0;
-        result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, -1);
-        fail("The test case is a prototype.");
+        InventoryControl.addToInventory(contents, type, num);
+        assertEquals(num, actualResult, -1);
         
         //test 3, invalid number two
         System.out.println("Here is what you added to your inventory");
-        contents = InventoryItemType.contents;
+        contents = testInventory.getContents();
         num = 11;
-        itemCost = 10;
-        totalCost = 110;
-        accountInfo = 0;
-        result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, -1);
-        fail("The test case is a prototype.");
+        InventoryControl.addToInventory(contents, type, num);
+        assertEquals(num, actualResult, -1);
+
         
         //test 4, invalid number three
         System.out.println("Here is what you added to your inventory");
-        contents = InventoryItemType.contents;
-        num = 10;
-        itemCost = 100;
-        totalCost = 1000;
-        accountInfo = 0;
-        result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, -1);
-        /*fail("The test case is a prototype.");
+        contents = testInventory.getContents();
+        num = 9;
+        InventoryControl.addToInventory(contents, type, num);
+        assertEquals(num, actualResult, -1);
         
         //test 5, boundary number one
         System.out.println("Here is what you added to your inventory");
-        contents = InventoryItemType.contents;
+        contents = testInventory.getContents();
         num = 1;
-        itemCost = 1;
-        totalCost = 1;
-        accountInfo = 0;
-        result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, 0);
-        /*fail("The test case is a prototype.");
+        InventoryControl.addToInventory(contents, type, num);
+        assertEquals(num, actualResult, 0);
         
         //test 6, boundary number two
         System.out.println("Here is what you added to your inventory");
-        contents = InventoryItemType.contents;
+        contents = testInventory.getContents();
         num = 10;
-        itemCost = 5;
-        totalCost = 50;
-        accountInfo = 0;
-        result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, 0);
-        /*fail("The test case is a prototype.");
+        InventoryControl.addToInventory(contents, type, num);
+        assertEquals(num, actualResult, 0);
         
         //test 7, boundary number three
         System.out.println("Here is what you added to your inventory");
-        contents = InventoryItemType.contents;
+        contents = testInventory.getContents();
         num = 1;
-        itemCost = 300;
-        totalCost = 300;
-        accountInfo = 0;
-        result = InventoryControl.testaddToInventory(contents, num, itemCost);
-        assertEquals(totalCost, result, 0);
-        /*fail("The test case is a prototype.");
+        InventoryControl.addToInventory(contents, type, num);
+        assertEquals(num, actualResult, 0);
     }
     
 }
-*/
