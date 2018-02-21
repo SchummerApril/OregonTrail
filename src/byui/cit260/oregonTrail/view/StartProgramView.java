@@ -22,28 +22,7 @@ public class StartProgramView {
         }
        while (endOfView != true);
     }
-       
-        
-         /*endOfView = false
-        DO
-            inputs = getInputs()
-            IF no inputs were entered OR the first input is Q
-                RETURN
-            ENDIF
-            endOfView = doAction(inputs)
-        WHILE endOfView != true */
-        
-        //use this all the time write it down.
-        //promt them to enter their name display the banner page. Put what I want to happen first in the game. Welcome, enter name,
-//        System.out.println("Welcome to the Oregon Trail game");
-        //no output expected.
-        
-  //      System.out.println("Please enter your name");
-   //     Scanner inputs = new Scanner(System.in);
-    //    System.out.println("How many people are in your party");
-            //get the input
-           
-            // if no inputs were entered or the input is a number 
+ 
 
     private static String[] getInputs() {
         Scanner scanner = new Scanner(System.in);
@@ -61,22 +40,6 @@ public class StartProgramView {
     }
            
                                 
-       /* getInputs(): String[] {
-inputs = new String array one element long
-Display a description of the view
-valid = false
-WHILE valid == false (no input value has been enterd)
-Display the prompt message
-Get the value entered from the keyboard
-Trim off leading and trailing blanks from the value
-IF length of the value < 1 then
-Display "You must enter a non-blank value”
-Continue (move to the top of the loop and repeat)
-ENDIF
-Assign the value to the fist position in the inputs array
-valid = true (ends the loop)
-ENDWHILE
-RETURN inputs*/
     
     
 }
