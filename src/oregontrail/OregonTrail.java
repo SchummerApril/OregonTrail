@@ -14,8 +14,7 @@ public class OregonTrail {
      */
     public static void main(String[] args) {
         StartProgramView.displayStartProgramView();
-        //StartProgramView startProgramView = new StartProgramView();
-        //startProgramView.display();
+        
     }
   
 }
