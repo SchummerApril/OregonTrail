@@ -7,8 +7,8 @@ import oregontrail.OregonTrail;
 
 
 /**
- *
- * @author aschummer
+ *          Main Author, Classmate, Classmate
+ * @author aschummer, Nastia, Marci
  */
 public class StartProgramView {
 
