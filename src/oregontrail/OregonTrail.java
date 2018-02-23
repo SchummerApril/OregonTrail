@@ -11,6 +11,7 @@ public class OregonTrail {
     //entry point to the rest of the game 
     private static Game currentGame = null; 
     private static Player player = null; 
+   
 
     public static Game getCurrentGame() {
         return currentGame;
