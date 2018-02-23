@@ -3,6 +3,7 @@ package byui.cit260.oregonTrail.view;
 import byui.cit260.oregonTrail.control.PlayerControl;
 import byui.cit260.oregonTrail.model.Player;
 import java.io.IOException;
+import oregontrail.OregonTrail;
 
 
 /**
@@ -17,6 +18,7 @@ public class StartProgramView {
     //the function/method below is displaying what the end user sees.
     public static void displayStartProgramView(){ 
         Output.println("Welcome to the CIT260 Oregon Trail");
+        //add the game description below
         Output.println("Please enter your name before continuing.");     
        //controls the loop for this menu
         boolean endOfView = false;
@@ -49,6 +51,8 @@ public class StartProgramView {
                 Output.println("Could not create the player, " + "Enter a different name.");
                 return false;
            }
+        //sets the player for the rest of the game
+        OregonTrail.setPlayer(player); 
         Output.println("Welcome to the game, " + player.getName() + " Have fun!");
         //makes the next menu display
         MainMenuView.displayMainMenuView();
