@@ -1,8 +1,8 @@
 package byui.cit260.oregonTrail.view;
 
 /**
- *
- * @author Nastia
+ *          Main Author, Classmate, Classmate
+ * @author Nastia, Marci, April
  */
 class StartExistingGameView {
     static void displayStartExistingGameView(){

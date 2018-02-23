@@ -3,8 +3,8 @@ package byui.cit260.oregonTrail.view;
 import java.io.IOException;
 
 /**
- *
- * @author Marci
+ *          Main Author, Classmate, Classmate
+ * @author Marci, Nastia, April
  */
 public class HelpMenuView {
 
