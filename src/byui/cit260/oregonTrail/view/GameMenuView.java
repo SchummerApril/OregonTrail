@@ -1,5 +1,4 @@
 package byui.cit260.oregonTrail.view;
-
 import java.io.IOException;
 
 

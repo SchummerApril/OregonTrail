@@ -4,7 +4,7 @@ import java.io.IOException;
 
 /**
  *   
- * @author Marci (week 7) and Nastia (week 8)
+ * @author Nastia 
  */
 public class HelpMenuView {
 
