@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Game implements Serializable{
     
     private String player;
-    private String map;
+    private Map map;
     private double totalTime;
 
     public String getPlayer() {
@@ -20,13 +20,15 @@ public class Game implements Serializable{
         this.player = player;
     }
 
-    public String getMap() {
+    public Map getMap() {
         return map;
     }
 
-    public void setMap(String map) {
+    public void setMap(Map map) {
         this.map = map;
     }
+
+  
 
     public double getTotalTime() {
         return totalTime;
@@ -41,10 +43,10 @@ public class Game implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.player);
-        hash = 89 * hash + Objects.hashCode(this.map);
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.totalTime) ^ (Double.doubleToLongBits(this.totalTime) >>> 32));
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.player);
+        hash = 67 * hash + Objects.hashCode(this.map);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.totalTime) ^ (Double.doubleToLongBits(this.totalTime) >>> 32));
         return hash;
     }
 
@@ -76,6 +78,12 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "player=" + player + ", map=" + map + ", totalTime=" + totalTime + '}';
     }
+
+   
+
+    
+
+    
     
     
 }

@@ -11,7 +11,12 @@ public abstract class GameControl {
 }
     //makes a new game (Player - calls on the class, player - calls on variable)
     public static Game createNewGame(Player player) {
-        return new Game();
+        Game newGame = new Game();
+        //every time we set a game we have a map from MapControl
+        newGame.setMap(MapControl.createNewMap());
+        return newGame;
     }
+    
+    
 }
 

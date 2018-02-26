@@ -56,10 +56,10 @@ public class MainMenuView {
         }
 
     private static void startNewGame() {
-         Output.println("Create New Game");
-         GameMenuView.displayGameMenuView();
+         Output.println("Create New Game");        
          Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
          OregonTrail.setCurrentGame(newGame);
+         GameMenuView.displayGameMenuView();
     }
 
     private static void restartGame() {

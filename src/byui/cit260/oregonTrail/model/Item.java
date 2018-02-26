@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * //? make a note of what this class does
+ * //contains logic
  * @author Nastia
  * 
  */
@@ -15,6 +15,10 @@ public class Item implements Serializable{
     private int value; 
 
     public Item() {
+    }
+    //creates an instance of the Inventory
+    public Item(InventoryItemType type) {
+     this.value = type.itemCost;
     }
 
     public int getQuantity() {

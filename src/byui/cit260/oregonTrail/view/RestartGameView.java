@@ -2,16 +2,19 @@ package byui.cit260.oregonTrail.view;
 
 import java.io.IOException;
 
-
 /**
  *
- * @author Nastia and the gang
+ * @author aschummer
  */
-public class GameMenuView {
 
-    static void displayGameMenuView() {
-  
-        Output.println(" S - move the player \n D - calculate the max weight of the container  \n C - add item to inventory \n E - exit");
+//April, I commented this section out so that it doesn't show errors
+//When  you're ready to work here, remove comments and change the switch statements! :)
+
+//imagine what the Restart Game screen does and write it out, change the words, switch statement
+public class RestartGameView {
+    /* public static void displayMainMenuView(){
+        //!!!!!!!!change the printed lines, different option for the player
+        Output.println(" R - Resume \n S - Restart Game \n E - End Game");
         boolean endOfView = false;
         
         do { 
@@ -22,8 +25,7 @@ public class GameMenuView {
         }
        while (endOfView != true);
     }
-    
-       private static String[] getInputs() {
+        private static String[] getInputs() {
         //1 is the length of the array, holds one string
         String[] inputs = new String[1];
         //try/catch wraps the input to catch a possible error
@@ -31,42 +33,28 @@ public class GameMenuView {
             inputs[0] = Input.getString("Please select one of the following options: ");
         } catch (IOException ex) {}
         return inputs;
-       }
+    
+    }
+        
         private static boolean doAction(String[] inputs) {
             //convert array of strings into a single character
             //convert all characters to upper case
             char choice = Character.toUpperCase(inputs[0].charAt(0));
-            
+            //!!!!!!change the switch options
             switch (choice) {
-                case 'S': 
-                    movePlayer();
+                case 'N': 
+                    startNewGame(); //!!!! this is a string
                     break;
-                case 'D':
-                    calcVolumeOfContainer();
+                case 'R':
+                    restartGame();
                     break;
-                case 'C':
-                    addToInventory();
+                case 'H':
+                    getHelp();
                     break;
                 case 'E':
                     return true; 
                 default: Output.println("Invalid menu item");    
             }
             return false;
-    }
-
-    private static void movePlayer() {
-        MovePlayerView.display();
-    }
-
-    private static void calcVolumeOfContainer() {
-        ContainerVolumeView.display();
-    }
-
-    private static void addToInventory() {
-        AddInventoryView.display();
-    }
-    
-    
+        }*/
 }
-    
-

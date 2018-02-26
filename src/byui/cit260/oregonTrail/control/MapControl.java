@@ -1,6 +1,9 @@
 package byui.cit260.oregonTrail.control;
+import byui.cit260.oregonTrail.model.Location;
 import byui.cit260.oregonTrail.model.Map;
 import byui.cit260.oregonTrail.model.Point;
+import byui.cit260.oregonTrail.model.ScenicStop;
+import byui.cit260.oregonTrail.model.Stop;
 
 /**
  *          Main Author, Classmate, Classmate
@@ -49,14 +52,18 @@ public class MapControl {
             // return result
             return distance;
         }
-
-
-        /*Location of Stop //Reference how to do it
-        *public static void visitCurrentLocation(Map map) {
-        *    Point currentPoint = map.getPlayerLocation();
-        *   Location currentLocation = map.getContents().get(currentPoint);
-        *    currentLocation.visit();
-        }
-           */
-
+        
+        public static Map createNewMap(){
+            Map newMap  = new Map();
+            Location startingLocation = new Location(new ScenicStop ("Starting Point"));
+            Point startingPoint = new Point(1, 1);
+            newMap.addLocation(startingLocation, startingPoint);
+            
+            Location endingLocation = new Location(new ScenicStop ("Ending Point"));
+            Point endingPoint = new Point(1, 25);
+            newMap.addLocation(endingLocation, endingPoint);
+            
+            return newMap;
+            
+    }
 }

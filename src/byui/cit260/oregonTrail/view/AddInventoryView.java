@@ -2,16 +2,14 @@ package byui.cit260.oregonTrail.view;
 
 import java.io.IOException;
 
-
 /**
  *
- * @author Nastia and the gang
+ * @author Nastia
  */
-public class GameMenuView {
-
-    static void displayGameMenuView() {
-  
-        Output.println(" S - move the player \n D - calculate the max weight of the container  \n C - add item to inventory \n E - exit");
+public class AddInventoryView {
+    static void display(){
+        
+        Output.println(" B- buy item \n E - exit");
         boolean endOfView = false;
         
         do { 
@@ -21,9 +19,10 @@ public class GameMenuView {
          endOfView = doAction(inputs);
         }
        while (endOfView != true);
+    
     }
     
-       private static String[] getInputs() {
+    private static String[] getInputs() {
         //1 is the length of the array, holds one string
         String[] inputs = new String[1];
         //try/catch wraps the input to catch a possible error
@@ -32,41 +31,25 @@ public class GameMenuView {
         } catch (IOException ex) {}
         return inputs;
        }
-        private static boolean doAction(String[] inputs) {
+    
+     private static boolean doAction(String[] inputs) {
             //convert array of strings into a single character
             //convert all characters to upper case
             char choice = Character.toUpperCase(inputs[0].charAt(0));
             
             switch (choice) {
-                case 'S': 
-                    movePlayer();
+                case 'B': 
+                    buyItem();
                     break;
-                case 'D':
-                    calcVolumeOfContainer();
-                    break;
-                case 'C':
-                    addToInventory();
-                    break;
-                case 'E':
+                case 'E':                    
                     return true; 
                 default: Output.println("Invalid menu item");    
             }
             return false;
-    }
+     }
 
-    private static void movePlayer() {
-        MovePlayerView.display();
-    }
-
-    private static void calcVolumeOfContainer() {
-        ContainerVolumeView.display();
-    }
-
-    private static void addToInventory() {
+    private static void buyItem() {
+        Output.println("Thank you for shopping with us.");
         AddInventoryView.display();
     }
-    
-    
 }
-    
-
