@@ -17,12 +17,17 @@ public class StartProgramView {
     
     //the function/method below is displaying what the end user sees.
     public static void displayStartProgramView(){ 
-        Output.println("Welcome to the CIT260 Oregon Trail");
-        //add the game description below
+            Output.println("Welcome to the CIT260 Oregon Trail");
+            Output.println("******************************************************");
+                Output.println("\n This game will allow you to travel the oregon ");
+                Output.println("trail making stops at cities, beautiful views, and cross rivers.");
+                Output.println("You will learn about the hardships that the settlers had to over ");
+                Output.println("come as they moved from Independence to Oregon City");
+            Output.println("\n******************************************************");
         Output.println("Please enter your name before continuing.");     
        //controls the loop for this menu
         boolean endOfView = false;
-        do { 
+        do {  
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

@@ -9,8 +9,8 @@ import oregontrail.OregonTrail;
 import java.util.Map.Entry;
 
 /**
- *
- * @author Marci
+ *           Main Author, Classmate, Classmate
+ * @author Marci, aschummer, Nastia
  */
 public class MovePlayerView {
     static void display(){
@@ -50,14 +50,17 @@ public class MovePlayerView {
                 case 'T':
                     movePlayer();
                     break;
-                case 'E':                    
+                case 'E':    
+                    exitMenu();
                     return true; 
+                    
                 default: Output.println("Invalid menu item");    
             }
             return false;
      }
 
     private static void listLocations() {
+        //Choose Locations
         HashMap<Point, Location> map = OregonTrail.getCurrentGame().getMap().getContents();
         for (Entry <Point, Location> each : map.entrySet()) {
             Point p = each.getKey();
@@ -69,5 +72,10 @@ public class MovePlayerView {
     private static void movePlayer() {
         //checks for the validity of the points
         HashMap<Point, Location> Map;
+    }
+    
+    private static void exitMenu() {
+        //Returns to previous screen
+    
     }
 }

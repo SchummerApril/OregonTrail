@@ -21,6 +21,10 @@ public class RiverCrossingStop  extends Stop implements Serializable {
         this.depth = 10;
         this.ferryCost = 100;
     }
+
+    public RiverCrossingStop(String little_Blue_River) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     //Getters & Setters
