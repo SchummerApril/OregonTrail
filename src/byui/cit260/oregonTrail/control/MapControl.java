@@ -123,7 +123,7 @@ public class MapControl {
             newMap.addLocation(fortWallaWallaLocation, fortWallaWallaPoint);
             
             //14 Location on the map
-            Location bearRiverLocation = new Location(new RiverCrossing ("Bear River"));
+            Location bearRiverLocation = new Location(new RiverCrossingStop ("Bear River"));
             Point bearRiverPoint = new Point(1, 14);
             newMap.addLocation(bearRiverLocation, bearRiverPoint);
             
