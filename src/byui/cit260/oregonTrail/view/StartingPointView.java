@@ -9,9 +9,9 @@ public class StartingPointView {
     
         //this is what is displayed on the screen for the player
      static void display(){
-         Output.println(" Welcome to the begining of the Oregon...."
-                 + ""
-                 + "");
+         Output.println(" Welcome to the begining of the Oregon located in Independence Missouri."
+                 + "We see that you are getting ready to travel and settle West in Oregon City."
+                 + "Please stay here and prepare for the trail.");
          
         Output.println(" S - Shop \n  T - Trade \n  R - Rest \n C - Start the Trail \n E - Exit to Game Menu");
         boolean endOfView = false;
