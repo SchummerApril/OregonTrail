@@ -60,8 +60,9 @@ public class MapControl {
             //Start of Game Location - good example of a City Stop
             Stop cityStopOne = new CityStop();
             //different actos for each stop here
+            //names location
             Location startingLocation = new Location("Starting Point", cityStopOne);
-            //assigns point to lcoations
+            //assigns point to locations
             Point startingPoint = new Point(1, 1);
             newMap.addLocation(startingLocation, startingPoint);
             
@@ -85,11 +86,10 @@ public class MapControl {
             //5 Location on the map
             //Gives it the type of Stop
             Stop cityStopTwo = new CityStop();
-            
             //different actors for each stop here
-            
             //Names the Location
             Location fortKearneyLocation = new Location("Fort Kearney", cityStopTwo);
+            //assigns point to locations
             Point fortKearneyPoint = new Point(1, 5);
             newMap.addLocation(fortKearneyLocation, fortKearneyPoint);
             
@@ -109,7 +109,12 @@ public class MapControl {
             newMap.addLocation(chimneyRockLocation, chimneyRockPoint);
             
             //9 Location on the map
-            Location fortCasperLocation = new Location(new CityStop ("Fort Caspar"));
+            //Gives it the type of Stop
+            Stop cityStopThree = new CityStop();
+            //different actors for each stop here
+            //Names the Location
+            Location fortCasperLocation = new Location("Fort Caspar", new CityStopthree);
+            //assigns point to locations
             Point fortCasperPoint = new Point(1, 9);
             newMap.addLocation(fortCasperLocation, fortCasperPoint);
             
