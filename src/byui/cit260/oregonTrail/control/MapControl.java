@@ -58,7 +58,7 @@ public class MapControl {
         public static Map createNewMap(){
             Map newMap  = new Map();
             //Start of Game Location
-            Location startingLocation = new Location(new ScenicStop ("Starting Point"));
+            Location startingLocation = new Location(new CityStop ("Starting Point"));
             Point startingPoint = new Point(1, 1);
             newMap.addLocation(startingLocation, startingPoint);
             

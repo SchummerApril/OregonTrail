@@ -13,19 +13,14 @@ public class RiverCrossingStop  extends Stop implements Serializable {
     //Class Instance Variables
     private int depth;
     private int ferryCost;
-    private String amountAvailable;
+    private int amountAvailable; //should this be a string
     
     
     //Constructor
     public RiverCrossingStop() {
         this.depth = 10;
         this.ferryCost = 100;
-    }
-
-    public RiverCrossingStop(String little_Blue_River) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    }   
     
     //Getters & Setters
     public int getDepth() {
@@ -44,11 +39,11 @@ public class RiverCrossingStop  extends Stop implements Serializable {
         this.ferryCost = ferryCost;
     }
 
-    public String getAmountAvailable() {
+    public int getAmountAvailable() {
         return amountAvailable;
     }
 
-    public void setAmountAvailable(String amountAvailable) {
+    public void setAmountAvailable(int amountAvailable) {
         this.amountAvailable = amountAvailable;
     }
     

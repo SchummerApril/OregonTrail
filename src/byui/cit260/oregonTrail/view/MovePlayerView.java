@@ -13,7 +13,7 @@ import java.util.Map.Entry;
  * @author Marci, aschummer, Nastia
  */
 public class MovePlayerView {
-    static void displayMovePlayerView(){
+    static void display(){
         
         Output.println(" R - list locations \n  T - move the player \n E - exit");
         boolean endOfView = false;
@@ -60,12 +60,16 @@ public class MovePlayerView {
      }
 
     private static void listLocations() {
-        //Choose Locations
+        //display locations you are able to choose Locations
+        
+        //checks if location is real/correct
         HashMap<Point, Location> map = OregonTrail.getCurrentGame().getMap().getContents();
         for (Entry <Point, Location> each : map.entrySet()) {
             Point p = each.getKey();
             Location l =each.getValue();
             Output.println(p.getX() + ", " + p.getY());
+            
+            //error message to move player
         }
     }
 

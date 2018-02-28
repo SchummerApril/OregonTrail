@@ -12,7 +12,8 @@ import java.util.Objects;
 public class CityStop implements Serializable {
     
     //Class Instance Variables
-    private String excute;
+    private String execute;//void or boolean
+ //connect CityStop and Shop together
     private int trade;
     private int amountAvailable;
     
@@ -22,6 +23,7 @@ public class CityStop implements Serializable {
     //Constructor
     public CityStop() {
     }
+
     
     //Getters and Setters for class attribute
     public Stop getStop() {
@@ -34,12 +36,12 @@ public class CityStop implements Serializable {
     
     
     //Getters and Setters
-    public String getExcute() {
-        return excute;
+    public String getExecute() {
+        return execute;
     }
 
-    public void setExcute(String excute) {
-        this.excute = excute;
+    public void setExecute(String excute) {
+        this.execute = execute;
     }
 
     public int getTrade() {
@@ -62,7 +64,7 @@ public class CityStop implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.excute);
+        hash = 29 * hash + Objects.hashCode(this.execute);
         hash = 29 * hash + this.trade;
         hash = 29 * hash + this.amountAvailable;
         return hash;
@@ -86,7 +88,7 @@ public class CityStop implements Serializable {
         if (this.amountAvailable != other.amountAvailable) {
             return false;
         }
-        if (!Objects.equals(this.excute, other.excute)) {
+        if (!Objects.equals(this.execute, other.execute)) {
             return false;
         }
         return true;
@@ -94,7 +96,7 @@ public class CityStop implements Serializable {
     //toString
     @Override
     public String toString() {
-        return "CityStop{" + "excute=" + excute + ", trade=" + trade + ", amountAvailable=" + amountAvailable + '}';
+        return "CityStop{" + "excute=" + execute + ", trade=" + trade + ", amountAvailable=" + amountAvailable + '}';
     }
     
     
