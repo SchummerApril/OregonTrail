@@ -5,7 +5,7 @@ import java.io.Serializable;
  *      Main Author, Classmate, Classmate
  * @author Nastia, aschummer, Marci
  */
-public class BuffaloStampede implements Serializable{
+public class BuffaloStampede extends Condition implements Serializable{
     private boolean complete; 
 
     public BuffaloStampede() {

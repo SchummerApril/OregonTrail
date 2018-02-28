@@ -5,7 +5,7 @@ import java.io.Serializable;
  *          Main Author, Classmate, Classmate
  * @author Nastia, aschummer, Marci
  */
-public class BearAttack implements Serializable{
+public class BearAttack extends Condition implements Serializable{
     private boolean complete; 
 
     public BearAttack() {

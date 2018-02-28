@@ -9,7 +9,7 @@ import java.util.Objects;
  * @author Marci, aschummer, Nastia
  */
 //Implement Serializable in order for import to work
-public class CityStop implements Serializable {
+public class CityStop extends Stop implements Serializable {
     
     //Class Instance Variables
     private String execute;//void or boolean

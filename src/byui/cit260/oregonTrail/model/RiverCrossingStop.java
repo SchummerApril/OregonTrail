@@ -85,10 +85,10 @@ public class RiverCrossingStop  extends Stop implements Serializable {
         return "RiverCrossingStop{" + "depth=" + depth + ", ferryCost=" + ferryCost + ", amountAvailable=" + amountAvailable + '}';
     }
 
-    @Override
+    /*@Override
     public void visit() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
     
     
     

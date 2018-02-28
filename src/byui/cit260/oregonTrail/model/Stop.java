@@ -17,53 +17,21 @@ public abstract class Stop implements Serializable {
     private boolean canRest;
     private int travelTime;
 
-    public abstract void visit();
-    
-    //class attribute variable
-        private ScenicStop scenicStop;
-        private RiverCrossingStop riverCrossingStop;
-        private Condition conditions;
-     
+   // public abstract void visit();
+
         
     public Stop() {
     }
     
-    
     //Constructor
     public Condition getCondition() {
+        
         return condition;
     }
     
-    //Getters and Setters for Class Attributes
-
-    public ScenicStop getScenicStop() {
-        return scenicStop;
-    }
-
-    public void setScenicStop(ScenicStop scenicStop) {
-        this.scenicStop = scenicStop;
-    }
-
-    public RiverCrossingStop getRiverCrossingStop() {
-        return riverCrossingStop;
-    }
-
-    public void setRiverCrossingStop(RiverCrossingStop riverCrossingStop) {
-        this.riverCrossingStop = riverCrossingStop;
-    }
-
-    public Condition getConditions() {
-        return conditions;
-    }
-
-    public void setConditions(Condition conditions) {
-        this.conditions = conditions;
-    }
-    
-    
     //Getters and Setters
     public void setCondition(Condition condition) {
-
+        
         this.condition = condition;
     }
 
