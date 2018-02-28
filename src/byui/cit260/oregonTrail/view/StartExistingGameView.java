@@ -1,6 +1,8 @@
 package byui.cit260.oregonTrail.view;
 
+
 import java.io.IOException;
+import oregontrail.OregonTrail;
 
 /**
  *     
@@ -8,7 +10,7 @@ import java.io.IOException;
  */
 
 class StartExistingGameView {
-    static void displayStartExistingGameView(){
+    static void displayStartGameView(){
         
         Output.println(" B - Banker "
                 + "\n E - Explorer "
@@ -25,7 +27,7 @@ class StartExistingGameView {
         }
        while (endOfView != true);
     }
-    
+
     private static String[] getInputs() {
         //1 is the length of the array, holds one string
         String[] inputs = new String[1];
@@ -34,8 +36,8 @@ class StartExistingGameView {
             inputs[0] = Input.getString("Please select one of the following options: ");
         } catch (IOException ex) {}
         return inputs;
-    
     }
+
     private static boolean doAction(String[] inputs) {
             //convert array of strings into a single character
             //convert all characters to upper case
@@ -67,8 +69,6 @@ class StartExistingGameView {
         
     private static void NameFamilyView() {
       NameFamilyView.display();
+        }     
     }
-    
-    
-        
-    }
+

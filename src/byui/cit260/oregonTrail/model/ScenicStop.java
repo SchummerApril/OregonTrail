@@ -9,6 +9,8 @@ import java.util.Objects;
 public class ScenicStop extends Stop implements Serializable{
     private String aboutStop;
     
+    //we have a condition each one has a different one, none or one
+    
     public ScenicStop(String about){
         this.aboutStop = about;
     }
@@ -21,11 +23,11 @@ public class ScenicStop extends Stop implements Serializable{
         this.aboutStop = aboutStop;
     }
    
-    @Override
+  /*  @Override
     public void visit() {
         //ignore condition
         System.out.println(this.aboutStop);
-    }
+    }*/
     
  
 }//closing tag

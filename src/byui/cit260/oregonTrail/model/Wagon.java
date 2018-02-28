@@ -12,7 +12,8 @@ public class Wagon implements Serializable{
    private int height;
    private int length;
    private int width;
-   
+   private int maxCarryWeight;
+   private int weight;
 
     public String getContianers() {
         return containers;

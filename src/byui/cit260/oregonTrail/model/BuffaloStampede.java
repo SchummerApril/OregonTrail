@@ -5,7 +5,7 @@ import java.io.Serializable;
  *    
  * @author Nastia
  */
-public class BuffaloStampede implements Serializable{
+public class BuffaloStampede extends Condition implements Serializable{
     private boolean complete; 
 
     public BuffaloStampede() {

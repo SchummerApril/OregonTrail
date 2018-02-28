@@ -10,8 +10,19 @@ import java.io.Serializable;
 public class Location implements Serializable {
     private String visitText;
     private Stop stop;
+    public String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     
-    public Location(Stop stop) {
+    
+    public Location(String name, Stop stop) {
+        this.name = name;
         this.stop = stop;
     }
 
@@ -31,9 +42,9 @@ public class Location implements Serializable {
         this.stop = stop;
     }
     
-    public void visit() {
+   /* public void visit() {
         System.out.println("Visiting Location");
         System.out.println(visitText);
         this.stop.visit();
-    }
+    }*/
 }
