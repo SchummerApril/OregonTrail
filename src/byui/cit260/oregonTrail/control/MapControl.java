@@ -57,18 +57,23 @@ public class MapControl {
         
         public static Map createNewMap(){
             Map newMap  = new Map();
-            //Start of Game Location
-            Location startingLocation = new Location(new CityStop ("Starting Point"));
+            //Start of Game Location - good example of a City Stop
+            Stop cityStopOne = new CityStop();
+            //different actos for each stop here
+            Location startingLocation = new Location("Starting Point", cityStopOne);
+            //assigns point to lcoations
             Point startingPoint = new Point(1, 1);
             newMap.addLocation(startingLocation, startingPoint);
             
-            //2 Location on the map
-            Location kansasRiverCrossingLocation = new Location(new RiverCrossingStop ("Kansas River Crossing"));
+            //2 Location on the map - good example of a riverCrossing
+            Stop riverCrossingOne = new RiverCrossingStop();
+            Location kansasRiverCrossingLocation = new Location("Kansas River Crossing", riverCrossingOne);
+            
             Point kansasRiverCrossingPoint = new Point(1, 2);
             newMap.addLocation(kansasRiverCrossingLocation, kansasRiverCrossingPoint);
             
-            //3 Location on the map
-            Location minorParkLocation = new Location(new ScenicStop ("Minor Park"));
+            //3 Location on the map - Good Example of ScenicStop
+            Location minorParkLocation = new Location("Minor Park", new ScenicStop ("add description here"));
             Point minorParkPoint = new Point(1, 3);
             newMap.addLocation(minorParkLocation, minorParkPoint);
             
@@ -78,12 +83,18 @@ public class MapControl {
             newMap.addLocation(littleBlueRiverLocation, littleBlueRiverPoint);
             
             //5 Location on the map
-            Location fortKearneyLocation = new Location(new CityStop ("Fort Kearney"));
+            //Gives it the type of Stop
+            Stop cityStopTwo = new CityStop();
+            
+            //different actors for each stop here
+            
+            //Names the Location
+            Location fortKearneyLocation = new Location("Fort Kearney", cityStopTwo);
             Point fortKearneyPoint = new Point(1, 5);
             newMap.addLocation(fortKearneyLocation, fortKearneyPoint);
             
             //6 Location on the map
-            Location grandIslandLocation = new Location(new ScenicStop ("Grand Island"));
+            Location grandIslandLocation = new Location("Grand Island", new ScenicStop ("add description here"));
             Point grandIslandPoint = new Point(1, 6);
             newMap.addLocation(grandIslandLocation, grandIslandPoint);
             

@@ -6,10 +6,11 @@ import java.io.Serializable;
  * @author Nastia, Marci, aschummer
  */
 public class Weather extends Condition {
-    @Override
+    
+   /* @Override
     public void execute() {
     System.out.println("Weather condition");
-    }
+    }*/
 
     public Weather() {
     }
