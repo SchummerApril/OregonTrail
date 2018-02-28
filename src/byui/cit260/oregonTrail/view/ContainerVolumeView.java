@@ -1,4 +1,5 @@
 package byui.cit260.oregonTrail.view;
+import byui.cit260.oregonTrail.control.ContainerControl;
 import java.io.IOException;
 
 /**
@@ -48,8 +49,12 @@ public class ContainerVolumeView {
 
     private static void enterDimensions() {
         try { double height = (double) Input.getInt("Enter height...");
-        double diameter = (double) Input.getInt("Enter diameter...");}
+        double diameter = (double) Input.getInt("Enter diameter...");
+        double result = ContainerControl.calcVolumeOfContainer(height, diameter);
+        Output.println("the result is " + result);
+        }
         catch (IOException ex) {}
+        
     }
      
 }

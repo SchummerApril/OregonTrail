@@ -12,7 +12,7 @@ import oregontrail.OregonTrail;
 public class MainMenuView {
     //starts a second view
     public static void displayMainMenuView(){
-        Output.println(" N - start new game \n R - Restart existing game \n H - Get help on how to play the game \n E - exit");
+        Output.println(" N - Start new game \n R - Restart existing game \n H - Get help on how to play the game \n E - exit");
         boolean endOfView = false;
         
         do { 
@@ -59,12 +59,16 @@ public class MainMenuView {
          Output.println("Create New Game");        
          Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
          OregonTrail.setCurrentGame(newGame);
-         GameMenuView.displayGameMenuView();
+         GameMenuView.display();
     }
 
     private static void restartGame() {
         Output.println("Loading...");
-        StartExistingGameView.displayStartExistingGameView();
+       // RestartGameView.display();
+       //create new game change to load game from file...  ln 69
+       Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
+         OregonTrail.setCurrentGame(newGame);
+         GameMenuView.display();
     }
 
     private static void getHelp() {

@@ -8,7 +8,7 @@ import java.io.IOException;
  */
 public class GameMenuView {
 
-    static void displayGameMenuView() {
+    static void display() {
   
         Output.println(" S - move the player \n D - calculate the max weight of the container  \n C - add item to inventory \n E - exit");
         boolean endOfView = false;
