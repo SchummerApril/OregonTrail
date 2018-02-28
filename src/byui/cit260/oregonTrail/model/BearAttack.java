@@ -2,8 +2,8 @@ package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
 /**
- *          Main Author, Classmate, Classmate
- * @author Nastia, aschummer, Marci
+ *         
+ * @author Nastia
  */
 public class BearAttack implements Serializable{
     private boolean complete; 
