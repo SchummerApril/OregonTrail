@@ -1,29 +1,16 @@
 package byui.cit260.oregonTrail.view;
 
+import java.io.IOException;
+
 /**
- *          Main Author, Classmate, Classmate
- * @author Nastia, Marci, April
+ *     
+ * @author Nastia
  */
-
-
-//list of things a user can choose from goes here ex. Output.println("")
-        
-        //Who would you like to be Banker(1,000), Farmer(500), Missionary(300)
-                //switch b - Banker, F - Farmer, M - Missionary
-        
-        //Name your Family
-                //inputs
-                    //1. name...
-                    //2. name...
-                    //3. name...
-                    //4. name...
-                    
-        //Coninue to StartingPointView to start the trail/game
 
 class StartExistingGameView {
     static void displayStartExistingGameView(){
         
-        Output.println(" N - start new game \n R - Restart existing game \n H - Get help on how to play the game \n E - exit");
+        Output.println(" B - Banker \n E - Explorer F - Fur Trader \n C - Carpenter \n Q - Quit");
         boolean endOfView = false;
         
         do { 
@@ -51,25 +38,27 @@ class StartExistingGameView {
             char choice = Character.toUpperCase(inputs[0].charAt(0));
             
             switch (choice) {
-                case 'N': 
-                    startNewGame();
-                    break;
-                case 'R':
-                    restartGame();
-                    break;
-                case 'H':
-                    getHelp();
+                case 'B': 
+                    Output.println("Congradulations! You are a Banker! Continue to name your travel buddies!");
                     break;
                 case 'E':
+                    Output.println("Congradulations! You are a Explorer! Continue to name your travel buddies!");
+                    break;
+                case 'F':
+                    Output.println("Congradulations! You are a Fur Trader! Continue to name your travel buddies!");
+                    break;
+                case 'C':
+                    Output.println("Congradulations! You are a Carpenter! Continue to name your travel buddies!");
+                    break;
+                case 'Q':
                     return true; 
                 default: Output.println("Invalid menu item");    
             }
             return false;
         }
         
-    private static void getHelp() {
-       Output.println("How may I help?");
-       HelpMenuView.displayHelpMenuView();
+    private static void NameFamilyView() {
+      NameFamilyView.display();
     }
     
     
