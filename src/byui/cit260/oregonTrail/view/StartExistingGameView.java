@@ -1,62 +1,74 @@
 package byui.cit260.oregonTrail.view;
 
+
 import java.io.IOException;
+import oregontrail.OregonTrail;
 
 /**
- *          Main Author, Classmate, Classmate
- * @author Nastia, Marci, April
+ *     
+ * @author Nastia
  */
-public class StartExistingGameView {
 
-    private static String[] inputs;
-    public static void displayStartExistingGameView(){
-        //list of things a user can choose from goes here ex. Output.println("")
-        Output.println(" S - Restart Existing Game \n D - Save Existing Game \n T - Terminate Game \n E - Exit Game \n");
+class StartExistingGameView {
+    static void displayStartGameView(){
+        
+        Output.println(" B - Banker "
+                + "\n E - Explorer "
+                + "\n F - Fur Trader "
+                + "\n C - Carpenter "
+                + "\n Q - Quit");
         boolean endOfView = false;
         
-        do {
+        do { 
         String[] inputs = getInputs();
-        if (inputs.length < 1 || inputs [0] ==null)
+        if (inputs.length < 1 || inputs[0] ==null)
             return;
-        endOfView = doAction(inputs); 
+         endOfView = doAction(inputs);
+        }
+       while (endOfView != true);
     }
-        while (endOfView != true);
-  }
-     private static String[] getInputs() {
-     String [] imputs = new String[1];
-     
-     try {
-         inputs[0] = Input.getString("Please select one of the following options: ");
+
+    private static String[] getInputs() {
+        //1 is the length of the array, holds one string
+        String[] inputs = new String[1];
+        //try/catch wraps the input to catch a possible error
+        try {
+            inputs[0] = Input.getString("Please select one of the following options: ");
         } catch (IOException ex) {}
-        return inputs; 
-     }
+        return inputs;
+    }
 
     private static boolean doAction(String[] inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
-
-  //  private static boolean doAction(String[] inputs) {
             //convert array of strings into a single character
             //convert all characters to upper case
-    //        char choice = Character.toUpperCase(inputs[0].charAt(0));
-            //!!!!!!change the switch options
-      //      switch (choice) {
-        //        case 'S': 
-          //          restartExisitinGame("Would you like to restart an existing game?"); //!!!! this is a string
-            //        break;
-              //  case 'D':
-                //    saveExistingGame("Would you like to save your existing game?");
-                  //  break;
-               // case 'E':
-                 //   exitExistingGame("Would you like to exit existing game?");
-                   // break;
-             //   case 'T':
-               //     terminateExistingGame("Would you like to terminate existing game? ");
-              //  case 'E':
-                //    return true; 
-             //   default: Output.println("Invalid menu item");    
-           // }
-          //  return false;
-       // }
-    
+            char choice = Character.toUpperCase(inputs[0].charAt(0));
+            
+            switch (choice) {
+                case 'B': 
+                    Output.println("Congradulations! You are a Banker! "
+                            + "Continue to name your travel buddies!");
+                    break;
+                case 'E':
+                    Output.println("Congradulations! You are a Explorer! "
+                            + "Continue to name your travel buddies!");
+                    break;
+                case 'F':
+                    Output.println("Congradulations! You are a Fur Trader! "
+                            + "Continue to name your travel buddies!");
+                    break;
+                case 'C':
+                    Output.println("Congradulations! You are a Carpenter! "
+                            + "Continue to name your travel buddies!");
+                    break;
+                case 'Q':
+                    return true; 
+                default: Output.println("Invalid menu item");    
+            }
+            return false;
+        }
+        
+    private static void NameFamilyView() {
+      NameFamilyView.display();
+        }     
+    }
+

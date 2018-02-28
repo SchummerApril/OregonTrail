@@ -1,7 +1,9 @@
 package byui.cit260.oregonTrail.control;
+import byui.cit260.oregonTrail.model.CityStop;
 import byui.cit260.oregonTrail.model.Location;
 import byui.cit260.oregonTrail.model.Map;
 import byui.cit260.oregonTrail.model.Point;
+import byui.cit260.oregonTrail.model.RiverCrossingStop;
 import byui.cit260.oregonTrail.model.ScenicStop;
 import byui.cit260.oregonTrail.model.Stop;
 
@@ -55,10 +57,127 @@ public class MapControl {
         
         public static Map createNewMap(){
             Map newMap  = new Map();
-            Location startingLocation = new Location(new ScenicStop ("Starting Point"));
+            //Start of Game Location
+            Location startingLocation = new Location(new CityStop ("Starting Point"));
             Point startingPoint = new Point(1, 1);
             newMap.addLocation(startingLocation, startingPoint);
             
+            //2 Location on the map
+            Location kansasRiverCrossingLocation = new Location(new RiverCrossingStop ("Kansas River Crossing"));
+            Point kansasRiverCrossingPoint = new Point(1, 2);
+            newMap.addLocation(kansasRiverCrossingLocation, kansasRiverCrossingPoint);
+            
+            //3 Location on the map
+            Location minorParkLocation = new Location(new ScenicStop ("Minor Park"));
+            Point minorParkPoint = new Point(1, 3);
+            newMap.addLocation(minorParkLocation, minorParkPoint);
+            
+            //4 Location on the map
+            Location littleBlueRiverLocation = new Location(new RiverCrossingStop ("Little Blue River"));
+            Point littleBlueRiverPoint = new Point(1, 4);
+            newMap.addLocation(littleBlueRiverLocation, littleBlueRiverPoint);
+            
+            //5 Location on the map
+            Location fortKearneyLocation = new Location(new CityStop ("Fort Kearney"));
+            Point fortKearneyPoint = new Point(1, 5);
+            newMap.addLocation(fortKearneyLocation, fortKearneyPoint);
+            
+            //6 Location on the map
+            Location grandIslandLocation = new Location(new ScenicStop ("Grand Island"));
+            Point grandIslandPoint = new Point(1, 6);
+            newMap.addLocation(grandIslandLocation, grandIslandPoint);
+            
+            //7 Location on the map
+            Location platteRiverCrossingLocation = new Location(new RiverCrossingStop ("Platte River Crossing"));
+            Point platteRiverCrossingPoint = new Point(1, 7);
+            newMap.addLocation(platteRiverCrossingLocation, platteRiverCrossingPoint);
+            
+            //8 Location on the map
+            Location chimneyRockLocation = new Location(new ScenicStop ("Chimney Rock"));
+            Point chimneyRockPoint = new Point(1, 8);
+            newMap.addLocation(chimneyRockLocation, chimneyRockPoint);
+            
+            //9 Location on the map
+            Location fortCasperLocation = new Location(new CityStop ("Fort Caspar"));
+            Point fortCasperPoint = new Point(1, 9);
+            newMap.addLocation(fortCasperLocation, fortCasperPoint);
+            
+            //10 Location on the map
+            Location splitrockLocation = new Location(new ScenicStop ("Splitrock"));
+            Point splitrockPoint = new Point(1, 10);
+            newMap.addLocation(splitrockLocation, splitrockPoint);
+            
+            //11 Location on the map
+            Location greenRiverLocation = new Location(new RiverCrossingStop ("Green River"));
+            Point greenRiverPoint = new Point(1, 11);
+            newMap.addLocation(greenRiverLocation, greenRiverPoint);
+            
+            //12 Location on the map
+            Location sodaSpringsLocation = new Location(new ScenicStop ("Soda Springs"));
+            Point sodaSpringsPoint = new Point(1, 12);
+            newMap.addLocation(sodaSpringsLocation, sodaSpringsPoint);
+            
+            //13 Location on the map
+            Location fortWallaWallaLocation = new Location(new CityStop ("Fort Walla Walla"));
+            Point fortWallaWallaPoint = new Point(1, 13);
+            newMap.addLocation(fortWallaWallaLocation, fortWallaWallaPoint);
+            
+            //14 Location on the map
+            Location bearRiverLocation = new Location(new RiverCrossingStop ("Bear River"));
+            Point bearRiverPoint = new Point(1, 14);
+            newMap.addLocation(bearRiverLocation, bearRiverPoint);
+            
+            //15 Location on the map
+            Location salmonFallsLocation = new Location(new ScenicStop ("Salmon Falls"));
+            Point salmonFallsPoint = new Point(1, 15);
+            newMap.addLocation(salmonFallsLocation, salmonFallsPoint);
+            
+            //16 Location on the map
+            Location snakeRiverLocation = new Location(new ScenicStop ("Snake River"));
+            Point snakeRiverPoint = new Point(1, 16);
+            newMap.addLocation(snakeRiverLocation, snakeRiverPoint);
+            
+            //17 Location on the map
+            Location fortBoiseLocation = new Location(new CityStop ("Fort Boise"));
+            Point fortBoisePoint = new Point(1, 17);
+            newMap.addLocation(fortBoiseLocation, fortBoisePoint);
+            
+            //18 Location on the map
+            Location flagstaffHillLocation = new Location(new ScenicStop ("Flagstaff Hill"));
+            Point flagstaffHillPoint = new Point(1, 18);
+            newMap.addLocation(flagstaffHillLocation, flagstaffHillPoint);
+            
+            //19 Location on the map
+            Location blueMountainsLocation = new Location(new ScenicStop ("Blue Mountains"));
+            Point blueMountainsPoint = new Point(1, 19);
+            newMap.addLocation(blueMountainsLocation, blueMountainsPoint);
+            
+            //20 Location on the map
+            Location deschutesRiverLocation = new Location(new RiverCrossingStop ("Deschutes River"));
+            Point deschutesRiverPoint = new Point(1, 20);
+            newMap.addLocation(deschutesRiverLocation, deschutesRiverPoint);
+            
+            //21 Location on the map
+            Location columbiaRiverLocation = new Location(new ScenicStop ("Columbia River"));
+            Point columbiaRiverPoint = new Point(1, 21);
+            newMap.addLocation(columbiaRiverLocation, columbiaRiverPoint);
+            
+            //22 Location on the map
+            Location theDallesLocation = new Location(new CityStop ("The Dalles"));
+            Point theDallesPoint = new Point(1, 22);
+            newMap.addLocation(theDallesLocation, theDallesPoint);
+            
+            //23 Location on the map
+            Location willametteRiverLocation = new Location(new ScenicStop ("Willamette River"));
+            Point willametteRiverPoint = new Point(1, 23);
+            newMap.addLocation(willametteRiverLocation, willametteRiverPoint);
+            
+            //24 Location on the map
+            Location cityOverLookLocation = new Location(new ScenicStop ("Oregon City Over Look"));
+            Point cityOverLookPoint = new Point(1, 24);
+            newMap.addLocation(cityOverLookLocation, cityOverLookPoint);
+            
+            //Last Location on the Game, End of the Game
             Location endingLocation = new Location(new ScenicStop ("Ending Point"));
             Point endingPoint = new Point(1, 25);
             newMap.addLocation(endingLocation, endingPoint);

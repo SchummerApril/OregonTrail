@@ -1,8 +1,8 @@
 package byui.cit260.oregonTrail.model;
 /**
- * //defines all the items i have in my game
+ * 
  * @author Nastia
- * contains the list of all items we have in the game
+ * 
  */
 
     public enum InventoryItemType {
@@ -26,8 +26,5 @@ package byui.cit260.oregonTrail.model;
         this.itemCost = itemCost;
         this.weight = weight;
     }
-
-   
-     
  }
 

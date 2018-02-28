@@ -9,13 +9,15 @@ import oregontrail.OregonTrail;
 import java.util.Map.Entry;
 
 /**
- *
- * @author Marci
+ *           Main Author, Classmate, Classmate
+ * @author Marci, aschummer, Nastia
  */
 public class MovePlayerView {
     static void display(){
         
-        Output.println(" R - list locations \n  T - move the player \n E - exit");
+        Output.println(" R - list locations "
+                + "\n  T - move the player "
+                + "\n E - exit");
         boolean endOfView = false;
         
         do { 
@@ -50,24 +52,36 @@ public class MovePlayerView {
                 case 'T':
                     movePlayer();
                     break;
-                case 'E':                    
+                case 'E':    
+                    exitMenu();
                     return true; 
+                    
                 default: Output.println("Invalid menu item");    
             }
             return false;
      }
 
     private static void listLocations() {
+        //display locations you are able to choose Locations
+        
+        //checks if location is real/correct
         HashMap<Point, Location> map = OregonTrail.getCurrentGame().getMap().getContents();
         for (Entry <Point, Location> each : map.entrySet()) {
             Point p = each.getKey();
             Location l =each.getValue();
             Output.println(p.getX() + ", " + p.getY());
+            
+            //error message to move player
         }
     }
 
     private static void movePlayer() {
         //checks for the validity of the points
         HashMap<Point, Location> Map;
+    }
+    
+    private static void exitMenu() {
+        //Returns to previous screen
+    
     }
 }

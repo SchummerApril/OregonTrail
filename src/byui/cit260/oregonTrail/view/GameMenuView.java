@@ -64,6 +64,10 @@ public class GameMenuView {
     private static void addToInventory() {
         AddInventoryView.display();
     }
+
+    static void displayGameMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

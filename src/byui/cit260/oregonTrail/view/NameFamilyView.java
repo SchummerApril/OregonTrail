@@ -5,29 +5,17 @@ import byui.cit260.oregonTrail.model.Player;
 import java.io.IOException;
 import oregontrail.OregonTrail;
 
-
 /**
- *          Main Author, Classmate, Classmate
- * @author aschummer, Nastia, Marci
+ *
+ * @author Nastia
  */
-public class StartProgramView {
-
-    public StartProgramView() {
-    }
-    
-    //the function/method below is displaying what the end user sees.
-    public static void displayStartProgramView(){ 
-            Output.println("Welcome to the CIT260 Oregon Trail");
-            Output.println("******************************************************");
-                Output.println("\n This game will allow you to travel the oregon" 
-                            + "\n trail making stops at cities, beautiful views, and cross rivers."
-                            + "\n You will learn about the hardships that the settlers had to overcome"
-                            + "\n as they moved from Independence to Oregon City");
-            Output.println("\n******************************************************");
-        Output.println("Please enter your name before continuing.");     
-       //controls the loop for this menu
+public class NameFamilyView {
+    static void display() {
+        
+        Output.println("Please enter names of your family and friends who are traveling with you.");
         boolean endOfView = false;
-        do {  
+        
+        do { 
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;
@@ -44,9 +32,8 @@ public class StartProgramView {
             inputs[0] = Input.getString("Enter name: ");
         } catch (IOException ex) {}
         return inputs;
-    }
     
-    //used to check if you're finished with the current view
+    }
     private static boolean doAction(String[] inputs) {
         String name = inputs[0];
         //uses control layer to make a new player
@@ -58,11 +45,11 @@ public class StartProgramView {
            }
         //sets the player for the rest of the game
         OregonTrail.setPlayer(player); 
-        Output.println("Welcome to the game, " + player.getName() + " Have fun!");
+        Output.println("Thank you for enterring " + player.getName());
         //makes the next menu display
-        MainMenuView.displayMainMenuView();
+        StartingPointView.display();
          return true;
-    }     
-   
+    } 
+    
+     
 }
-
