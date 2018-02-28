@@ -8,15 +8,15 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     
-    private String player;
+    private Player player;
     private Map map;
     private double totalTime;
 
-    public String getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
-    public void setPlayer(String player) {
+    public void setPlayer(Player player) {
         this.player = player;
     }
 

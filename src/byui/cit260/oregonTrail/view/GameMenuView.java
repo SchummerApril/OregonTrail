@@ -10,7 +10,10 @@ public class GameMenuView {
 
     static void display() {
   
-        Output.println(" S - move the player \n D - calculate the max weight of the container  \n C - add item to inventory \n E - exit");
+        Output.println(" S - Move the player "
+                + "\n D - Calculate the max weight of the container  "
+                + "\n C - Add item to inventory "
+                + "\n E - Exit");
         boolean endOfView = false;
         
         do { 
@@ -66,7 +69,7 @@ public class GameMenuView {
     }
 
     static void displayGameMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
     

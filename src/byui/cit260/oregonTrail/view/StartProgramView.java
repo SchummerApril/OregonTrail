@@ -22,7 +22,7 @@ public class StartProgramView {
                 Output.println("\n This game will allow you to travel the oregon" 
                             + "\n trail making stops at cities, beautiful views, and cross rivers."
                             + "\n You will learn about the hardships that the settlers had to overcome"
-                            + "\n as they moved from Independence to Oregon City");
+                            + "\n as they moved from Independence to Oregon City.");
             Output.println("\n******************************************************");
         Output.println("Please enter your name before continuing.");     
        //controls the loop for this menu
@@ -58,7 +58,7 @@ public class StartProgramView {
            }
         //sets the player for the rest of the game
         OregonTrail.setPlayer(player); 
-        Output.println("Welcome to the game, " + player.getName() + " Have fun!");
+        Output.println("Welcome to the game, " + player.getName() + ". Have fun!");
         //makes the next menu display
         MainMenuView.displayMainMenuView();
          return true;

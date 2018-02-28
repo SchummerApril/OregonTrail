@@ -2,22 +2,21 @@ package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Arrays;
 /**
- * //main class for inventory in the game
  * @author Nastia
  */
 
 public class Inventory implements Serializable{
     private int inventorySize = 9; 
-    private Item[] contents; //
-    private int quantityInStock; //TODO move to Item class
-    private int requiredAmount; //TODO move to Item class
+    private Item[] contents; 
+  
+    private int requiredAmount; //leave here for now
 
     public Inventory() {
         this.contents = new Item[this.inventorySize]; 
-        // this needs to move to Control layer
         for (InventoryItemType type : InventoryItemType.values()){
-            Item each = new Item(); 
+            Item each = new Item(type); 
             this.contents[type.ordinal()] = each;
         }
     }
@@ -39,14 +38,6 @@ public class Inventory implements Serializable{
         this.contents = contents;
     }
 
-    public int getQuantityInStock() {
-        return quantityInStock;
-    }
-
-    public void setQuantityInStock(int quantityInStock) {
-        this.quantityInStock = quantityInStock;
-    }
-
     public int getRequiredAmount() {
         return requiredAmount;
     }
@@ -65,7 +56,6 @@ public class Inventory implements Serializable{
     public int hashCode() {
         int hash = 7;
         hash = 79 * hash + Objects.hashCode(this.contents);
-        hash = 79 * hash + this.quantityInStock;
         hash = 79 * hash + this.requiredAmount;
         return hash;
     }
@@ -82,9 +72,7 @@ public class Inventory implements Serializable{
             return false;
         }
         final Inventory other = (Inventory) obj;
-        if (this.quantityInStock != other.quantityInStock) {
-            return false;
-        }
+        
         if (this.requiredAmount != other.requiredAmount) {
             return false;
         }
@@ -96,10 +84,7 @@ public class Inventory implements Serializable{
 
     @Override
     public String toString() {
-        return "Inventory{" + "contents=" + contents + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
-    }
-
-    
-      
+        return "Inventory{" + "inventorySize=" + inventorySize + ", contents=" + java.util.Arrays.toString(contents) + ", requiredAmount=" + requiredAmount + '}';
+    }   
     
 }

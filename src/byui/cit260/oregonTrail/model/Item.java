@@ -18,6 +18,7 @@ public class Item implements Serializable{
     }
     //creates an instance of the Inventory
     public Item(InventoryItemType type) {
+     this.quantity = 0;
      this.value = type.itemCost;
     }
 
@@ -89,8 +90,7 @@ public class Item implements Serializable{
 
     @Override
     public String toString() {
-        return "Item{" + "type=" + type + ", weight=" + weight + ", value=" + value + '}';
-    }
-    
+        return "Item{" + "type=" + type + ", quantity=" + quantity + ", weight=" + weight + ", value=" + value + '}';
+    }    
     
 }

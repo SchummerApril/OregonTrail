@@ -1,12 +1,12 @@
 package byui.cit260.oregonTrail.model;
 /**
- * 
  * @author Nastia
  * 
  */
 
     public enum InventoryItemType {
      
+    //built in cost and weight
     bullets(2, 1), 
     clothing(5, 2), 
     ox (40, 100), 

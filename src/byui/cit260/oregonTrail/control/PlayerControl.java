@@ -1,5 +1,6 @@
 package byui.cit260.oregonTrail.control;
 
+import byui.cit260.oregonTrail.model.Inventory;
 import byui.cit260.oregonTrail.model.InventoryItemType;
 import byui.cit260.oregonTrail.model.Player;
 
@@ -9,7 +10,11 @@ import byui.cit260.oregonTrail.model.Player;
  */
 public abstract class PlayerControl {
     public static Player createPlayer(String name){
-        return new Player(name);
+        Player newPlayer = new Player(name);
+        
+        newPlayer.setAmountofMoney(1000);
+        newPlayer.setInventory(new Inventory());
+        return newPlayer;
     }
     
     public static boolean canBuyItem(Player player, InventoryItemType type, int num) {
