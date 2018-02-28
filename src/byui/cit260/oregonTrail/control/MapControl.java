@@ -59,7 +59,7 @@ public class MapControl {
             Map newMap  = new Map();
             //Start of Game Location - good example of a City Stop
             Stop cityStopOne = new CityStop();
-            //different actos for each stop here
+            //different actos for each stop here EX. Actor actorOne = new Actor();
             //names location
             Location startingLocation = new Location("Starting Point", cityStopOne);
             //assigns point to locations
@@ -106,7 +106,6 @@ public class MapControl {
             newMap.addLocation(platteRiverCrossingLocation, platteRiverCrossingPoint);
             
             //8 Location on the map
-            
             Location chimneyRockLocation = new Location ("Chimney Rock", new ScenicStop ("add description here"));
             Point chimneyRockPoint = new Point(1, 8);
             newMap.addLocation(chimneyRockLocation, chimneyRockPoint);
@@ -114,10 +113,10 @@ public class MapControl {
             //9 Location on the map
             //Gives it the type of Stop
             Stop cityStopThree = new CityStop();
-            //different actors for each stop here
+            //different actors for each stop here Actor actorOne = new Actor();
             //Names the Location
-            Location fortCasperLocation = new Location("Fort Caspar", new CityStopthree);
-            //assigns point to locations
+            Location fortCasperLocation = new Location("Fort Caspar", cityStopThree);
+            //assigns point to the locations
             Point fortCasperPoint = new Point(1, 9);
             newMap.addLocation(fortCasperLocation, fortCasperPoint);
             
@@ -138,7 +137,12 @@ public class MapControl {
             newMap.addLocation(sodaSpringsLocation, sodaSpringsPoint);
             
             //13 Location on the map
-            Location fortWallaWallaLocation = new Location(new CityStop ("Fort Walla Walla"));
+            //Gives it the type of Stop
+            Stop cityStopFour = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location fortWallaWallaLocation = new Location("Fort Walla Walla", cityStopFour);
+            //assigns a point to location
             Point fortWallaWallaPoint = new Point(1, 13);
             newMap.addLocation(fortWallaWallaLocation, fortWallaWallaPoint);
             
@@ -159,7 +163,12 @@ public class MapControl {
             newMap.addLocation(snakeRiverLocation, snakeRiverPoint);
             
             //17 Location on the map
-            Location fortBoiseLocation = new Location(new CityStop ("Fort Boise"));
+            //Gives it the type of Stop
+            Stop cityStopFive = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location fortBoiseLocation = new Location("Fort Boise", cityStopFive);
+            //assigns a point to location
             Point fortBoisePoint = new Point(1, 17);
             newMap.addLocation(fortBoiseLocation, fortBoisePoint);
             
@@ -185,7 +194,12 @@ public class MapControl {
             newMap.addLocation(columbiaRiverLocation, columbiaRiverPoint);
             
             //22 Location on the map
-            Location theDallesLocation = new Location(new CityStop ("The Dalles"));
+            //Gives it the type of Stop
+            Stop cityStopSix = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location theDallesLocation = new Location("The Dalles", cityStopSix);
+            //assigns a point to the location
             Point theDallesPoint = new Point(1, 22);
             newMap.addLocation(theDallesLocation, theDallesPoint);
             
