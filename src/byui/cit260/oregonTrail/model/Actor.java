@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /*
- *  Main Author, Classmate, Classmate
- * @author Nastia, aschummer, Marci
+ *  
+ * @author Nastia
 
  */
 
