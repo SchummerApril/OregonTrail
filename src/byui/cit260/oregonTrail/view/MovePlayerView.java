@@ -13,7 +13,7 @@ import java.util.Map.Entry;
  * @author Marci, aschummer, Nastia
  */
 public class MovePlayerView {
-    static void display(){
+    static void displayMovePlayerView(){
         
         Output.println(" R - list locations \n  T - move the player \n E - exit");
         boolean endOfView = false;
