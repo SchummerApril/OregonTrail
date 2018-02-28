@@ -7,7 +7,7 @@ import oregontrail.OregonTrail;
 
 /**
  *          Main Author, Classmate, Classmate
- * @author Nastia, schummer, Marci
+ * @author Nastia, aschummer, Marci
  */
 public class MainMenuView {
     //starts a second view
@@ -62,12 +62,16 @@ public class MainMenuView {
          Output.println("Create New Game");        
          Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
          OregonTrail.setCurrentGame(newGame);
-         GameMenuView.displayGameMenuView();
+         GameMenuView.display();
     }
 
     private static void restartGame() {
         Output.println("Loading...");
-        StartExistingGameView.displayStartExistingGameView();
+       // RestartGameView.display();
+       //create new game change to load game from file...  ln 69
+       Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
+         OregonTrail.setCurrentGame(newGame);
+         GameMenuView.display();
     }
 
     private static void getHelp() {

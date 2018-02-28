@@ -1,3 +1,4 @@
+
 package byui.cit260.oregonTrail.view;
 
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 //imagine what the Restart Game screen does and write it out, change the words, switch statement
 public class RestartGameView {
-    /* public static void displayMainMenuView(){
+     public static void display(){
         //!!!!!!!!change the printed lines, different option for the player
         Output.println(" R - Resume \n S - Restart Game \n E - End Game");
         boolean endOfView = false;
@@ -43,18 +44,31 @@ public class RestartGameView {
             //!!!!!!change the switch options
             switch (choice) {
                 case 'N': 
-                    startNewGame(); //!!!! this is a string
+                    startNewGame("Would you like to start a new game?"); //!!!! this is a string
                     break;
                 case 'R':
-                    restartGame();
+                    restartGame("Would you like to restart a previous game?");
                     break;
                 case 'H':
-                    getHelp();
+                    getHelp("What can I help you with?");
                     break;
                 case 'E':
                     return true; 
                 default: Output.println("Invalid menu item");    
             }
             return false;
-        }*/
+        }
+
+    private static void startNewGame(String text) {
+       Output.println(text);
+    }
+
+    private static void restartGame(String text) {
+      Output.println(text);
+    }
+
+    private static void getHelp(String text) {
+      Output.println(text);
+    }
+
 }

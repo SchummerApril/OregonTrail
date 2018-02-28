@@ -6,22 +6,25 @@ package byui.cit260.oregonTrail.model;
  */
 
     public enum InventoryItemType {
-    //below are all the items we have across inventories (for actor, for player, for shop)
-        
-    bullets(2), 
-    clothingSet(5), 
-    ox (40), 
-    firewood(1), 
-    berries(5), 
-    foodPounds(1), 
-    wagonWheel(10), 
-    wagonAxle(8), 
-    wagonTongue(7); 
      
+    bullets(2, 1), 
+    clothing(5, 2), 
+    ox (40, 100), 
+    firewood(1, 5), 
+    berries(5, 1), 
+    food(1, 10), 
+    wagonWheel(10, 20), 
+    wagonAxle(8, 2), 
+    wagonTongue(7, 2); 
+// <-- all the items our inventory has and its weight if the wagon to carry.
+// <--we can add more items and now they connect to item cost and weight.     
     public final int itemCost; 
+    public final int weight;
 
-    private InventoryItemType(int itemCost) {
+
+    private InventoryItemType(int itemCost, int weight) {
         this.itemCost = itemCost;
+        this.weight = weight;
     }
  }
 
