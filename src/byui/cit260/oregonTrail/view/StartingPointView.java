@@ -5,7 +5,7 @@ import java.io.IOException;
  *
  * @author Marci
  */
-public class startingPointView {
+public class StartingPointView {
     
         //this is what is displayed on the screen for the player
      static void display(){
