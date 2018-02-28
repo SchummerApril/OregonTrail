@@ -12,7 +12,10 @@ import oregontrail.OregonTrail;
 public class MainMenuView {
     //starts a second view
     public static void displayMainMenuView(){
-        Output.println(" N - start new game \n R - Restart existing game \n H - Get help on how to play the game \n E - exit");
+        Output.println(" N - start new game "
+                + "\n R - Restart existing game "
+                + "\n H - Get help on how to play the game "
+                + "\n E - exit");
         boolean endOfView = false;
         
         do { 

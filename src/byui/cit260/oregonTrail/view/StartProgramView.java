@@ -19,10 +19,10 @@ public class StartProgramView {
     public static void displayStartProgramView(){ 
             Output.println("Welcome to the CIT260 Oregon Trail");
             Output.println("******************************************************");
-                Output.println("\n This game will allow you to travel the oregon ");
-                Output.println("trail making stops at cities, beautiful views, and cross rivers.");
-                Output.println("You will learn about the hardships that the settlers had to over ");
-                Output.println("come as they moved from Independence to Oregon City");
+                Output.println("\n This game will allow you to travel the oregon" 
+                            + "\n trail making stops at cities, beautiful views, and cross rivers."
+                            + "\n You will learn about the hardships that the settlers had to overcome"
+                            + "\n as they moved from Independence to Oregon City");
             Output.println("\n******************************************************");
         Output.println("Please enter your name before continuing.");     
        //controls the loop for this menu

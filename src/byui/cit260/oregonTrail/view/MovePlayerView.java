@@ -15,7 +15,9 @@ import java.util.Map.Entry;
 public class MovePlayerView {
     static void display(){
         
-        Output.println(" R - list locations \n  T - move the player \n E - exit");
+        Output.println(" R - list locations "
+                + "\n  T - move the player "
+                + "\n E - exit");
         boolean endOfView = false;
         
         do { 

@@ -10,7 +10,11 @@ import java.io.IOException;
 class StartExistingGameView {
     static void displayStartExistingGameView(){
         
-        Output.println(" B - Banker \n E - Explorer F - Fur Trader \n C - Carpenter \n Q - Quit");
+        Output.println(" B - Banker "
+                + "\n E - Explorer "
+                + "\n F - Fur Trader "
+                + "\n C - Carpenter "
+                + "\n Q - Quit");
         boolean endOfView = false;
         
         do { 
@@ -39,16 +43,20 @@ class StartExistingGameView {
             
             switch (choice) {
                 case 'B': 
-                    Output.println("Congradulations! You are a Banker! Continue to name your travel buddies!");
+                    Output.println("Congradulations! You are a Banker! "
+                            + "Continue to name your travel buddies!");
                     break;
                 case 'E':
-                    Output.println("Congradulations! You are a Explorer! Continue to name your travel buddies!");
+                    Output.println("Congradulations! You are a Explorer! "
+                            + "Continue to name your travel buddies!");
                     break;
                 case 'F':
-                    Output.println("Congradulations! You are a Fur Trader! Continue to name your travel buddies!");
+                    Output.println("Congradulations! You are a Fur Trader! "
+                            + "Continue to name your travel buddies!");
                     break;
                 case 'C':
-                    Output.println("Congradulations! You are a Carpenter! Continue to name your travel buddies!");
+                    Output.println("Congradulations! You are a Carpenter! "
+                            + "Continue to name your travel buddies!");
                     break;
                 case 'Q':
                     return true; 

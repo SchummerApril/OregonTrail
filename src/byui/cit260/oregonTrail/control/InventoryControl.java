@@ -5,8 +5,8 @@ import byui.cit260.oregonTrail.model.Item;
 import byui.cit260.oregonTrail.model.Player;
 
 /**
- *      Main Author, Classmate, Classmate
- * @author Nastia, Marci, aschummer
+ *      
+ * @author Nastia
  */
 public abstract class InventoryControl {
     
