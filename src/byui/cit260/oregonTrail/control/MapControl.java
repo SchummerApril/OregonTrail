@@ -59,9 +59,10 @@ public class MapControl {
             Map newMap  = new Map();
             //Start of Game Location - good example of a City Stop
             Stop cityStopOne = new CityStop();
-            //different actos for each stop here
+            //different actos for each stop here EX. Actor actorOne = new Actor();
+            //names location
             Location startingLocation = new Location("Starting Point", cityStopOne);
-            //assigns point to lcoations
+            //assigns point to locations
             Point startingPoint = new Point(1, 1);
             newMap.addLocation(startingLocation, startingPoint);
             
@@ -78,18 +79,18 @@ public class MapControl {
             newMap.addLocation(minorParkLocation, minorParkPoint);
            /* 
             //4 Location on the map
-            Location littleBlueRiverLocation = new Location(new RiverCrossingStop ("Little Blue River"));
+            Stop riverCrossingTwo = new RiverCrossingStop();
+            Location littleBlueRiverLocation = new Location ("Little Blue River", riverCrossingTwo);
             Point littleBlueRiverPoint = new Point(1, 4);
             newMap.addLocation(littleBlueRiverLocation, littleBlueRiverPoint);
             
             //5 Location on the map
             //Gives it the type of Stop
             Stop cityStopTwo = new CityStop();
-            
             //different actors for each stop here
-            
             //Names the Location
             Location fortKearneyLocation = new Location("Fort Kearney", cityStopTwo);
+            //assigns point to locations
             Point fortKearneyPoint = new Point(1, 5);
             newMap.addLocation(fortKearneyLocation, fortKearneyPoint);
             
@@ -99,97 +100,121 @@ public class MapControl {
             newMap.addLocation(grandIslandLocation, grandIslandPoint);
             
             //7 Location on the map
-            Location platteRiverCrossingLocation = new Location(new RiverCrossingStop ("Platte River Crossing"));
+            Stop riverCrossingThree = new RiverCrossingStop();
+            Location platteRiverCrossingLocation = new Location("Platte River Crossing", riverCrossingThree);
             Point platteRiverCrossingPoint = new Point(1, 7);
             newMap.addLocation(platteRiverCrossingLocation, platteRiverCrossingPoint);
             
             //8 Location on the map
-            Location chimneyRockLocation = new Location(new ScenicStop ("Chimney Rock"));
+            Location chimneyRockLocation = new Location ("Chimney Rock", new ScenicStop ("add description here"));
             Point chimneyRockPoint = new Point(1, 8);
             newMap.addLocation(chimneyRockLocation, chimneyRockPoint);
             
             //9 Location on the map
-            Location fortCasperLocation = new Location(new CityStop ("Fort Caspar"));
+            //Gives it the type of Stop
+            Stop cityStopThree = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location fortCasperLocation = new Location("Fort Caspar", cityStopThree);
+            //assigns point to the locations
             Point fortCasperPoint = new Point(1, 9);
             newMap.addLocation(fortCasperLocation, fortCasperPoint);
             
             //10 Location on the map
-            Location splitrockLocation = new Location(new ScenicStop ("Splitrock"));
+            Location splitrockLocation = new Location ("Splitrock", new ScenicStop ("add description here"));
             Point splitrockPoint = new Point(1, 10);
             newMap.addLocation(splitrockLocation, splitrockPoint);
             
             //11 Location on the map
-            Location greenRiverLocation = new Location(new RiverCrossingStop ("Green River"));
+            Stop riverCrossingFour = new RiverCrossingStop();
+            Location greenRiverLocation = new Location("Green River", riverCrossingFour);
             Point greenRiverPoint = new Point(1, 11);
             newMap.addLocation(greenRiverLocation, greenRiverPoint);
             
             //12 Location on the map
-            Location sodaSpringsLocation = new Location(new ScenicStop ("Soda Springs"));
+            Location sodaSpringsLocation = new Location("Soda Springs", new ScenicStop ("add description here"));
             Point sodaSpringsPoint = new Point(1, 12);
             newMap.addLocation(sodaSpringsLocation, sodaSpringsPoint);
             
             //13 Location on the map
-            Location fortWallaWallaLocation = new Location(new CityStop ("Fort Walla Walla"));
+            //Gives it the type of Stop
+            Stop cityStopFour = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location fortWallaWallaLocation = new Location("Fort Walla Walla", cityStopFour);
+            //assigns a point to location
             Point fortWallaWallaPoint = new Point(1, 13);
             newMap.addLocation(fortWallaWallaLocation, fortWallaWallaPoint);
             
             //14 Location on the map
-            Location bearRiverLocation = new Location(new RiverCrossingStop ("Bear River"));
+            Stop riverCrossingFive = new RiverCrossingStop();
+            Location bearRiverLocation = new Location("Bear River", riverCrossingFive);
             Point bearRiverPoint = new Point(1, 14);
             newMap.addLocation(bearRiverLocation, bearRiverPoint);
             
             //15 Location on the map
-            Location salmonFallsLocation = new Location(new ScenicStop ("Salmon Falls"));
+            Location salmonFallsLocation = new Location("Salmon Falls", new ScenicStop ("add description here"));
             Point salmonFallsPoint = new Point(1, 15);
             newMap.addLocation(salmonFallsLocation, salmonFallsPoint);
             
             //16 Location on the map
-            Location snakeRiverLocation = new Location(new ScenicStop ("Snake River"));
+            Location snakeRiverLocation = new Location("Snake River", new ScenicStop ("add description here"));
             Point snakeRiverPoint = new Point(1, 16);
             newMap.addLocation(snakeRiverLocation, snakeRiverPoint);
             
             //17 Location on the map
-            Location fortBoiseLocation = new Location(new CityStop ("Fort Boise"));
+            //Gives it the type of Stop
+            Stop cityStopFive = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location fortBoiseLocation = new Location("Fort Boise", cityStopFive);
+            //assigns a point to location
             Point fortBoisePoint = new Point(1, 17);
             newMap.addLocation(fortBoiseLocation, fortBoisePoint);
             
             //18 Location on the map
-            Location flagstaffHillLocation = new Location(new ScenicStop ("Flagstaff Hill"));
+            Location flagstaffHillLocation = new Location("Flagstaff Hill", new ScenicStop ("add description here"));
             Point flagstaffHillPoint = new Point(1, 18);
             newMap.addLocation(flagstaffHillLocation, flagstaffHillPoint);
             
             //19 Location on the map
-            Location blueMountainsLocation = new Location(new ScenicStop ("Blue Mountains"));
+            Location blueMountainsLocation = new Location ("Blue Mountains", new ScenicStop ("add description here"));
             Point blueMountainsPoint = new Point(1, 19);
             newMap.addLocation(blueMountainsLocation, blueMountainsPoint);
             
             //20 Location on the map
-            Location deschutesRiverLocation = new Location(new RiverCrossingStop ("Deschutes River"));
+            Stop riverCrossingSix = new RiverCrossingStop();
+            Location deschutesRiverLocation = new Location("Deschutes River", riverCrossingSix);
             Point deschutesRiverPoint = new Point(1, 20);
             newMap.addLocation(deschutesRiverLocation, deschutesRiverPoint);
             
             //21 Location on the map
-            Location columbiaRiverLocation = new Location(new ScenicStop ("Columbia River"));
+            Location columbiaRiverLocation = new Location("Columbia River", new ScenicStop ("add description here"));
             Point columbiaRiverPoint = new Point(1, 21);
             newMap.addLocation(columbiaRiverLocation, columbiaRiverPoint);
             
             //22 Location on the map
-            Location theDallesLocation = new Location(new CityStop ("The Dalles"));
+            //Gives it the type of Stop
+            Stop cityStopSix = new CityStop();
+            //different actors for each stop here Actor actorOne = new Actor();
+            //Names the Location
+            Location theDallesLocation = new Location("The Dalles", cityStopSix);
+            //assigns a point to the location
             Point theDallesPoint = new Point(1, 22);
             newMap.addLocation(theDallesLocation, theDallesPoint);
             
             //23 Location on the map
-            Location willametteRiverLocation = new Location(new ScenicStop ("Willamette River"));
+            Location willametteRiverLocation = new Location("Willamette River", new ScenicStop ("add description here"));
             Point willametteRiverPoint = new Point(1, 23);
             newMap.addLocation(willametteRiverLocation, willametteRiverPoint);
             
             //24 Location on the map
-            Location cityOverLookLocation = new Location(new ScenicStop ("Oregon City Over Look"));
+            Location cityOverLookLocation = new Location("Oregon City Over Look", new ScenicStop ("add description here"));
             Point cityOverLookPoint = new Point(1, 24);
             newMap.addLocation(cityOverLookLocation, cityOverLookPoint);
             
             //Last Location on the Game, End of the Game
-            Location endingLocation = new Location(new ScenicStop ("Ending Point"));
+            Location endingLocation = new Location("Ending Point", new ScenicStop ("add description here"));
             Point endingPoint = new Point(1, 25);
             newMap.addLocation(endingLocation, endingPoint);
             */
