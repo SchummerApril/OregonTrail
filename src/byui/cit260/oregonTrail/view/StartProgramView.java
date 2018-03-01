@@ -60,7 +60,7 @@ public class StartProgramView {
         OregonTrail.setPlayer(player); 
         Output.println("Welcome to the game, " + player.getName() + ". Have fun!");
         //makes the next menu display
-        MainMenuView.displayMainMenuView();
+        StartExistingGameView.displayStartGameView();
          return true;
     }     
    

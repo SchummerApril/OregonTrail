@@ -77,7 +77,7 @@ public class MapControl {
             Location minorParkLocation = new Location("Minor Park", new ScenicStop ("add description here"));
             Point minorParkPoint = new Point(1, 3);
             newMap.addLocation(minorParkLocation, minorParkPoint);
-           /* 
+           
             //4 Location on the map
             Stop riverCrossingTwo = new RiverCrossingStop();
             Location littleBlueRiverLocation = new Location ("Little Blue River", riverCrossingTwo);
@@ -217,7 +217,7 @@ public class MapControl {
             Location endingLocation = new Location("Ending Point", new ScenicStop ("add description here"));
             Point endingPoint = new Point(1, 25);
             newMap.addLocation(endingLocation, endingPoint);
-            */
+            
             return newMap;
             
     }
