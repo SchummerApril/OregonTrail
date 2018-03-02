@@ -13,7 +13,6 @@ import static org.junit.Assert.*;
  * @author Nastia
  * 
  */
- 
 public class InventoryControlTest {
     
     public InventoryControlTest() {
@@ -28,7 +27,7 @@ public class InventoryControlTest {
     }
 
     @Test
-    public void testaddToInventory() {
+    public void testcanBuyItem() {
         Inventory testInventory = new Inventory();
         //test 1, valid test
         System.out.println("Here is what you added to your inventory");

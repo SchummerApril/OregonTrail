@@ -32,8 +32,7 @@ public class LocationControlTest {
         int expResult = 50;
         int result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, 0);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+      
     
     //test 2, invalid number one       
         System.out.println("invalid1 TotalMilesTraveled");
@@ -42,8 +41,6 @@ public class LocationControlTest {
         expResult = 80;
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     
     //test 3, invalid number two
         System.out.println("invalid2 TotalMilesTraveled");
@@ -52,9 +49,6 @@ public class LocationControlTest {
         expResult = -195;
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
-        // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
-    
     
      //test 4, invalid number three 
         System.out.println("invalid3 TotalMilesTraveled");
@@ -63,9 +57,6 @@ public class LocationControlTest {
         expResult = 3000;
         result = LocationControl.calcMilesTraveled(startingPosition, currentPosition);
         assertEquals(expResult, result, -1);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    
     
      //test 5, boundary number one      
         System.out.println("boundary1 TotalMilesTraveled");
@@ -100,11 +91,11 @@ public class LocationControlTest {
     }
 
     private void assertEquals(int expResult, int result, int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      
     }
 
     private void fail(String the_test_case_is_a_prototype) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 }
     

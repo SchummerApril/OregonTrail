@@ -10,9 +10,7 @@ public class GameMenuView {
 
     static void display() {
         boolean endOfView = false;
-        
-        do { 
-            //placing print menu option here to repeat during invalid option and return to menu option
+        do {
             Output.println("\n"
                     + "*****************************************************\n"
                     + "GAME MENU\n"

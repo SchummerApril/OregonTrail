@@ -35,7 +35,7 @@ public class WagonControlTest {
         int expResult = 540;
         int result = WagonControl.calcWagonVolume(height,length, width);
         assertEquals(expResult, result, 0.0);
-        
+    
         
         System.out.println("invalid1 calcWagonVolume");
         height = 11;

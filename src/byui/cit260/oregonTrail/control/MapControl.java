@@ -15,15 +15,13 @@ import byui.cit260.oregonTrail.model.Stop;
  */
 public class MapControl {
     
-    //How to move the player Part 1
-    public static boolean isValidPoint(Map map, Point p) {
-           /* for (Point existing : map.getContents().keySet()) {
+        //How to move the player Part 1
+        public static boolean isValidPoint(Map map, Point p) {
+                /* for (Point existing : map.getContents().keySet()) {
                 if (existing.getY() == p.getY() && existing.getX() == p.getX()) {
                     return true;
                 }*/
-           return (map.getContents().get(p) != null);
-           
-           
+           return (map.getContents().get(p) != null);         
         }
 
         //How to move the player Part 2
@@ -32,7 +30,6 @@ public class MapControl {
                 map.setPlayerLocation(destination);
                 return true;
             }
-
             return false;
         }
 
