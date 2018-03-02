@@ -17,7 +17,13 @@ public class AddInventoryView {
         boolean endOfView = false;
         
         do { 
-            Output.println(" B- Buy item \n E - Exit");
+            Output.println("\n"
+                    + "****************************************\n"
+                    + "Inventory Options \n"
+                    + "****************************************\n"
+                    + "B- Buy item \n "
+                    + "E - Exit \n"
+                    + "*****************************************\n");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

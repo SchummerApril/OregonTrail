@@ -16,7 +16,7 @@ public class NameFamilyView {
         boolean endOfView = false;
         
         do { 
-            Output.println("Please enter names of your family and friends who are traveling with you.");
+            Output.println("Please enter names of your family and friends who are traveling with you.\n");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

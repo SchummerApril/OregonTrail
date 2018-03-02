@@ -16,10 +16,15 @@ public class MainMenuView {
         boolean endOfView = false;
         
         do { 
-            Output.println(" N - Start new game "
-                + "\n R - Restart existing game "
-                + "\n H - Get help on how to play the game "
-                + "\n E - Exit");
+            Output.println("\n"
+                    + "***************************************\n"
+                    + "MAIN MENU\n"
+                    + "***************************************\n"
+                    + "N - Start new game \n"
+                    + "R - Restart existing game \n"
+                    + "H - Get help on how to play the game \n"
+                    + "E - Exit \n"
+                    + "****************************************\n");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

@@ -19,7 +19,14 @@ public class RestartGameView {
         boolean endOfView = false;
         
         do { 
-            Output.println(" R - Resume \n S - Restart Game \n E - End Game");
+            Output.println("\n"
+                    + "**********************************\n"
+                    + "CHOOSE ONE OF THE FOLLOWING OPTIONS \n"
+                    + "************************************\n"
+                    + "R - Resume \n "
+                    + "S - Restart Game \n "
+                    + "E - End Game"
+                    + "*************************************\n");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

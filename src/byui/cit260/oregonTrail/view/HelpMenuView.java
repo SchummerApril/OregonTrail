@@ -13,12 +13,17 @@ public class HelpMenuView {
         boolean endOfView = false;
         
         do { 
-            Output.println(" G - What is the goal of the game? "
-                + "\n M - How to move the player? "
-                + "\n E - Estimate required resources "
-                + "\n H - What does it mean to 'harvest resources'? "
-                + "\n D - Get item information "
-                + "\n Q - Quit");
+            Output.println("\n"
+                    + "*************************************************\n"
+                    + "HELP MENU\n"
+                    + "*************************************************\n"
+                    + "G - What is the goal of the game?\n "
+                    + "M - How to move the player?\n "
+                    + "E - Estimate required resources.\n "
+                    + "H - What does it mean to 'harvest resources'? \n"
+                    + "D - Get information about inventory items in this game.\n "
+                    + "Q - Quit\n"
+                    + "**************************************************\n");
             
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)

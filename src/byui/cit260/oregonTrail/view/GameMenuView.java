@@ -9,16 +9,19 @@ import java.io.IOException;
 public class GameMenuView {
 
     static void display() {
-  
-       
         boolean endOfView = false;
         
         do { 
             //placing print menu option here to repeat during invalid option and return to menu option
-            Output.println(" S - Move the player "
-                + "\n D - Calculate the max weight of the container  "
-                + "\n C - Add item to inventory "
-                + "\n E - Exit");
+            Output.println("\n"
+                    + "*****************************************************\n"
+                    + "GAME MENU\n"
+                    + "*****************************************************\n"
+                    + "S - Move the player\n"
+                    + "D - Calculate the max weight of the container\n"
+                    + "C - Add item to inventory \n"
+                    + "E - Exit \n"
+                    + "*****************************************************\n");
             
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)

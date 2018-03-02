@@ -15,11 +15,16 @@ class StartExistingGameView {
         boolean endOfView = false;
         
         do { 
-            Output.println(" B - Banker "
-                + "\n E - Explorer "
-                + "\n F - Fur Trader "
-                + "\n C - Carpenter "
-                + "\n Q - Quit");
+            Output.println("\n"
+                    + "*****************************************\n"
+                    + "PICK YOUR CHARACTER\n"
+                    + "******************************************\n "
+                    + "B - Banker \n"
+                    + "E - Explorer \n"
+                    + "F - Fur Trader \n"
+                    + "C - Carpenter \n"
+                    + "Q - Quit \n"
+                    + "******************************************\n");
             
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)

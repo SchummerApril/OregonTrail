@@ -22,9 +22,14 @@ public class MovePlayerView {
         boolean endOfView = false;
         
         do { 
-            Output.println(" R - list locations "
-                + "\n  T - move the player "
-                + "\n E - exit");
+            Output.println("\n"
+                    + "***************************************\n"
+                    + "Move to a New Location"
+                    + "***************************************\n"
+                    + "L - List locations \n"
+                    + "M - Move the player \n"
+                    + "E - Exit \n"
+                    + "****************************************\n");
             
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
@@ -51,10 +56,10 @@ public class MovePlayerView {
             char choice = Character.toUpperCase(inputs[0].charAt(0));
             
             switch (choice) {
-                case 'R':  
+                case 'L':  
                     listLocations();
                     break;
-                case 'T':
+                case 'M':
                     movePlayer();
                     break;
                 case 'E':    
