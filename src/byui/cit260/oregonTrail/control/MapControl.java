@@ -73,10 +73,11 @@ public class MapControl {
             Point kansasRiverCrossingPoint = new Point(1, 2);
             newMap.addLocation(kansasRiverCrossingLocation, kansasRiverCrossingPoint);
             
-            //3 Location on the map - Good Example of ScenicStop
+            //3 Location on the map - Good Example of ScenicStop - ScenicStop 1
            //Allows you to set the condition for the ScenicStop
                                                    //("message", number of items, type of item)
-            Condition bearAttackOne = new Condition("You are being attacked by Bears!!", -2 ,InventoryItemType.food);
+            Condition bearAttackOne = new Condition("You are being attacked by Bears!! "
+                    + "They have eaten some of your food", -2 ,InventoryItemType.food);
             Stop ScenicStopOne = new ScenicStop("add description here");
             ScenicStopOne.setCondition(bearAttackOne);
             
@@ -100,8 +101,14 @@ public class MapControl {
             Point fortKearneyPoint = new Point(1, 5);
             newMap.addLocation(fortKearneyLocation, fortKearneyPoint);
             
-            //6 Location on the map
-            Location grandIslandLocation = new Location("Grand Island", new ScenicStop ("add description here"));
+            //6 Location on the map - ScenicStop 2
+          //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition peacefulOne = new Condition("And it was peaceful in the land.", 0 ,InventoryItemType.food);
+            Stop ScenicStopTwo = new ScenicStop("add description here");
+            ScenicStopTwo.setCondition(peacefulOne);
+            
+            Location grandIslandLocation = new Location("Grand Island", ScenicStopTwo);
             Point grandIslandPoint = new Point(1, 6);
             newMap.addLocation(grandIslandLocation, grandIslandPoint);
             
@@ -111,8 +118,15 @@ public class MapControl {
             Point platteRiverCrossingPoint = new Point(1, 7);
             newMap.addLocation(platteRiverCrossingLocation, platteRiverCrossingPoint);
             
-            //8 Location on the map
-            Location chimneyRockLocation = new Location ("Chimney Rock", new ScenicStop ("add description here"));
+            //8 Location on the map - ScenicStop 3
+           //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition buffaloAttackOne = new Condition("You are being run over by Buffalo!! "
+                    + "One of your wagon wheels have been damaged", -1 ,InventoryItemType.wagonWheel);
+            Stop ScenicStopThree = new ScenicStop("add description here");
+            ScenicStopThree.setCondition(buffaloAttackOne);
+            
+            Location chimneyRockLocation = new Location ("Chimney Rock", ScenicStopThree);
             Point chimneyRockPoint = new Point(1, 8);
             newMap.addLocation(chimneyRockLocation, chimneyRockPoint);
             
@@ -126,8 +140,14 @@ public class MapControl {
             Point fortCasperPoint = new Point(1, 9);
             newMap.addLocation(fortCasperLocation, fortCasperPoint);
             
-            //10 Location on the map
-            Location splitrockLocation = new Location ("Splitrock", new ScenicStop ("add description here"));
+            //10 Location on the map - ScenicStop 4
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition bearAttackTwo = new Condition("The Bears are coming! They have eaten some of your food", -5 ,InventoryItemType.food);
+            Stop ScenicStopFour = new ScenicStop("add description here");
+            ScenicStopFour.setCondition(bearAttackTwo);
+            
+            Location splitrockLocation = new Location ("Splitrock", ScenicStopFour);
             Point splitrockPoint = new Point(1, 10);
             newMap.addLocation(splitrockLocation, splitrockPoint);
             
@@ -137,8 +157,14 @@ public class MapControl {
             Point greenRiverPoint = new Point(1, 11);
             newMap.addLocation(greenRiverLocation, greenRiverPoint);
             
-            //12 Location on the map
-            Location sodaSpringsLocation = new Location("Soda Springs", new ScenicStop ("add description here"));
+            //12 Location on the map - ScenicStop 5
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition buffaloAttackTwo = new Condition("Its a stampede!! During the Stampede on of your Axles broke.", -1 ,InventoryItemType.wagonAxle);
+            Stop ScenicStopFive = new ScenicStop("add description here");
+            ScenicStopFive.setCondition(buffaloAttackTwo);
+            
+            Location sodaSpringsLocation = new Location("Soda Springs", ScenicStopFive);
             Point sodaSpringsPoint = new Point(1, 12);
             newMap.addLocation(sodaSpringsLocation, sodaSpringsPoint);
             
@@ -158,13 +184,25 @@ public class MapControl {
             Point bearRiverPoint = new Point(1, 14);
             newMap.addLocation(bearRiverLocation, bearRiverPoint);
             
-            //15 Location on the map
-            Location salmonFallsLocation = new Location("Salmon Falls", new ScenicStop ("add description here"));
+            //15 Location on the map - ScenicStop 6
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition peacefulTwo = new Condition("It was peaceful and you found berries", 5 ,InventoryItemType.berries);
+            Stop ScenicStopSix = new ScenicStop("add description here");
+            ScenicStopSix.setCondition(peacefulTwo);
+            
+            Location salmonFallsLocation = new Location("Salmon Falls", ScenicStopSix);
             Point salmonFallsPoint = new Point(1, 15);
             newMap.addLocation(salmonFallsLocation, salmonFallsPoint);
             
-            //16 Location on the map
-            Location snakeRiverLocation = new Location("Snake River", new ScenicStop ("add description here"));
+            //16 Location on the map - ScenicStop 7
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition bearAttackThree = new Condition("You are being attacked by Bears!! They have eaten one of your Oxen", -1 ,InventoryItemType.ox);
+            Stop ScenicStopSeven = new ScenicStop("add description here");
+            ScenicStopSeven.setCondition(bearAttackThree);
+            
+            Location snakeRiverLocation = new Location("Snake River", ScenicStopSeven);
             Point snakeRiverPoint = new Point(1, 16);
             newMap.addLocation(snakeRiverLocation, snakeRiverPoint);
             
@@ -178,13 +216,25 @@ public class MapControl {
             Point fortBoisePoint = new Point(1, 17);
             newMap.addLocation(fortBoiseLocation, fortBoisePoint);
             
-            //18 Location on the map
-            Location flagstaffHillLocation = new Location("Flagstaff Hill", new ScenicStop ("add description here"));
+            //18 Location on the map - ScenicStop 8
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition peacefulThree = new Condition("Everything was calm and you found some firewood", 2 ,InventoryItemType.firewood);
+            Stop ScenicStopEight = new ScenicStop("add description here");
+            ScenicStopEight.setCondition(peacefulThree);
+            
+            Location flagstaffHillLocation = new Location("Flagstaff Hill", ScenicStopEight);
             Point flagstaffHillPoint = new Point(1, 18);
             newMap.addLocation(flagstaffHillLocation, flagstaffHillPoint);
             
-            //19 Location on the map
-            Location blueMountainsLocation = new Location ("Blue Mountains", new ScenicStop ("add description here"));
+            //19 Location on the map - ScenicStop 9
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition bearAttackFour = new Condition("You are being attacked by Bears!! They have eaten a lot of your food", -50 ,InventoryItemType.food);
+            Stop ScenicStopNine = new ScenicStop("add description here");
+            ScenicStopNine.setCondition(bearAttackFour);
+            
+            Location blueMountainsLocation = new Location ("Blue Mountains", ScenicStopNine);
             Point blueMountainsPoint = new Point(1, 19);
             newMap.addLocation(blueMountainsLocation, blueMountainsPoint);
             
@@ -194,8 +244,14 @@ public class MapControl {
             Point deschutesRiverPoint = new Point(1, 20);
             newMap.addLocation(deschutesRiverLocation, deschutesRiverPoint);
             
-            //21 Location on the map
-            Location columbiaRiverLocation = new Location("Columbia River", new ScenicStop ("add description here"));
+            //21 Location on the map - ScenicStop 10
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition buffaloAttackThree = new Condition("BUFFALO!!!!! They have ruined some of your clothes ", -12 ,InventoryItemType.clothing);
+            Stop ScenicStopTen = new ScenicStop("add description here");
+            ScenicStopTen.setCondition(buffaloAttackThree);
+            
+            Location columbiaRiverLocation = new Location("Columbia River", ScenicStopTen);
             Point columbiaRiverPoint = new Point(1, 21);
             newMap.addLocation(columbiaRiverLocation, columbiaRiverPoint);
             
@@ -209,13 +265,29 @@ public class MapControl {
             Point theDallesPoint = new Point(1, 22);
             newMap.addLocation(theDallesLocation, theDallesPoint);
             
-            //23 Location on the map
-            Location willametteRiverLocation = new Location("Willamette River", new ScenicStop ("add description here"));
+            //23 Location on the map - ScenicStop 11
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition buffaloAttackFour = new Condition("The Buffalo were calm so "
+                    + "you were able to draw a picture "
+                    + "of the herd and pass by safely!!", 0 ,InventoryItemType.food);
+            Stop ScenicStopEleven = new ScenicStop("add description here");
+            ScenicStopEleven.setCondition(buffaloAttackFour);
+            
+            Location willametteRiverLocation = new Location("Willamette River", ScenicStopEleven);
             Point willametteRiverPoint = new Point(1, 23);
             newMap.addLocation(willametteRiverLocation, willametteRiverPoint);
             
-            //24 Location on the map
-            Location cityOverLookLocation = new Location("Oregon City Over Look", new ScenicStop ("add description here"));
+            //24 Location on the map - ScenicStop 12
+            //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition peacefulFour = new Condition("Enjoy the nice view and take it all in!", 0 ,InventoryItemType.food);
+            Stop ScenicStopTwelve = new ScenicStop("You are almost to Oregon City. "
+                    + "Once you get over this hill top and down in the valley, "
+                    + "you will have made it to the end of your journey");
+            ScenicStopTwelve.setCondition(peacefulFour);
+            
+            Location cityOverLookLocation = new Location("Oregon City Over Look", ScenicStopTwelve);
             Point cityOverLookPoint = new Point(1, 24);
             newMap.addLocation(cityOverLookLocation, cityOverLookPoint);
             
