@@ -11,14 +11,16 @@ import oregontrail.OregonTrail;
 class StartExistingGameView {
     static void displayStartGameView(){
         
-        Output.println(" B - Banker "
+        
+        boolean endOfView = false;
+        
+        do { 
+            Output.println(" B - Banker "
                 + "\n E - Explorer "
                 + "\n F - Fur Trader "
                 + "\n C - Carpenter "
                 + "\n Q - Quit");
-        boolean endOfView = false;
-        
-        do { 
+            
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

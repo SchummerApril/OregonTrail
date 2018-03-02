@@ -47,4 +47,9 @@ public class Location implements Serializable {
         System.out.println(visitText);
         this.stop.visit();
     }*/
+
+    @Override
+    public String toString() {
+        return "Location{" + "visitText=" + visitText + ", stop=" + stop + ", name=" + name + '}';
+    }
 }

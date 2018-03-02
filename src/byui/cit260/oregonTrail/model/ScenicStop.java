@@ -15,6 +15,9 @@ public class ScenicStop extends Stop implements Serializable{
         this.aboutStop = about;
     }
 
+    public ScenicStop() {
+    }
+
     public String getAboutStop() {
         return aboutStop;
     }

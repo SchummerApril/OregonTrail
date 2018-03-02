@@ -12,10 +12,11 @@ import oregontrail.OregonTrail;
 public class NameFamilyView {
     static void display() {
         
-        Output.println("Please enter names of your family and friends who are traveling with you.");
+        
         boolean endOfView = false;
         
         do { 
+            Output.println("Please enter names of your family and friends who are traveling with you.");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

@@ -1,8 +1,12 @@
 package oregontrail;
 
+import byui.cit260.oregonTrail.control.MapControl;
 import byui.cit260.oregonTrail.model.Game;
+import byui.cit260.oregonTrail.model.Map;
 import byui.cit260.oregonTrail.model.Player;
+import byui.cit260.oregonTrail.model.Point;
 import byui.cit260.oregonTrail.model.Shop;
+import byui.cit260.oregonTrail.view.Output;
 import byui.cit260.oregonTrail.view.StartProgramView;
 
 
@@ -32,7 +36,14 @@ public class OregonTrail {
     
    
     public static void main(String[] args) {
-        StartProgramView.displayStartProgramView();
+        //plays the game remove comments later
+        //StartProgramView.displayStartProgramView();
+        
+        //test the model layer because control reaches the model layer
+        //makes and instance of your map so it can pull information
+        Map testMap = MapControl.createNewMap();
+        //prints out what is getting                 What point you want to get
+        Output.println(testMap.getContents().get(new Point(2,10)));
         
     }
   

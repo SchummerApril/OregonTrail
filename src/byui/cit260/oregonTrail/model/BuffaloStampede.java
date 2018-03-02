@@ -6,8 +6,8 @@ import java.io.Serializable;
  * @author Nastia
  */
 public class BuffaloStampede extends Condition implements Serializable{
-    private boolean complete; 
-
+    //We will no longer need this class because we put the conditions in the condition class and then set the parameters for each condition in the Map Control Layer
+    /*
     public BuffaloStampede() {
     }
 
@@ -48,6 +48,6 @@ public class BuffaloStampede extends Condition implements Serializable{
     public String toString() {
         return "BuffaloStampede{" + "complete=" + complete + '}';
     }
-    
+    */
     
 }

@@ -6,6 +6,7 @@ import byui.cit260.oregonTrail.model.Map;
 import byui.cit260.oregonTrail.model.Point;
 import byui.cit260.oregonTrail.model.RiverCrossingStop;
 import byui.cit260.oregonTrail.model.ScenicStop;
+import byui.cit260.oregonTrail.model.Stop;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -24,22 +25,22 @@ public class MapControlTest {
         //List of Locations
         Point startingPoint = new Point(0, 0);
         ScenicStop startingStop = new ScenicStop("");
-        Location startingLocation = new Location(startingStop);
+        Location startingLocation = new Location("Starting Point",startingStop);
         startingLocation.setVisitText("starting Location");
         
         Point endPoint = new Point(1, 25);
         ScenicStop endStop = new ScenicStop("");
-        Location endLocation = new Location(endStop);
+        Location endLocation = new Location("End Point", endStop);
         endLocation.setVisitText("End Location");
         
         Point fortNoxPoint = new Point(1, 20);
         ScenicStop fortNoxStop = new ScenicStop("");
-        Location fortNoxLocation = new Location(fortNoxStop);
+        Location fortNoxLocation = new Location("Fort Nox Stop",fortNoxStop);
         fortNoxLocation.setVisitText("Fort Nox Location");
         
         Point mississippiRiverPoint = new Point(1, 23);
         RiverCrossingStop mississippiRiverStop = new RiverCrossingStop();
-        Location mississippiRiverLocation = new Location(mississippiRiverStop);
+        Location mississippiRiverLocation = new Location("Mississippi", mississippiRiverStop);
         mississippiRiverLocation.setVisitText("Mississippi Location");
         
         
@@ -106,17 +107,17 @@ public class MapControlTest {
         
         Point endPoint = new Point(1, 25);
         ScenicStop endStop = new ScenicStop("");
-        Location endLocation = new Location(endStop);
+        Location endLocation = new Location("end stop", endStop);
         endLocation.setVisitText("End Location");
         
         Point fortNoxPoint = new Point(1, 20);
         ScenicStop fortNoxStop = new ScenicStop("");
-        Location fortNoxLocation = new Location(fortNoxStop);
+        Location fortNoxLocation = new Location("Fort Nox Stop", fortNoxStop);
         fortNoxLocation.setVisitText("Fort Nox Location");
         
         Point mississippiRiverPoint = new Point(1, 23);
         RiverCrossingStop mississippiRiverStop = new RiverCrossingStop();
-        Location mississippiRiverLocation = new Location(mississippiRiverStop);
+        Location mississippiRiverLocation = new Location("Mississippi", mississippiRiverStop);
         mississippiRiverLocation.setVisitText("Mississippi Location");
         
         
@@ -175,65 +176,85 @@ public class MapControlTest {
     @Test //Test 1, Valid 1
     public void testDistancePlayerToPoint() {
         System.out.println("distancePlayerToPoint");
-        Map map = null;
-        Point p2 = null;
+        Map map = new Map();
+        Point p2 = new Point();
+        
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(p2);
+        
         double expResult = 0.0;
         double result = MapControl.distancePlayerToPoint(map, p2);
         assertEquals(expResult, result, 0.0);
        
         
-    //Test 2, Invalid 1
+    //Test 2, Invalid 1 can't be a string
        System.out.println("distancePlayerToPoint");
-        map = null;
-        p2 = null;
-        expResult = 0.0;
+        map = new Map();
+        p2 = new Point(1,1);
+        
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(p2);
+        
+        expResult = 0;
         result = MapControl.distancePlayerToPoint(map, p2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 0);
       
         
-    //Test 3, Invalid 2
+    //Test 3, Invalid 2 player can't be in negative position
        System.out.println("distancePlayerToPoint");
-        map = null;
-        p2 = null;
-        expResult = 0.0;
+        map = new Map();
+        p2 = new Point(1,1);
+        
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(new Point (-1,0));
+        
+        expResult =  2.2361;
         result = MapControl.distancePlayerToPoint(map, p2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result,  0.0001);
        
         
-    //Test 4, Invalid 3
+    //Test 4, Invalid 3, 3,3 is not a vaild point on map
        System.out.println("distancePlayerToPoint");
-        map = null;
-        p2 = null;
-        expResult = 0.0;
+        map = new Map();
+        p2 = new Point(3,3);
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(new Point (0,0));
+        expResult = 4.2426;
         result = MapControl.distancePlayerToPoint(map, p2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 0.0001);
         
         
     //Test 5, Boundary 1 (other invalid options)
        System.out.println("distancePlayerToPoint");
-        map = null;
-        p2 = null;
-        expResult = 0.0;
+        map = new Map();
+        p2 = new Point(1,15);
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(new Point (1,10));
+        expResult = 5;
         result = MapControl.distancePlayerToPoint(map, p2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 1);
         
         
     //Test 6, Boundary 2 (other invalid options)
        System.out.println("distancePlayerToPoint");
-        map = null;
-        p2 = null;
-        expResult = 0.0;
+        map = new Map();
+        p2 = new Point(1,25);
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(new Point (1,15));
+        expResult = 10;
         result = MapControl.distancePlayerToPoint(map, p2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 1);
          
         
     //Test 7, Boundary 3 (other invalid options)
        System.out.println("distancePlayerToPoint");
-        map = null;
-        p2 = null;
-        expResult = 0.0;
+        map = new Map();
+        p2 = new Point(1,25);
+        map.addLocation(new Location("",new ScenicStop()), p2);
+        map.setPlayerLocation(new Point (1,1));
+        expResult = 24;
         result = MapControl.distancePlayerToPoint(map, p2);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 1);
         
     
 }

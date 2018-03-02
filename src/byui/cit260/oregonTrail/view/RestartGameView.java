@@ -15,10 +15,11 @@ import java.io.IOException;
 public class RestartGameView {
      public static void display(){
         //!!!!!!!!change the printed lines, different option for the player
-        Output.println(" R - Resume \n S - Restart Game \n E - End Game");
+        
         boolean endOfView = false;
         
         do { 
+            Output.println(" R - Resume \n S - Restart Game \n E - End Game");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

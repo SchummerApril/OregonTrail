@@ -8,10 +8,11 @@ import java.io.IOException;
  */
 public class ContainerVolumeView {
     static void display(){       
-        Output.println(" D - enter the dimensions \n E - exit");
+        
         boolean endOfView = false;
         
         do { 
+            Output.println(" D - enter the dimensions \n E - exit");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

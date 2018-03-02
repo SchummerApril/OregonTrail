@@ -28,7 +28,7 @@ public class Map implements Serializable{
    public void addLocation(Location l, Point p) {
         this.map.put(p, l);
     }
-   //
+   //gets map information
     public HashMap<Point, Location> getContents() {
         return this.map;
     }

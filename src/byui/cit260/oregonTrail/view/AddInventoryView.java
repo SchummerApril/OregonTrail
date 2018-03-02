@@ -13,10 +13,11 @@ import oregontrail.OregonTrail;
 public class AddInventoryView {
     static void display(){
         
-        Output.println(" B- Buy item \n E - Exit");
+        
         boolean endOfView = false;
         
         do { 
+            Output.println(" B- Buy item \n E - Exit");
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

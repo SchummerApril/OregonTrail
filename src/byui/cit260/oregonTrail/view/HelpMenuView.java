@@ -9,15 +9,17 @@ import java.io.IOException;
 public class HelpMenuView {
 
     static void displayHelpMenuView() {
-        Output.println(" G - What is the goal of the game? "
+        
+        boolean endOfView = false;
+        
+        do { 
+            Output.println(" G - What is the goal of the game? "
                 + "\n M - How to move the player? "
                 + "\n E - Estimate required resources "
                 + "\n H - What does it mean to 'harvest resources'? "
                 + "\n D - Get item information "
                 + "\n Q - Quit");
-        boolean endOfView = false;
-        
-        do { 
+            
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

@@ -1,5 +1,7 @@
 package byui.cit260.oregonTrail.control;
 import byui.cit260.oregonTrail.model.CityStop;
+import byui.cit260.oregonTrail.model.Condition;
+import byui.cit260.oregonTrail.model.InventoryItemType;
 import byui.cit260.oregonTrail.model.Location;
 import byui.cit260.oregonTrail.model.Map;
 import byui.cit260.oregonTrail.model.Point;
@@ -15,15 +17,14 @@ public class MapControl {
     
     //How to move the player Part 1
     public static boolean isValidPoint(Map map, Point p) {
-            for (Point existing : map.getContents().keySet()) {
+           /* for (Point existing : map.getContents().keySet()) {
                 if (existing.getY() == p.getY() && existing.getX() == p.getX()) {
                     return true;
-                }
-             }
-
-            return false;
+                }*/
+           return (map.getContents().get(p) != null);
+           
+           
         }
-
 
         //How to move the player Part 2
         public static boolean movePlayer(Map map, Point destination) {
@@ -34,7 +35,6 @@ public class MapControl {
 
             return false;
         }
-
 
         // How you get the distance between the Player and Stop
         public static double distancePlayerToPoint(Map map, Point p2) {
@@ -74,7 +74,13 @@ public class MapControl {
             newMap.addLocation(kansasRiverCrossingLocation, kansasRiverCrossingPoint);
             
             //3 Location on the map - Good Example of ScenicStop
-            Location minorParkLocation = new Location("Minor Park", new ScenicStop ("add description here"));
+           //Allows you to set the condition for the ScenicStop
+                                                   //("message", number of items, type of item)
+            Condition bearAttackOne = new Condition("You are being attacked by Bears!!", -2 ,InventoryItemType.food);
+            Stop ScenicStopOne = new ScenicStop("add description here");
+            ScenicStopOne.setCondition(bearAttackOne);
+            
+            Location minorParkLocation = new Location("Minor Park", ScenicStopOne);
             Point minorParkPoint = new Point(1, 3);
             newMap.addLocation(minorParkLocation, minorParkPoint);
           

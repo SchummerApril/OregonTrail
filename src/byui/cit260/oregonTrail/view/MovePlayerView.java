@@ -18,12 +18,14 @@ import java.util.logging.Logger;
 public class MovePlayerView {
     static void display(){
         
-        Output.println(" R - list locations "
-                + "\n  T - move the player "
-                + "\n E - exit");
+        
         boolean endOfView = false;
         
         do { 
+            Output.println(" R - list locations "
+                + "\n  T - move the player "
+                + "\n E - exit");
+            
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

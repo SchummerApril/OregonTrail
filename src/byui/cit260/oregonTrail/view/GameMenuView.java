@@ -10,13 +10,16 @@ public class GameMenuView {
 
     static void display() {
   
-        Output.println(" S - Move the player "
-                + "\n D - Calculate the max weight of the container  "
-                + "\n C - Add item to inventory "
-                + "\n E - Exit");
+       
         boolean endOfView = false;
         
         do { 
+            //placing print menu option here to repeat during invalid option and return to menu option
+            Output.println(" S - Move the player "
+                + "\n D - Calculate the max weight of the container  "
+                + "\n C - Add item to inventory "
+                + "\n E - Exit");
+            
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;
@@ -24,6 +27,7 @@ public class GameMenuView {
         }
        while (endOfView != true);
     }
+    
     
        private static String[] getInputs() {
         //1 is the length of the array, holds one string

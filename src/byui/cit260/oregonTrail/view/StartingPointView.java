@@ -9,7 +9,12 @@ public class StartingPointView {
     
         //this is what is displayed on the screen for the player
      static void display(){
-         Output.println(" Welcome to the begining of the Oregon located in Independence Missouri."
+         
+        boolean endOfView = false;
+        
+        //converts input into a char
+        do { 
+            Output.println(" Welcome to the begining of the Oregon located in Independence Missouri."
                      + "We see that you are getting ready to travel and settle West in Oregon City."
                      + "Please stay here and prepare for the trail.");
          
@@ -18,10 +23,7 @@ public class StartingPointView {
                 + "\n  R - Rest "
                 + "\n C - Start the Trail "
                 + "\n E - Exit to Game Menu");
-        boolean endOfView = false;
-        
-        //converts input into a char
-        do { 
+            
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;

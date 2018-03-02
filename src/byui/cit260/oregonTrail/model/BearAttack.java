@@ -6,6 +6,8 @@ import java.io.Serializable;
  * @author Nastia
  */
 public class BearAttack extends Condition implements Serializable{
+     //We will no longer need this class because we put the conditions in the condition class and then set the parameters for each condition in the Map Control Layer
+   
     private boolean complete; 
 
     public BearAttack() {
