@@ -18,12 +18,12 @@ public class StartingPointView {
                      + "We see that you are getting ready to travel and settle West in Oregon City."
                      + "Please stay here and prepare for the trail.");
          
-        Output.println(" S - Shop "
-                + "\n  T - Trade "
-                + "\n  R - Rest "
-                + "\n C - Start the Trail "
-                + "\n E - Exit to Game Menu");
-            
+            Output.println("S - Shop\n"
+                    + "T - Trade\n"
+                    + "R - Rest\n"
+                    + "C - Start the Trail\n"
+                    + "E - Exit to Game Menu\n");
+
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)
             return;
