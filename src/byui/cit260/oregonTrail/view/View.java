@@ -9,7 +9,7 @@ import java.io.IOException;
 public abstract class View implements ViewInterface {
     
     protected String displayMessage;
-    
+    protected String prompt = "Please select one of the following options: ";
     public View() {
     }
     
@@ -22,20 +22,9 @@ public abstract class View implements ViewInterface {
         
         boolean endOfView = false;
         do {
-            //OUR VERSION FROM HELPMENUVIEW
-            /*String[] inputs = getInputs();
-            if (inputs.length < 1 || inputs[0] ==null)
-            return;
-         
-        endOfView = doAction(inputs);
-        }
-        while (endOfView != true);*/
-            
-            //INSTRUCTIONS VERSION
             String value = this.getInput(); 
-            if (value.toUpperCase().equals("E"))
+            if (value == null || value.length() < 1 )
                 return;
-            
             endOfView = this.doAction(value);          
     }
         while (!endOfView);
@@ -43,17 +32,12 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
         
-        boolean valid = false;
+        /*boolean valid = false;*/
         String value = null;
-        
-        while (!valid) {
-            Output.println("\n" + this.displayMessage);
-            
+        Output.println("\n" + this.displayMessage);
             try {
-            Input.getString("Please select one of the following options: ");
-            } catch (IOException ex) {}
-            break;
-            }
+            value = Input.getString(this.prompt);
+            } catch (IOException ex) {} 
         return value;
         }
         

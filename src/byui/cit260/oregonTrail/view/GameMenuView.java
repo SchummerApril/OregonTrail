@@ -6,7 +6,8 @@ import java.io.IOException;
  *
  * @author Nastia and the gang
  */
-public abstract class GameMenuView extends View {
+
+public class GameMenuView extends View {
 
     public GameMenuView() {
         super("\n"
@@ -20,8 +21,8 @@ public abstract class GameMenuView extends View {
                 + "*****************************************************\n");
     }
     @Override
-    private boolean doAction(String[] inputs) {
-        char choice = Character.toUpperCase(inputs[0].charAt(0));
+    public boolean doAction(String value) {
+        char choice = Character.toUpperCase(value.charAt(0));
 
         switch (choice) {
             case 'S': 
@@ -49,10 +50,11 @@ public abstract class GameMenuView extends View {
     }
 
     private static void addToInventory() {
-        AddInventoryView.display();
+        AddInventoryView view = new AddInventoryView();
+        view.display(); 
     }
 
-    static void displayGameMenuView() {
+    private static void displayGameMenuView() {
         
     }
     

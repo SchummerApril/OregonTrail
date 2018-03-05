@@ -10,7 +10,11 @@ public class ContainerVolumeView {
     static void display(){       
         boolean endOfView = false;
         do { 
-            Output.println(" D - enter the dimensions \n E - exit");
+            Output.println("\n"
+                    + "**************************************\n"
+                    + "D - Enter the dimensions\n"
+                    + "E - Exit\n"
+                    + "**************************************\n");
             String[] inputs = getInputs();
             if (inputs.length < 1 || inputs[0] ==null)
                 return;

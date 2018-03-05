@@ -6,25 +6,25 @@ import java.io.IOException;
  *   
  * @author Nastia 
  */
-public abstract class HelpMenuView extends View {
+public class HelpMenuView extends View {
 
     public HelpMenuView() { 
         super("\n"
             + "*************************************************\n"
             + "HELP MENU\n"
             + "*************************************************\n"
-            + "G - What is the goal of the game?\n "
-            + "M - How to move the player?\n "
-            + "E - Estimate required resources.\n "
-            + "H - What does it mean to 'harvest resources'? \n"
-            + "D - Get information about inventory items in this game.\n "
+            + "G - What is the goal of the game?\n"
+            + "M - How to move the player?\n"
+            + "E - Estimate required resources.\n"
+            + "H - What does it mean to 'harvest resources'?\n"
+            + "D - Get information about inventory items in this game.\n"
             + "Q - Quit\n"
             + "**************************************************\n");
     }
     
     @Override 
-    public boolean doAction(String[] inputs) {
-        char choice = Character.toUpperCase(inputs[0].charAt(0));
+    public boolean doAction(String value) {
+        char choice = Character.toUpperCase(value.charAt(0));
             
             switch (choice) {
                 case 'G': 
@@ -66,6 +66,4 @@ public abstract class HelpMenuView extends View {
             }
             return false;  
     }   
-        
-     //add a function to take the player to a new menu once action is complete successfully  
 }

@@ -7,9 +7,9 @@ import oregontrail.OregonTrail;
 
 /**
  *    
- * @author Nastia
+ * @author GROUP
  */
-public abstract class MainMenuView extends View {
+public class MainMenuView extends View {
    
     public MainMenuView(){
         super("\n"
@@ -26,7 +26,7 @@ public abstract class MainMenuView extends View {
     @Override
     public boolean doAction(String value) {
       
-        char choice = Character.toUpperCase(input[0].charAt(0));
+        char choice = Character.toUpperCase(value.charAt(0));
             
         switch (choice) {
             case 'N': 
@@ -49,19 +49,21 @@ public abstract class MainMenuView extends View {
         Output.println("Create New Game");        
         Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
         OregonTrail.setCurrentGame(newGame);
-        GameMenuView.display();
+        GameMenuView view = new GameMenuView();
+        view.display();
     }
 
     private static void restartGame() {
         Output.println("Loading...");
         Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
         OregonTrail.setCurrentGame(newGame);
-        GameMenuView.display();
+        GameMenuView view = new GameMenuView();
+        view.display();
     }
 
-    public void getHelp() {
-            HelpMenuView helpMenuView = new HelpMenuView();
-            helpMenuView.display();  
+    private static void getHelp() {
+        HelpMenuView view = new HelpMenuView();
+        view.display();  
         }
         
 }

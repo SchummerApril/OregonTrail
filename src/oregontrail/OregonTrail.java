@@ -12,7 +12,6 @@ import byui.cit260.oregonTrail.view.StartProgramView;
 
 
 public class OregonTrail {
-    
     //entry point to the rest of the game 
     private static Game currentGame = null; 
     private static Player player = null; 
@@ -33,12 +32,11 @@ public class OregonTrail {
     public static void setPlayer(Player player) {
         OregonTrail.player = player;
     }
-    
-    
-   
+
     public static void main(String[] args) {
         //plays the game remove comments later
-        MainMenuView.displayMainMenuView();
+        StartProgramView view = new StartProgramView();
+        view.display();
         
         //test the model layer because control reaches the model layer
         //makes and instance of your map so it can pull information
