@@ -5,21 +5,13 @@ import java.io.PrintWriter;
 public abstract class Output {
     private final static PrintWriter OUT = new PrintWriter(System.out, true);
     
-    
-    
     public static <T> void print(T text) {
         Output.OUT.print(text);
         Output.OUT.flush();
     }
 
-    
     public static <T> void println(T text) {
         Output.OUT.println(text);
     }
 }
-
-/**
- *
- * @author aschummer
- */
 

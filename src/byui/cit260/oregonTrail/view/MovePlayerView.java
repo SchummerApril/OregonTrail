@@ -12,8 +12,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *           Main Author, Classmate, Classmate
- * @author Marci, aschummer, Nastia
+ *      
+ * @author Marci
  */
 public class MovePlayerView {
     static void display(){

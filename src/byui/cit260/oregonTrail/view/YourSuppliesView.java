@@ -6,7 +6,10 @@ package byui.cit260.oregonTrail.view;
  */
 public class YourSuppliesView extends View {
     public YourSuppliesView(){
-        super("Here is the list of the items in your Inventory");
+        super("\n"
+            + "*************************************************\n"
+            + "Here is the list of the items in your Inventory: \n"
+            + "*************************************************\n");
     }
     @Override  
      public boolean doAction(String value) {

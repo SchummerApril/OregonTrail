@@ -4,22 +4,23 @@ import java.io.IOException;
 
 /**
  *
- * @author Nastia and the gang
+ * @author GROUP
  */
 
 public class GameMenuView extends View {
 
     public GameMenuView() {
         super("\n"
-                + "*****************************************************\n"
-                + "GAME MENU\n"
-                + "*****************************************************\n"
-                + "S - Move the player\n"
-                + "D - Calculate the max weight of the container\n"
-                + "C - Add item to inventory \n"
-                + "E - Exit \n"
-                + "*****************************************************\n");
+            + "*****************************************************\n"
+            + "GAME MENU\n"
+            + "*****************************************************\n"
+            + "S - Move the player\n"
+            + "D - Calculate the max weight of the container\n"
+            + "C - Add item to inventory \n"
+            + "E - Exit \n"
+            + "*****************************************************\n");
     }
+    
     @Override
     public boolean doAction(String value) {
         char choice = Character.toUpperCase(value.charAt(0));
@@ -54,11 +55,7 @@ public class GameMenuView extends View {
         view.display(); 
     }
 
-    private static void displayGameMenuView() {
-        
-    }
-    
-    
+    private static void displayGameMenuView() {}
 }
     
 

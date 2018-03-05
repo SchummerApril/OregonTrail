@@ -4,9 +4,10 @@ package byui.cit260.oregonTrail.view;
  *
  * @author Marci
  */
-public class ShopView {
+public class ShopView extends View{
 
-    static void display() {
+    public ShopView() {
+        super("");
         
     }
     //This will displays all the Shop Items that are for sale and their prices
