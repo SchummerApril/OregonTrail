@@ -6,60 +6,43 @@ import java.io.IOException;
 import oregontrail.OregonTrail;
 
 /**
- *          Main Author, Classmate, Classmate
- * @author Nastia, aschummer, Marci
+ *    
+ * @author Nastia
  */
-public class MainMenuView {
-    //starts a second view
-    public static void displayMainMenuView(){
-        
-        boolean endOfView = false;
-        
-        do { 
-            Output.println("\n"
-                    + "***************************************\n"
-                    + "MAIN MENU\n"
-                    + "***************************************\n"
-                    + "N - Start new game \n"
-                    + "R - Restart existing game \n"
-                    + "H - Get help on how to play the game \n"
-                    + "E - Exit \n"
-                    + "****************************************\n");
-        String[] inputs = getInputs();
-        if (inputs.length < 1 || inputs[0] ==null)
-            return;
-         endOfView = doAction(inputs);
-        }
-       while (endOfView != true);
+public class MainMenuView extends View {
+   
+    public MainMenuView(){
+        super("\n"
+        + "***************************************\n"
+        + "MAIN MENU\n"
+        + "***************************************\n"
+        + "N - Start new game \n"
+        + "R - Restart existing game \n"
+        + "H - Get help on how to play the game \n"
+        + "E - Exit \n"
+        + "****************************************\n");
     }
-        private static String[] getInputs() {
-        //1 is the length of the array, holds one string
-        String[] inputs = new String[1];
-        //try/catch wraps the input to catch a possible error
-        try {
-            inputs[0] = Input.getString("Please select one of the following options: ");
-        } catch (IOException ex) {}
-        return inputs;
+        
+    }
     
-    }
-        private static boolean doAction(String[] inputs) {
-            //convert array of strings into a single character
-            //convert all characters to upper case
-            char choice = Character.toUpperCase(inputs[0].charAt(0));
+    @Override
+    public boolean doAction(String value) {
+      
+        char choice = Character.toUpperCase(inputs[0].charAt(0));
             
-            switch (choice) {
-                case 'N': 
-                    startNewGame();
-                    break;
-                case 'R':
-                    restartGame();
-                    break;
-                case 'H':
-                    getHelp();
-                    break;
-                case 'E':
-                    return true; 
-                default: Output.println("Invalid menu item");    
+        switch (choice) {
+            case 'N': 
+                startNewGame();
+                break;
+            case 'R':
+                restartGame();
+                break;
+            case 'H':
+                getHelp();
+                break;
+            case 'E':
+                return true; 
+            default: Output.println("Invalid menu item");    
             }
             return false;
         }
