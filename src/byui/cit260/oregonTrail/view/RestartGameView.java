@@ -9,7 +9,6 @@ import java.io.IOException;
 public class RestartGameView extends View {
 
     public RestartGameView() {
-
         super("\n"
                 + "**********************************\n"
                 + "CHOOSE ONE OF THE FOLLOWING OPTIONS \n"
@@ -18,12 +17,13 @@ public class RestartGameView extends View {
                 + "S - Restart Game\n"
                 + "H - Help\n"
                 + "E - Exit Menu\n"
-                + "*************************************\n");}
+                + "*************************************\n");
+    }
+    
     @Override
     public boolean doAction(String value) {
         char choice = Character.toUpperCase(value.charAt(0));
         switch (choice) {
-
             case 'R':
                 resumeGame("Would you like to resume a previous game?");
                 break;

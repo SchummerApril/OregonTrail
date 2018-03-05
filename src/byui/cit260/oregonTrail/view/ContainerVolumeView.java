@@ -13,28 +13,23 @@ public class ContainerVolumeView extends View{
                     + "**************************************\n"
                     + "D - Enter the dimensions\n"
                     + "E - Exit\n"
-                    + "**************************************\n"
-                    
-                );
-            
-       
+                    + "**************************************\n");  
     }
     
     @Override
-     public boolean doAction(String inputs) {
+    public boolean doAction(String inputs) {
             //convert array of strings into a single character
             //convert all characters to upper case
-            char choice = Character.toUpperCase(inputs.charAt(0));
-            
-            switch (choice) {
-                case 'D': 
-                    enterDimensions();
-                    break;
-                case 'E':                    
-                    return true; 
-                default: Output.println("Invalid menu item");    
-            }
-            return false;
+        char choice = Character.toUpperCase(inputs.charAt(0));
+        switch (choice) {
+            case 'D': 
+                enterDimensions();
+                break;
+            case 'E':                    
+                return true; 
+            default: Output.println("Invalid menu item");    
+        }
+        return false;
      }
 
     private static void enterDimensions() {
