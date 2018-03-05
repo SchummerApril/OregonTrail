@@ -22,13 +22,13 @@ public class StartProgramView {
         boolean endOfView = false;
         do {  
             Output.println("Welcome to the CIT260 Oregon Trail");
-            Output.println("******************************************************");
-                Output.println("\n This game will allow you to travel the oregon" 
-                            + "\n trail making stops at cities, beautiful views, and cross rivers."
-                            + "\n You will learn about the hardships that the settlers had to overcome"
-                            + "\n as they moved from Independence to Oregon City.");
-            Output.println("\n******************************************************");
-        Output.println("Please enter your name before continuing.");   
+            Output.println("******************************************************\n"
+                           +"This game will allow you to travel the Oregon\n" 
+                           +"Trail making stops at cities, scenic areas, and river crossings.\n"
+                           +"You will learn about the hardships that the settlers had to overcome\n"
+                           +"as they moved from Independence to Oregon City."
+                           +"******************************************************\n"
+                           +"Please enter your name before continuing.");   
             
         String[] inputs = getInputs();
         if (inputs.length < 1 || inputs[0] ==null)

@@ -8,13 +8,8 @@ import java.io.IOException;
  * @author aschummer
  */
 
-//April, I commented this section out so that it doesn't show errors
-//When  you're ready to work here, remove comments and change the switch statements! :)
-
-//imagine what the Restart Game screen does and write it out, change the words, switch statement
 public class RestartGameView {
      public static void display(){
-        //!!!!!!!!change the printed lines, different option for the player
         
         boolean endOfView = false;
         
@@ -46,13 +41,10 @@ public class RestartGameView {
     }
         
         private static boolean doAction(String[] inputs) {
-            //convert array of strings into a single character
-            //convert all characters to upper case
             char choice = Character.toUpperCase(inputs[0].charAt(0));
-            //!!!!!!change the switch options
             switch (choice) {
                 case 'N': 
-                    startNewGame("Would you like to start a new game?"); //!!!! this is a string
+                    startNewGame("Would you like to start a new game?"); 
                     break;
                 case 'R':
                     restartGame("Would you like to restart a previous game?");

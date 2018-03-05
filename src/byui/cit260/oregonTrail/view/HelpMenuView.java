@@ -6,46 +6,25 @@ import java.io.IOException;
  *   
  * @author Nastia 
  */
-public class HelpMenuView {
+public abstract class HelpMenuView extends View {
 
-    static void displayHelpMenuView() {
-        
-        boolean endOfView = false;
-        
-        do { 
-            Output.println("\n"
-                    + "*************************************************\n"
-                    + "HELP MENU\n"
-                    + "*************************************************\n"
-                    + "G - What is the goal of the game?\n "
-                    + "M - How to move the player?\n "
-                    + "E - Estimate required resources.\n "
-                    + "H - What does it mean to 'harvest resources'? \n"
-                    + "D - Get information about inventory items in this game.\n "
-                    + "Q - Quit\n"
-                    + "**************************************************\n");
-            
-        String[] inputs = getInputs();
-        if (inputs.length < 1 || inputs[0] ==null)
-            return;
-         endOfView = doAction(inputs);
-        }
-       while (endOfView != true);
+    public HelpMenuView() { 
+        super("\n"
+              + "*************************************************\n"
+              + "HELP MENU\n"
+              + "*************************************************\n"
+              + "G - What is the goal of the game?\n "
+              + "M - How to move the player?\n "
+              + "E - Estimate required resources.\n "
+              + "H - What does it mean to 'harvest resources'? \n"
+              + "D - Get information about inventory items in this game.\n "
+              + "Q - Quit\n"
+              + "**************************************************\n");
     }
-        private static String[] getInputs() {
-        //1 is the length of the array, holds one string
-        String[] inputs = new String[1];
-        //try/catch wraps the input to catch a possible error
-        try {
-            inputs[0] = Input.getString("Please select one of the following options: ");
-        } catch (IOException ex) {}
-        return inputs;
     
-    }
-        private static boolean doAction(String[] inputs) {
-            //convert array of strings into a single character
-            //convert all characters to upper case
-            char choice = Character.toUpperCase(inputs[0].charAt(0));
+    @Override 
+    public boolean doAction(String[] inputs) {
+        char choice = Character.toUpperCase(inputs[0].charAt(0));
             
             switch (choice) {
                 case 'G': 
@@ -87,8 +66,6 @@ public class HelpMenuView {
             }
             return false;  
     }   
-    public HelpMenuView() {
-    }
-
-    
+        
+     //add a function to take the player to a new menu once action is complete successfully  
 }

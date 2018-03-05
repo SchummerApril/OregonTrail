@@ -9,7 +9,7 @@ import oregontrail.OregonTrail;
  *    
  * @author Nastia
  */
-public class MainMenuView extends View {
+public abstract class MainMenuView extends View {
    
     public MainMenuView(){
         super("\n"
@@ -22,13 +22,11 @@ public class MainMenuView extends View {
         + "E - Exit \n"
         + "****************************************\n");
     }
-        
-    }
     
     @Override
     public boolean doAction(String value) {
       
-        char choice = Character.toUpperCase(inputs[0].charAt(0));
+        char choice = Character.toUpperCase(input[0].charAt(0));
             
         switch (choice) {
             case 'N': 
@@ -48,24 +46,22 @@ public class MainMenuView extends View {
         }
 
     private static void startNewGame() {
-         Output.println("Create New Game");        
-         Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
-         OregonTrail.setCurrentGame(newGame);
-         GameMenuView.display();
+        Output.println("Create New Game");        
+        Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
+        OregonTrail.setCurrentGame(newGame);
+        GameMenuView.display();
     }
 
     private static void restartGame() {
         Output.println("Loading...");
-       // RestartGameView.display();
-       //create new game change to load game from file...  ln 69
-       Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
-         OregonTrail.setCurrentGame(newGame);
-         GameMenuView.display();
+        Game newGame = GameControl.createNewGame(OregonTrail.getPlayer());
+        OregonTrail.setCurrentGame(newGame);
+        GameMenuView.display();
     }
 
-    private static void getHelp() {
-       Output.println("How may I help?");
-       HelpMenuView.displayHelpMenuView();
-    }
+    public void getHelp() {
+            HelpMenuView helpMenuView = new HelpMenuView();
+            helpMenuView.display();  
+        }
         
 }
