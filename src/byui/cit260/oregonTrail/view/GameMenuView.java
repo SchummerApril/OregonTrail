@@ -46,7 +46,8 @@ public class GameMenuView extends View {
     }
 
     private static void calcVolumeOfContainer() {
-        ContainerVolumeView.display();
+        ContainerVolumeView view = new ContainerVolumeView();
+        view.display();
     }
 
     private static void addToInventory() {
