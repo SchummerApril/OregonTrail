@@ -1,5 +1,7 @@
 package byui.cit260.oregonTrail.control;
 
+import byui.cit260.oregonTrail.model.Wagon;
+
 /**
  *
  * @author aschummer
@@ -20,4 +22,9 @@ public class WagonControl {
             
            return height * length * width;
     }
+    public static boolean canTravel(Wagon wagon){
+    /** return true if wagon can travel, false if its missing parts.**/
+            return false;
+    }
+
 }

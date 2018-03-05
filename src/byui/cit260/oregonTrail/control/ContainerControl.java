@@ -1,5 +1,7 @@
 package byui.cit260.oregonTrail.control;
 
+import byui.cit260.oregonTrail.model.Container;
+
 /**
  *
  * @author aschummer
@@ -18,6 +20,7 @@ public class ContainerControl {
        //converted cubic inches to cubic feet
        return volume;
    }
-           
+   public static int calculateTotalWeight(Container container){
+       return container.getWeight() + InventoryControl.calculateTotalWeight(container.getContents());
+   }
 }
-

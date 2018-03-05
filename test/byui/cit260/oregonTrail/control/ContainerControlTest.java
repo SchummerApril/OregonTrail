@@ -1,5 +1,6 @@
 package byui.cit260.oregonTrail.control;
 
+import byui.cit260.oregonTrail.model.Container;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,6 +21,22 @@ public class ContainerControlTest {
     
     @After
     public void tearDown() {
+    }
+    @Test
+    public void testCalcTotalWeightOfContainer() {
+        System.out.println("calcTotalWeightOfContainer");
+        Container container;
+        int expResult;
+        int result;
+        
+         System.out.println("test1");
+         container = new Container();
+         expResult = 0;
+         result = 0;
+         assertEquals(expResult, result);
+        
+        
+        
     }
 
     /**
