@@ -13,14 +13,14 @@ public abstract class MainMenuView extends View {
    
     public MainMenuView(){
         super("\n"
-        + "***************************************\n"
-        + "MAIN MENU\n"
-        + "***************************************\n"
-        + "N - Start new game \n"
-        + "R - Restart existing game \n"
-        + "H - Get help on how to play the game \n"
-        + "E - Exit \n"
-        + "****************************************\n");
+            + "***************************************\n"
+            + "MAIN MENU\n"
+            + "***************************************\n"
+            + "N - Start new game \n"
+            + "R - Restart existing game \n"
+            + "H - Get help on how to play the game \n"
+            + "E - Exit \n"
+            + "****************************************\n");
     }
     
     @Override

@@ -10,16 +10,16 @@ public abstract class HelpMenuView extends View {
 
     public HelpMenuView() { 
         super("\n"
-              + "*************************************************\n"
-              + "HELP MENU\n"
-              + "*************************************************\n"
-              + "G - What is the goal of the game?\n "
-              + "M - How to move the player?\n "
-              + "E - Estimate required resources.\n "
-              + "H - What does it mean to 'harvest resources'? \n"
-              + "D - Get information about inventory items in this game.\n "
-              + "Q - Quit\n"
-              + "**************************************************\n");
+            + "*************************************************\n"
+            + "HELP MENU\n"
+            + "*************************************************\n"
+            + "G - What is the goal of the game?\n "
+            + "M - How to move the player?\n "
+            + "E - Estimate required resources.\n "
+            + "H - What does it mean to 'harvest resources'? \n"
+            + "D - Get information about inventory items in this game.\n "
+            + "Q - Quit\n"
+            + "**************************************************\n");
     }
     
     @Override 
