@@ -34,7 +34,7 @@ public abstract class InventoryControl {
              
         return result;
    }
-   //this now connects to the wagonControl and is able to calc weight of contents and wagon
+   //this now connects to the wagonControl and is able to calc weight of contents and wagon AS
     public static boolean hasAtLeast(Inventory inventory, InventoryItemType type, int num){
         return inventory.getContents()[type.ordinal()].getQuantity()
  >= num;    
