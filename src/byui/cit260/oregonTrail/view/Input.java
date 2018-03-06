@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Input {
     //BufferedReader - type of wrapper to make input flexible
-    private final static BufferedReader IN =
+    static final BufferedReader IN =
             //assignment of the variable BufferedReader
             //InputStreamReader is a Utility class
             new BufferedReader(new InputStreamReader(System.in));

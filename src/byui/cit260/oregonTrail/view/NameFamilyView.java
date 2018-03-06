@@ -14,7 +14,9 @@ public class NameFamilyView extends View {
         super("\n"
             + "*******************************\n"
             + "Please enter names of your family and friends who are traveling with you.\n"
+            + "You can have up to four people travel with you:\n"    
             + "*******************************\n");
+        this.prompt = "";
     }
     
     @Override
@@ -34,4 +36,8 @@ public class NameFamilyView extends View {
         view.display();
         return true;
     }
+    
+  
+    //We don't want to put it in the parnet bc we only it used in this view for now. 
+    //new override to accept the view display of family members names loop over and over while input ! = quit
 }

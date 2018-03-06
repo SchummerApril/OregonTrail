@@ -23,7 +23,7 @@ public class WagonControl {
            return height * length * width;
     }
     public static boolean canTravel(Wagon wagon){
-    /** return true if wagon can travel, false if its missing parts.**/
+    //return true if wagon can travel, false if its missing parts.
             return false;
     }
 
