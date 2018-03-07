@@ -51,6 +51,12 @@ public class RestartGameView extends View {
 
     private static void getHelp(String text) {
         Output.println(text);
+        boolean done = false;
+        while(!done) {
+            HelpMenuView view = new HelpMenuView();
+            view.display();
+            done = true;
+        }
     }
 
 }

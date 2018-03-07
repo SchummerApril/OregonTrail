@@ -1,13 +1,14 @@
 package byui.cit260.oregonTrail.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 /**
  *          Main Author, Classmate, Classmate
  * @author aschummer, Nastia, Marci
  */
 public class Wagon implements Serializable{
-    private String containers;
+    private Container[] containers;
     private int maxNumberContainers;
    private int height;
    private int length;
@@ -15,13 +16,19 @@ public class Wagon implements Serializable{
    private int maxCarryWeight;
    private int weight;
 
-    public String getContianers() {
+    public Wagon() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Container[] getContainers() {
         return containers;
     }
 
-    public void setContainers(String containers) {
+    public void setContainers(Container[] containers) {
         this.containers = containers;
     }
+
+
 
     public int getMaxNumberContainers() {
         return maxNumberContainers;
@@ -31,27 +38,45 @@ public class Wagon implements Serializable{
         this.maxNumberContainers = maxNumberContainers;
     }
 
+    public int getMaxCarryWeight() {
+        return maxCarryWeight;
+    }
+
+    public void setMaxCarryWeight(int maxCarryWeight) {
+        this.maxCarryWeight = maxCarryWeight;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
     
 
-    public Wagon(String containers, int maxNumberContainers) {
-        this.containers = containers;
+    public Wagon(int maxNumberContainers) {
+        this.containers = new Container[maxNumberContainers];
         this.maxNumberContainers = maxNumberContainers;
         
     }
 
     @Override
     public String toString() {
-        return "Wagon{" + "containers=" + containers + ", maxNumberContainers=" + maxNumberContainers + ", height=" + height + ", length=" + length + ", width=" + width + '}';
+        return "Wagon{" + "containers=" + containers + ", maxNumberContainers=" + maxNumberContainers + ", height=" + height + ", length=" + length + ", width=" + width + ", maxCarryWeight=" + maxCarryWeight + ", weight=" + weight + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.containers);
-        hash = 79 * hash + this.maxNumberContainers;
-        hash = 79 * hash + this.height;
-        hash = 79 * hash + this.length;
-        hash = 79 * hash + this.width;
+        hash = 71 * hash + Arrays.deepHashCode(this.containers);
+        hash = 71 * hash + this.maxNumberContainers;
+        hash = 71 * hash + this.height;
+        hash = 71 * hash + this.length;
+        hash = 71 * hash + this.width;
+        hash = 71 * hash + this.maxCarryWeight;
+        hash = 71 * hash + this.weight;
         return hash;
     }
 
@@ -79,11 +104,19 @@ public class Wagon implements Serializable{
         if (this.width != other.width) {
             return false;
         }
-        if (!Objects.equals(this.containers, other.containers)) {
+        if (this.maxCarryWeight != other.maxCarryWeight) {
+            return false;
+        }
+        if (this.weight != other.weight) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.containers, other.containers)) {
             return false;
         }
         return true;
     }
+
+  
 
     public int getHeight() {
         return height;

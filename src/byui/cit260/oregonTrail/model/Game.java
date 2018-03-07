@@ -7,7 +7,15 @@ import java.util.Objects;
  * @author davidgw, Marci, aschummer, Nastia
  */
 public class Game implements Serializable{
-    
+
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+    private Wagon wagon;    
     private Player player;
     private Map map;
     private double totalTime;

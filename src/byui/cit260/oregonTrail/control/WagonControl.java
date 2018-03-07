@@ -1,5 +1,6 @@
 package byui.cit260.oregonTrail.control;
 
+import byui.cit260.oregonTrail.model.Container;
 import byui.cit260.oregonTrail.model.Wagon;
 
 /**
@@ -26,5 +27,20 @@ public class WagonControl {
     //return true if wagon can travel, false if its missing parts.
             return false;
     }
+public static int calculateTotalWeight(Wagon wagon){
+    int result = wagon.getWeight();
+    for (Container each: wagon.getContainers()){
+        result += ContainerControl.calculateTotalWeight(each);
+    }
+    return result;
+}
+public static boolean canPullWagon(Wagon wagon){
+    return calculateTotalWeight(wagon) < wagon.getMaxCarryWeight();
+    
+}
 
+    static Wagon createNewWagon() {
+        return new Wagon(5);
+        
+    }
 }

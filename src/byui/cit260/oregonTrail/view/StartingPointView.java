@@ -20,7 +20,8 @@ public class StartingPointView extends View {
               + "T - Trade\n"
               + "R - Rest\n"
               + "C - Start the Trail\n"
-              + "E - Exit to Game Menu\n"); 
+              + "E - Exit to Game Menu\n"
+              + "W - Container Weight\n");
     }
     
     @Override
@@ -44,7 +45,10 @@ public class StartingPointView extends View {
                     break;  
                 case 'E':
                     exitMenu();
-                    return true;   
+                    return true;  
+                case 'W':
+                    Weight();
+                    break;
                 default: Output.println("Invalid menu item");    
             }
             return false;
@@ -61,5 +65,8 @@ public class StartingPointView extends View {
        ShopView view = new ShopView();
        view.display();
     }
-   
+   private static void Weight(){
+        ContainerWeightView view = new ContainerWeightView();
+        view.display();
+   }
 }

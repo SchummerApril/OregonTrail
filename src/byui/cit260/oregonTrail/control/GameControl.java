@@ -15,6 +15,7 @@ public abstract class GameControl {
         newGame.setPlayer(player);
         //every time we set a game we have a map from MapControl
         newGame.setMap(MapControl.createNewMap());
+        newGame.setWagon(WagonControl.createNewWagon());
         return newGame;
     }
     

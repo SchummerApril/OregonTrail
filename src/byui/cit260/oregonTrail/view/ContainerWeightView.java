@@ -1,17 +1,19 @@
 package byui.cit260.oregonTrail.view;
 import byui.cit260.oregonTrail.control.ContainerControl;
+import byui.cit260.oregonTrail.model.Container;
 import java.io.IOException;
+import oregontrail.OregonTrail;
 
 /**
  *
  * @author aschummer
  */
-public class ContainerVolumeView extends View{
-    public ContainerVolumeView(){       
+public class ContainerWeightView extends View{
+    public ContainerWeightView(){       
        
             super("\n"
                     + "**************************************\n"
-                    + "D - Enter the dimensions\n"
+                    + "D - Display Containers\n"
                     + "E - Exit\n"
                     + "**************************************\n");  
     }
@@ -23,15 +25,23 @@ public class ContainerVolumeView extends View{
         char choice = Character.toUpperCase(inputs.charAt(0));
         switch (choice) {
             case 'D': 
-                enterDimensions();
+                displayContainers();
                 break;
             case 'E':                    
                 return true; 
             default: Output.println("Invalid menu item");    
         }
+     
         return false;
      }
-
+    public void displayContainers(){
+        int max = OregonTrail.getCurrentGame().getWagon().getMaxNumberContainers(); 
+        for(int i = 0; i < max; i++){
+        Container current = OregonTrail.getCurrentGame().getWagon().getContainers()[i];
+        Output.println("#" + i + ":" + ContainerControl.calculateTotalWeight(current));
+    }
+    
+    }
     private static void enterDimensions() {
         try { double height = (double) Input.getInt("Enter height...");
         double diameter = (double) Input.getInt("Enter diameter...");
