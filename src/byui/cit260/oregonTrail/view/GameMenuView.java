@@ -1,7 +1,7 @@
 package byui.cit260.oregonTrail.view;
 import java.io.IOException;
 
-
+//add display map in week 10 (copy it from MovePlayerView - maybe?)
 /**
  *
  * @author GROUP

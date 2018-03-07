@@ -22,7 +22,7 @@ public class AddInventoryView extends View {
     
     }
     @Override  
-     public boolean doAction(String value) {
+    public boolean doAction(String value) {
         char choice = Character.toUpperCase(value.charAt(0));
             
         switch (choice) {
@@ -41,7 +41,7 @@ public class AddInventoryView extends View {
        Player player = OregonTrail.getCurrentGame().getPlayer();
        for (InventoryItemType type: InventoryItemType.values()) {
            Output.println(type.ordinal() + ": " + type);
-       }
+            }
        
         int type = Input.getInt("Please enter a number that corresponds to the desired item: ");
         int num = Input.getInt("Please enter the number of items you would like: ");
@@ -57,17 +57,14 @@ public class AddInventoryView extends View {
         YourSuppliesView view = new YourSuppliesView();
         view.display(); 
     
-         }
+        }
          else {
              Output.println("Sorry, the desired item is unavailable. Try again");
-         }
-       }
+            }
+        }
         catch (Exception e){
             e.printStackTrace();
         }
-       
-    }
-       
-       
-    }
+    }  
+}
 

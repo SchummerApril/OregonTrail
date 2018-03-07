@@ -98,6 +98,4 @@ public class MovePlayerView extends View{
         //Returns to previous screen
     
     }
-
-
 }

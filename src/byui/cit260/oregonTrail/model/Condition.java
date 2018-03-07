@@ -18,9 +18,7 @@ public class Condition implements Serializable{
         this.quanity = quanity;
         this.type = type;
         this.complete = false;
-        
     }
-
     
     //getters and setters
     public String getMessage() {

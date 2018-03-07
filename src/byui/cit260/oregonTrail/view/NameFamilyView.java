@@ -30,7 +30,7 @@ public class NameFamilyView extends View {
                }
         
         OregonTrail.setPlayer(player); 
-        Output.println("Thank you for enterring " + player.getName());
+        Output.println("Thank you for entering " + player.getName());
         //makes the next menu display
         StartingPointView view = new StartingPointView();
         view.display();
@@ -38,6 +38,6 @@ public class NameFamilyView extends View {
     }
     
   
-    //We don't want to put it in the parnet bc we only it used in this view for now. 
+    //We don't want to put it in the parent bc we only it used in this view for now. 
     //new override to accept the view display of family members names loop over and over while input ! = quit
 }
