@@ -16,8 +16,8 @@ package byui.cit260.oregonTrail.model;
     wagonWheel(10, 20), 
     wagonAxle(8, 2), 
     wagonTongue(7, 2); 
-// <-- all the items our inventory has and its weight if the wagon to carry.
-// <--we can add more items and now they connect to item cost and weight.     
+// <-- all the items our inventory has its weight if the wagon to carry AS.
+// <--we can add more items and now they connect to item cost and weight AS.     
     public final int itemCost; 
     public final int weight;
 

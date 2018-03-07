@@ -16,7 +16,7 @@ public class AddInventoryView extends View {
             + "****************************************\n"
             + "Inventory Options \n"
             + "****************************************\n"
-            + "B - Buy item \n "
+            + "B - Buy item \n"
             + "E - Exit \n"
             + "*****************************************\n");
     

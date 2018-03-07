@@ -58,7 +58,8 @@ public class StartingPointView extends View {
 
     private static void Shop() {
        Output.println("Welcome to the Store");
-       ShopView.display();
+       ShopView view = new ShopView();
+       view.display();
     }
    
 }

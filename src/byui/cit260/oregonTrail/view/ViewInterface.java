@@ -2,7 +2,7 @@ package byui.cit260.oregonTrail.view;
 
 /**
  *
- * @author Nastia
+ * @author GROUP
  */
 public interface ViewInterface {
     
