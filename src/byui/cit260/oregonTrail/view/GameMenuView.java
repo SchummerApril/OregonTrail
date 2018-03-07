@@ -43,7 +43,11 @@ public class GameMenuView extends View {
     }
 
     private static void movePlayer() {
-        MovePlayerView.display();
+  
+        MovePlayerView view = new MovePlayerView();
+        view.display();
+        
+    
     }
 
     private static void calcVolumeOfContainer() {

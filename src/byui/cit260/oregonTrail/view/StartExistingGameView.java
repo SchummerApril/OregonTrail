@@ -1,4 +1,4 @@
-package oregontrail;
+package byui.cit260.oregonTrail.view;
 
 /**
  *
